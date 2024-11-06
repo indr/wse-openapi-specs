@@ -53,7 +53,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getLog4js",
-        "summary": "Retrieves the Server log4j configuration"
+        "summary": "Retrieves the Server log4j configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "log4j"
+        ]
       }
     },
     "/v2/servers/{serverName}/log4j/actions/{action}": {
@@ -104,7 +110,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "putLog4jsAction",
-        "summary": "Tells the log4j system to perform an action"
+        "summary": "Tells the log4j system to perform an action",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "log4j",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/log4j/{loggerName}/actions/{action}": {
@@ -170,7 +184,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "putLog4jAction",
-        "summary": "Tells the specified log4j logger to perform an action"
+        "summary": "Tells the specified log4j logger to perform an action",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "log4j",
+          "{loggerName}",
+          "actions",
+          "{action}"
+        ]
       }
     }
   },
@@ -275,5 +298,28 @@
         "type": "object"
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "v2"
+    },
+    {
+      "name": "servers"
+    },
+    {
+      "name": "{serverName}"
+    },
+    {
+      "name": "log4j"
+    },
+    {
+      "name": "actions"
+    },
+    {
+      "name": "{action}"
+    },
+    {
+      "name": "{loggerName}"
+    }
+  ]
 }

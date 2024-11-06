@@ -4,7 +4,7 @@
   "description": "Wowza Streaming Engine OpenAPI 3 specifications",
   "scripts": {
     "build": "openapi-merge-cli --config openapi-merge.json",
-    "convert": "./scripts/convert.sh ./src/swagger-v1.2 ./src/openapi-v3",
+    "convert": "./scripts/convert.sh ./src/swagger-v1.2 ./src/openapi-v3 && ./scripts/generateTags.js ./src/openapi-v3",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "redocly lint src/openapi-v3/*.json"
   },

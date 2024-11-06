@@ -53,7 +53,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMonitoringConfig",
-        "summary": "Retrieves the server monitoring configuration"
+        "summary": "Retrieves the server monitoring configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "monitoring"
+        ]
       },
       "put": {
         "parameters": [
@@ -106,7 +112,13 @@
           },
           "required": true
         },
-        "summary": "Updates the server monitoring configuration"
+        "summary": "Updates the server monitoring configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "monitoring"
+        ]
       }
     },
     "/v2/servers/{serverName}/monitoring/historic": {
@@ -156,7 +168,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getHistoricServerStatistics",
-        "summary": "Retrieves the server historical statictics"
+        "summary": "Retrieves the server historical statictics",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "monitoring",
+          "historic"
+        ]
       }
     }
   },
@@ -229,5 +248,22 @@
         "type": "object"
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "v2"
+    },
+    {
+      "name": "servers"
+    },
+    {
+      "name": "{serverName}"
+    },
+    {
+      "name": "monitoring"
+    },
+    {
+      "name": "historic"
+    }
+  ]
 }

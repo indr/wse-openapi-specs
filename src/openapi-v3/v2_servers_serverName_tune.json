@@ -53,7 +53,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerTuneConfig",
-        "summary": "Retrieves the server Tuning configuration"
+        "summary": "Retrieves the server Tuning configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "tune"
+        ]
       },
       "put": {
         "parameters": [
@@ -106,7 +112,13 @@
           },
           "required": true
         },
-        "summary": "Updates the server Tuning configuration"
+        "summary": "Updates the server Tuning configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "tune"
+        ]
       }
     }
   },
@@ -159,5 +171,19 @@
         "type": "object"
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "v2"
+    },
+    {
+      "name": "servers"
+    },
+    {
+      "name": "{serverName}"
+    },
+    {
+      "name": "tune"
+    }
+  ]
 }

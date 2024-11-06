@@ -5,6 +5,281 @@
     "version": "1.0.0"
   },
   "servers": [],
+  "tags": [
+    {
+      "name": "restinfo"
+    },
+    {
+      "name": "v2"
+    },
+    {
+      "name": "machine"
+    },
+    {
+      "name": "monitoring"
+    },
+    {
+      "name": "current"
+    },
+    {
+      "name": "historic"
+    },
+    {
+      "name": "servers"
+    },
+    {
+      "name": "{serverName}"
+    },
+    {
+      "name": "actions"
+    },
+    {
+      "name": "{action}"
+    },
+    {
+      "name": "adv"
+    },
+    {
+      "name": "logfiles"
+    },
+    {
+      "name": "{logName}"
+    },
+    {
+      "name": "download"
+    },
+    {
+      "name": "logs"
+    },
+    {
+      "name": "{logType}"
+    },
+    {
+      "name": "sourcecontrol"
+    },
+    {
+      "name": "drivernames"
+    },
+    {
+      "name": "licenses"
+    },
+    {
+      "name": "listeners"
+    },
+    {
+      "name": "log4j"
+    },
+    {
+      "name": "{loggerName}"
+    },
+    {
+      "name": "mediacache"
+    },
+    {
+      "name": "sources"
+    },
+    {
+      "name": "{sourceName}"
+    },
+    {
+      "name": "stores"
+    },
+    {
+      "name": "{storeName}"
+    },
+    {
+      "name": "mediacasters"
+    },
+    {
+      "name": "{mediacastername}"
+    },
+    {
+      "name": "publishers"
+    },
+    {
+      "name": "{publisher}"
+    },
+    {
+      "name": "status"
+    },
+    {
+      "name": "transcoder"
+    },
+    {
+      "name": "tune"
+    },
+    {
+      "name": "users"
+    },
+    {
+      "name": "{userName}"
+    },
+    {
+      "name": "vhosts"
+    },
+    {
+      "name": "{vhostName}"
+    },
+    {
+      "name": "hostports"
+    },
+    {
+      "name": "{portname}"
+    },
+    {
+      "name": "httpproviders"
+    },
+    {
+      "name": "{baseClass}"
+    },
+    {
+      "name": "ssl"
+    },
+    {
+      "name": "{publisherName}"
+    },
+    {
+      "name": "sdpfiles"
+    },
+    {
+      "name": "{sdpfileName}"
+    },
+    {
+      "name": "smilfiles"
+    },
+    {
+      "name": "{smilfileName}"
+    },
+    {
+      "name": "startupstreams"
+    },
+    {
+      "name": "applications"
+    },
+    {
+      "name": "{appName}"
+    },
+    {
+      "name": "instances"
+    },
+    {
+      "name": "{instanceName}"
+    },
+    {
+      "name": "streams"
+    },
+    {
+      "name": "{streamName}"
+    },
+    {
+      "name": "streamfiles"
+    },
+    {
+      "name": "{streamfileName}"
+    },
+    {
+      "name": "testPlaybackInfo"
+    },
+    {
+      "name": "templates"
+    },
+    {
+      "name": "{templateName}"
+    },
+    {
+      "name": "decode"
+    },
+    {
+      "name": "overlays"
+    },
+    {
+      "name": "{overlayName}"
+    },
+    {
+      "name": "encodes"
+    },
+    {
+      "name": "{encodeName}"
+    },
+    {
+      "name": "streamnamegroups"
+    },
+    {
+      "name": "{groupName}"
+    },
+    {
+      "name": "tunehostports"
+    },
+    {
+      "name": "drm"
+    },
+    {
+      "name": "buydrmmapfile"
+    },
+    {
+      "name": "verimatrixmapfile"
+    },
+    {
+      "name": "dvr"
+    },
+    {
+      "name": "dvrstores"
+    },
+    {
+      "name": "{dvrStoreName}"
+    },
+    {
+      "name": "incomingstreams"
+    },
+    {
+      "name": "encoder"
+    },
+    {
+      "name": "live"
+    },
+    {
+      "name": "shorturl"
+    },
+    {
+      "name": "streamgroups"
+    },
+    {
+      "name": "streamrecorders"
+    },
+    {
+      "name": "{recorderName}"
+    },
+    {
+      "name": "default"
+    },
+    {
+      "name": "modules"
+    },
+    {
+      "name": "pushpublish"
+    },
+    {
+      "name": "mapentries"
+    },
+    {
+      "name": "{entryName}"
+    },
+    {
+      "name": "security"
+    },
+    {
+      "name": "streamconfiguration"
+    },
+    {
+      "name": "webrtc"
+    },
+    {
+      "name": "wscrestproxy"
+    },
+    {
+      "name": "v3"
+    }
+  ],
   "paths": {
     "/restinfo": {
       "get": {
@@ -40,7 +315,10 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getRESTInfoConfig",
-        "summary": "Retrieves the REST configuration information"
+        "summary": "Retrieves the REST configuration information",
+        "tags": [
+          "restinfo"
+        ]
       }
     },
     "/v2/machine/monitoring/current": {
@@ -77,7 +355,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getCurrentMachineStatistics",
-        "summary": "Retrieves current statictics for the machine"
+        "summary": "Retrieves current statictics for the machine",
+        "tags": [
+          "v2",
+          "machine",
+          "monitoring",
+          "current"
+        ]
       }
     },
     "/v2/machine/monitoring/historic": {
@@ -114,7 +398,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getHistoricMachineStatistics",
-        "summary": "Retrieves historic statictics for the machine"
+        "summary": "Retrieves historic statictics for the machine",
+        "tags": [
+          "v2",
+          "machine",
+          "monitoring",
+          "historic"
+        ]
       }
     },
     "/v2/servers": {
@@ -151,7 +441,11 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServersConfig",
-        "summary": "Retrieves the list of Servers"
+        "summary": "Retrieves the list of Servers",
+        "tags": [
+          "v2",
+          "servers"
+        ]
       }
     },
     "/v2/servers/{serverName}": {
@@ -201,7 +495,12 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerConfig",
-        "summary": "Retrieves the Server configuration"
+        "summary": "Retrieves the Server configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -254,7 +553,12 @@
           },
           "required": true
         },
-        "summary": "Updates the Server configuration"
+        "summary": "Updates the Server configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/actions/{action}": {
@@ -319,7 +623,14 @@
         "deprecated": false,
         "description": "This API is available in builds 18647 or later.",
         "operationId": "putServerAction",
-        "summary": "Tells the Server to perform an action"
+        "summary": "Tells the Server to perform an action",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/adv": {
@@ -369,7 +680,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerConfigAdv",
-        "summary": "Retrieves the advanced Server configuration"
+        "summary": "Retrieves the advanced Server configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -422,7 +739,13 @@
           },
           "required": true
         },
-        "summary": "Updates the advanced Server configuration"
+        "summary": "Updates the advanced Server configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/logfiles": {
@@ -487,7 +810,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerLogFilesConfig",
-        "summary": "Retrieves the list of server log files"
+        "summary": "Retrieves the list of server log files",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "logfiles"
+        ]
       }
     },
     "/v2/servers/{serverName}/logfiles/{logName}": {
@@ -623,7 +952,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerLogFileConfig",
-        "summary": "Retrieves the contents of a Server Log with the specified log name"
+        "summary": "Retrieves the contents of a Server Log with the specified log name",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "logfiles",
+          "{logName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/logfiles/{logName}/download": {
@@ -683,7 +1019,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerLogFileDownloadConfig",
-        "summary": "Retrieves the Server Log file for the specified log name, zipped"
+        "summary": "Retrieves the Server Log file for the specified log name, zipped",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "logfiles",
+          "{logName}",
+          "download"
+        ]
       }
     },
     "/v2/servers/{serverName}/logs": {
@@ -733,7 +1077,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerLogTypesConfig",
-        "summary": "Retrieves the list of available server Log Types"
+        "summary": "Retrieves the list of available server Log Types",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "logs"
+        ]
       }
     },
     "/v2/servers/{serverName}/logs/{logType}": {
@@ -889,7 +1239,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerLogsConfig",
-        "summary": "Retrieves the contents of multiple Server Logs with the specified type in the log name"
+        "summary": "Retrieves the contents of multiple Server Logs with the specified type in the log name",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "logs",
+          "{logType}"
+        ]
       }
     },
     "/v2/servers/{serverName}/sourcecontrol/drivernames": {
@@ -939,7 +1296,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getSourceDriverNamesList",
-        "summary": "Get the list of source control drivers"
+        "summary": "Get the list of source control drivers",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "sourcecontrol",
+          "drivernames"
+        ]
       }
     },
     "/v2/servers/{serverName}/licenses": {
@@ -989,7 +1353,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerLicensesConfig",
-        "summary": "Retrieves the list of server Licenses"
+        "summary": "Retrieves the list of server Licenses",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "licenses"
+        ]
       },
       "put": {
         "parameters": [
@@ -1042,7 +1412,13 @@
           },
           "required": true
         },
-        "summary": "Updates the Server License list"
+        "summary": "Updates the Server License list",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "licenses"
+        ]
       }
     },
     "/v2/servers/{serverName}/listeners": {
@@ -1092,7 +1468,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerListenersConfig",
-        "summary": "Retrieves the list of server Listeners"
+        "summary": "Retrieves the list of server Listeners",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "listeners"
+        ]
       },
       "put": {
         "parameters": [
@@ -1145,7 +1527,13 @@
           },
           "required": true
         },
-        "summary": "Updates the server Listeners list"
+        "summary": "Updates the server Listeners list",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "listeners"
+        ]
       }
     },
     "/v2/servers/{serverName}/log4j": {
@@ -1195,7 +1583,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getLog4js",
-        "summary": "Retrieves the Server log4j configuration"
+        "summary": "Retrieves the Server log4j configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "log4j"
+        ]
       }
     },
     "/v2/servers/{serverName}/log4j/actions/{action}": {
@@ -1246,7 +1640,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "putLog4jsAction",
-        "summary": "Tells the log4j system to perform an action"
+        "summary": "Tells the log4j system to perform an action",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "log4j",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/log4j/{loggerName}/actions/{action}": {
@@ -1312,7 +1714,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "putLog4jAction",
-        "summary": "Tells the specified log4j logger to perform an action"
+        "summary": "Tells the specified log4j logger to perform an action",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "log4j",
+          "{loggerName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/mediacache": {
@@ -1362,7 +1773,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheConfig",
-        "summary": "Retrieves the server MediaCache configuration"
+        "summary": "Retrieves the server MediaCache configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache"
+        ]
       },
       "put": {
         "parameters": [
@@ -1415,7 +1832,13 @@
           },
           "required": true
         },
-        "summary": "Updates the server MediaCache configuration"
+        "summary": "Updates the server MediaCache configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache"
+        ]
       }
     },
     "/v2/servers/{serverName}/mediacache/adv": {
@@ -1465,7 +1888,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheConfigAdv",
-        "summary": "Retrieves the advanced MediaCache configuration"
+        "summary": "Retrieves the advanced MediaCache configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "adv"
+        ]
       },
       "post": {
         "parameters": [
@@ -1524,7 +1954,14 @@
           },
           "required": true
         },
-        "summary": "Adds an advanced MediaCache configuration"
+        "summary": "Adds an advanced MediaCache configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -1577,7 +2014,14 @@
           },
           "required": true
         },
-        "summary": "Updates the advanced MediaCache configuration"
+        "summary": "Updates the advanced MediaCache configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/mediacache/sources": {
@@ -1627,7 +2071,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheSourcesConfig",
-        "summary": "Retrieves the list of MediaCache Sources"
+        "summary": "Retrieves the list of MediaCache Sources",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources"
+        ]
       },
       "post": {
         "parameters": [
@@ -1686,7 +2137,14 @@
           },
           "required": true
         },
-        "summary": "Adds the specified MediaCache Source to the list"
+        "summary": "Adds the specified MediaCache Source to the list",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources"
+        ]
       }
     },
     "/v2/servers/{serverName}/mediacache/sources/{sourceName}": {
@@ -1733,7 +2191,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteMediaCacheSourceConfig",
-        "summary": "Deletes the specified MediaCache Source configuration"
+        "summary": "Deletes the specified MediaCache Source configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -1790,7 +2256,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheSourceConfig",
-        "summary": "Retrieves the specified MediaCache Source configuration"
+        "summary": "Retrieves the specified MediaCache Source configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -1858,7 +2332,15 @@
           },
           "required": true
         },
-        "summary": "Adds the specified MediaCache Source configuration"
+        "summary": "Adds the specified MediaCache Source configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -1920,7 +2402,15 @@
           },
           "required": true
         },
-        "summary": "Updates the specified MediaCache Source configuration"
+        "summary": "Updates the specified MediaCache Source configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/mediacache/sources/{sourceName}/adv": {
@@ -1979,7 +2469,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheSourceConfigAdv",
-        "summary": "Retrieves the specified advanced MediaCache Source configuration"
+        "summary": "Retrieves the specified advanced MediaCache Source configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}",
+          "adv"
+        ]
       },
       "post": {
         "parameters": [
@@ -2047,7 +2546,16 @@
           },
           "required": true
         },
-        "summary": "Adds the specified advanced MediaCache Source configuration"
+        "summary": "Adds the specified advanced MediaCache Source configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -2109,7 +2617,16 @@
           },
           "required": true
         },
-        "summary": "Updates the specified advanced MediaCache Source configuration"
+        "summary": "Updates the specified advanced MediaCache Source configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/mediacache/stores": {
@@ -2159,7 +2676,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheStoresConfig",
-        "summary": "Retrieves the list of MediaCache Stores"
+        "summary": "Retrieves the list of MediaCache Stores",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores"
+        ]
       },
       "post": {
         "parameters": [
@@ -2218,7 +2742,14 @@
           },
           "required": true
         },
-        "summary": "Adds the specified MediaCache Store to the list"
+        "summary": "Adds the specified MediaCache Store to the list",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores"
+        ]
       }
     },
     "/v2/servers/{serverName}/mediacache/stores/{storeName}": {
@@ -2265,7 +2796,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteMediaCacheStoreConfig",
-        "summary": "Deletes the specified MediaCache Store configuration"
+        "summary": "Deletes the specified MediaCache Store configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores",
+          "{storeName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -2322,7 +2861,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheStoreConfig",
-        "summary": "Retrieves the specified MediaCache Store configuration"
+        "summary": "Retrieves the specified MediaCache Store configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores",
+          "{storeName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -2390,7 +2937,15 @@
           },
           "required": true
         },
-        "summary": "Adds the specified MediaCache Store configuration"
+        "summary": "Adds the specified MediaCache Store configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores",
+          "{storeName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -2452,7 +3007,15 @@
           },
           "required": true
         },
-        "summary": "Updates the specified MediaCache Store configuration"
+        "summary": "Updates the specified MediaCache Store configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores",
+          "{storeName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/mediacache/stores/{storeName}/adv": {
@@ -2511,7 +3074,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheStoreConfigAdv",
-        "summary": "Retrieves the specified advanced MediaCache Store configuration"
+        "summary": "Retrieves the specified advanced MediaCache Store configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores",
+          "{storeName}",
+          "adv"
+        ]
       },
       "post": {
         "parameters": [
@@ -2579,7 +3151,16 @@
           },
           "required": true
         },
-        "summary": "Adds the specified advanced MediaCache Store configuration"
+        "summary": "Adds the specified advanced MediaCache Store configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores",
+          "{storeName}",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -2641,7 +3222,16 @@
           },
           "required": true
         },
-        "summary": "Updates the specified advanced MediaCache Store configuration"
+        "summary": "Updates the specified advanced MediaCache Store configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores",
+          "{storeName}",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/mediacasters": {
@@ -2691,7 +3281,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCastersConfig",
-        "summary": "Retrieves the list of MediaCasters"
+        "summary": "Retrieves the list of MediaCasters",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacasters"
+        ]
       }
     },
     "/v2/servers/{serverName}/mediacasters/{mediacastername}": {
@@ -2750,7 +3346,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCasterConfig",
-        "summary": "Retrieves the specified MediaCaster configuration"
+        "summary": "Retrieves the specified MediaCaster configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacasters",
+          "{mediacastername}"
+        ]
       }
     },
     "/v2/servers/{serverName}/monitoring": {
@@ -2800,7 +3403,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMonitoringConfig",
-        "summary": "Retrieves the server monitoring configuration"
+        "summary": "Retrieves the server monitoring configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "monitoring"
+        ]
       },
       "put": {
         "parameters": [
@@ -2853,7 +3462,13 @@
           },
           "required": true
         },
-        "summary": "Updates the server monitoring configuration"
+        "summary": "Updates the server monitoring configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "monitoring"
+        ]
       }
     },
     "/v2/servers/{serverName}/monitoring/historic": {
@@ -2903,7 +3518,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getHistoricServerStatistics",
-        "summary": "Retrieves the server historical statictics"
+        "summary": "Retrieves the server historical statictics",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "monitoring",
+          "historic"
+        ]
       }
     },
     "/v2/servers/{serverName}/publishers": {
@@ -2953,7 +3575,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getPublishersConfig",
-        "summary": "Retrieves the list of server Publishers"
+        "summary": "Retrieves the list of server Publishers",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "publishers"
+        ]
       },
       "post": {
         "parameters": [
@@ -3012,7 +3640,13 @@
           },
           "required": true
         },
-        "summary": "Adds a new Publisher to the list"
+        "summary": "Adds a new Publisher to the list",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "publishers"
+        ]
       }
     },
     "/v2/servers/{serverName}/publishers/{publisher}": {
@@ -3059,7 +3693,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deletePublisherConfig",
-        "summary": "Deletes the specified Publisher configuration"
+        "summary": "Deletes the specified Publisher configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "publishers",
+          "{publisher}"
+        ]
       },
       "get": {
         "parameters": [
@@ -3116,7 +3757,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getPublisherConfig",
-        "summary": "Retrieves the specified Publisher configuration"
+        "summary": "Retrieves the specified Publisher configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "publishers",
+          "{publisher}"
+        ]
       },
       "post": {
         "parameters": [
@@ -3184,7 +3832,14 @@
           },
           "required": true
         },
-        "summary": "Adds the specified Publisher configuration"
+        "summary": "Adds the specified Publisher configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "publishers",
+          "{publisher}"
+        ]
       }
     },
     "/v2/servers/{serverName}/status": {
@@ -3234,7 +3889,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerStatusConfig",
-        "summary": "Retrieves the server Status"
+        "summary": "Retrieves the server Status",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "status"
+        ]
       }
     },
     "/v2/servers/{serverName}/transcoder": {
@@ -3284,7 +3945,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderConfig",
-        "summary": "Retrieves the Transcoder information"
+        "summary": "Retrieves the Transcoder information",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "transcoder"
+        ]
       }
     },
     "/v2/servers/{serverName}/tune": {
@@ -3334,7 +4001,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerTuneConfig",
-        "summary": "Retrieves the server Tuning configuration"
+        "summary": "Retrieves the server Tuning configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "tune"
+        ]
       },
       "put": {
         "parameters": [
@@ -3387,7 +4060,13 @@
           },
           "required": true
         },
-        "summary": "Updates the server Tuning configuration"
+        "summary": "Updates the server Tuning configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "tune"
+        ]
       }
     },
     "/v2/servers/{serverName}/users": {
@@ -3437,7 +4116,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getUsersConfig",
-        "summary": "Retrieves the list of server Users"
+        "summary": "Retrieves the list of server Users",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "users"
+        ]
       },
       "post": {
         "parameters": [
@@ -3496,7 +4181,13 @@
           },
           "required": true
         },
-        "summary": "Adds a new server User to the list"
+        "summary": "Adds a new server User to the list",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "users"
+        ]
       }
     },
     "/v2/servers/{serverName}/users/{userName}": {
@@ -3544,7 +4235,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteUserConfig",
-        "summary": "Deletes the specified User configuration"
+        "summary": "Deletes the specified User configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "users",
+          "{userName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -3602,7 +4300,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getUserConfig",
-        "summary": "Retrieves the specified User configuration"
+        "summary": "Retrieves the specified User configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "users",
+          "{userName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -3671,7 +4376,14 @@
           },
           "required": true
         },
-        "summary": "Adds the specified User configuration"
+        "summary": "Adds the specified User configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "users",
+          "{userName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -3734,7 +4446,14 @@
           },
           "required": true
         },
-        "summary": "Updates the specified User configuration"
+        "summary": "Updates the specified User configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "users",
+          "{userName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts": {
@@ -3784,7 +4503,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getVHostsConfig",
-        "summary": "Retrieves the list of VHosts"
+        "summary": "Retrieves the list of VHosts",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}": {
@@ -3845,7 +4570,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getVHostConfig",
-        "summary": "Retrieves the specified VHost configuration"
+        "summary": "Retrieves the specified VHost configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -3909,7 +4641,14 @@
           },
           "required": true
         },
-        "summary": "Updates the specified VHost configuration"
+        "summary": "Updates the specified VHost configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/actions/{action}": {
@@ -3972,7 +4711,16 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putVHostAction"
+        "operationId": "putVHostAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/adv": {
@@ -4032,7 +4780,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getVHostConfigAdv",
-        "summary": "Retrieves the specified advanced VHost configuration"
+        "summary": "Retrieves the specified advanced VHost configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -4095,7 +4851,15 @@
           },
           "required": true
         },
-        "summary": "Updates the specified advanced VHost configuration"
+        "summary": "Updates the specified advanced VHost configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/hostports": {
@@ -4155,7 +4919,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getHostPortsConfig",
-        "summary": "Retrieves the list of server HostPorts for the specified vhost"
+        "summary": "Retrieves the list of server HostPorts for the specified vhost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "hostports"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/hostports/{portname}": {
@@ -4225,7 +4997,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getHostPortConfig",
-        "summary": "Retrieves the HostPort for the specifed vhost and port"
+        "summary": "Retrieves the HostPort for the specifed vhost and port",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "hostports",
+          "{portname}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/hostports/{portname}/adv": {
@@ -4295,7 +5076,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getHostPortConfigAdv",
-        "summary": "Retrieves the advanced HostPort configuration for the specified vhost and port"
+        "summary": "Retrieves the advanced HostPort configuration for the specified vhost and port",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "hostports",
+          "{portname}",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -4367,7 +5158,17 @@
             }
           },
           "required": true
-        }
+        },
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "hostports",
+          "{portname}",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/hostports/{portname}/httpproviders/{baseClass}": {
@@ -4446,7 +5247,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getHTTPProviderConfig",
-        "summary": "Retrieves the HTTPProviders for the specifed vhost, port and baseclass"
+        "summary": "Retrieves the HTTPProviders for the specifed vhost, port and baseclass",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "hostports",
+          "{portname}",
+          "httpproviders",
+          "{baseClass}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/hostports/{portname}/ssl": {
@@ -4516,7 +5328,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getSSLConfig",
-        "summary": "Retrieves the SSL configuration for the specified vhost and port"
+        "summary": "Retrieves the SSL configuration for the specified vhost and port",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "hostports",
+          "{portname}",
+          "ssl"
+        ]
       },
       "put": {
         "parameters": [
@@ -4589,7 +5411,17 @@
           },
           "required": true
         },
-        "summary": "Updates the SSL configuration for the specified vhost and port"
+        "summary": "Updates the SSL configuration for the specified vhost and port",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "hostports",
+          "{portname}",
+          "ssl"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/mediacache/stores": {
@@ -4649,7 +5481,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15942 or later.",
         "operationId": "getMediaCacheStoreList",
-        "summary": "Retrieves all entries in the MediaCache system"
+        "summary": "Retrieves all entries in the MediaCache system",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "mediacache",
+          "stores"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/mediacache/stores/actions/{action}": {
@@ -4717,7 +5558,18 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15942 or later.",
-        "operationId": "putMediaCacheStoreAction"
+        "operationId": "putMediaCacheStoreAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "mediacache",
+          "stores",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/monitoring/current": {
@@ -4777,7 +5629,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getCurrentVHostStatistics",
-        "summary": "Retrieves the current VHost statistics"
+        "summary": "Retrieves the current VHost statistics",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "monitoring",
+          "current"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/monitoring/historic": {
@@ -4837,7 +5698,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getHistoricVHostStatistics",
-        "summary": "Retrieves the historic VHost statistics"
+        "summary": "Retrieves the historic VHost statistics",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "monitoring",
+          "historic"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/publishers": {
@@ -4898,7 +5768,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getPublishersVhostConfig",
-        "summary": "Retrieves the list of Publishers for the specified VHost"
+        "summary": "Retrieves the list of Publishers for the specified VHost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "publishers"
+        ]
       },
       "post": {
         "parameters": [
@@ -4968,7 +5846,15 @@
           },
           "required": true
         },
-        "summary": "Add a Publisher to list of Publishers for the specified VHost"
+        "summary": "Add a Publisher to list of Publishers for the specified VHost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "publishers"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/publishers/{publisherName}": {
@@ -5027,7 +5913,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deletePublisherVhostConfig",
-        "summary": "Deletes the specified Publisher configuration"
+        "summary": "Deletes the specified Publisher configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "publishers",
+          "{publisherName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -5096,7 +5991,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getPublisherVhostConfig",
-        "summary": "Retrieves the specified Publisher configuration"
+        "summary": "Retrieves the specified Publisher configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "publishers",
+          "{publisherName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -5176,7 +6080,16 @@
           },
           "required": true
         },
-        "summary": "Adds the specified Publisher configuration"
+        "summary": "Adds the specified Publisher configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "publishers",
+          "{publisherName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -5250,7 +6163,16 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Publisher configuration"
+        "summary": "Updates the specified Publisher configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "publishers",
+          "{publisherName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/sdpfiles": {
@@ -5310,7 +6232,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getSDPFilesConfig",
-        "summary": "Retrieves the list of SDP Files for the specified VHost"
+        "summary": "Retrieves the list of SDP Files for the specified VHost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "sdpfiles"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/sdpfiles/{sdpfileName}": {
@@ -5368,7 +6298,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteSDPFileConfig",
-        "summary": "Deletes the specified SDP file"
+        "summary": "Deletes the specified SDP file",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "sdpfiles",
+          "{sdpfileName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/sdpfiles/{sdpfileName}/actions/{action}": {
@@ -5477,7 +6416,18 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putSDPFileAction"
+        "operationId": "putSDPFileAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "sdpfiles",
+          "{sdpfileName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/smilfiles": {
@@ -5538,7 +6488,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getSMILFilesConfig",
-        "summary": "Retrieves the list of SMIL Files for the specified VHost"
+        "summary": "Retrieves the list of SMIL Files for the specified VHost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "smilfiles"
+        ]
       },
       "post": {
         "parameters": [
@@ -5608,7 +6566,15 @@
           },
           "required": true
         },
-        "summary": "Adds a SMIL File to the list of SMIL Files for the specified VHost"
+        "summary": "Adds a SMIL File to the list of SMIL Files for the specified VHost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "smilfiles"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/smilfiles/{smilfileName}": {
@@ -5666,7 +6632,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteSMILFileConfig",
-        "summary": "Deletes the specified SMIL File configuration"
+        "summary": "Deletes the specified SMIL File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "smilfiles",
+          "{smilfileName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -5734,7 +6709,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getSMILFileConfig",
-        "summary": "Retrieves the specified SMIL File configuration"
+        "summary": "Retrieves the specified SMIL File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "smilfiles",
+          "{smilfileName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -5813,7 +6797,16 @@
           },
           "required": true
         },
-        "summary": "Adds the specified SMIL File configuration"
+        "summary": "Adds the specified SMIL File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "smilfiles",
+          "{smilfileName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -5886,7 +6879,16 @@
           },
           "required": true
         },
-        "summary": "Updates the specified SMIL File configuration"
+        "summary": "Updates the specified SMIL File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "smilfiles",
+          "{smilfileName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/smilfiles/{smilfileName}/actions/{action}": {
@@ -6006,7 +7008,18 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putSMILFileAction"
+        "operationId": "putSMILFileAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "smilfiles",
+          "{smilfileName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/startupstreams": {
@@ -6066,7 +7079,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getStartupStreamsConfig",
-        "summary": "Retrieves the list of Startup Streams for the specified VHost"
+        "summary": "Retrieves the list of Startup Streams for the specified VHost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "startupstreams"
+        ]
       },
       "post": {
         "parameters": [
@@ -6135,7 +7156,15 @@
           },
           "required": true
         },
-        "summary": "Adds a Startup Stream to the list of Startup Streams for the specified VHost"
+        "summary": "Adds a Startup Stream to the list of Startup Streams for the specified VHost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "startupstreams"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/startupstreams/applications/{appName}/instances/{instanceName}/streams/{streamName}": {
@@ -6211,7 +7240,21 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteStartupStreamConfig",
-        "summary": "Deletes the specified Startup Stream configuration"
+        "summary": "Deletes the specified Startup Stream configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "startupstreams",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "streams",
+          "{streamName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -6297,7 +7340,21 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getStartupStreamConfig",
-        "summary": "Retrieves the specified Startup Stream configuration"
+        "summary": "Retrieves the specified Startup Stream configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "startupstreams",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "streams",
+          "{streamName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -6394,7 +7451,21 @@
           },
           "required": true
         },
-        "summary": "Adds the specified Startup Stream configuration"
+        "summary": "Adds the specified Startup Stream configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "startupstreams",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "streams",
+          "{streamName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -6485,7 +7556,21 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Startup Stream configuration"
+        "summary": "Updates the specified Startup Stream configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "startupstreams",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "streams",
+          "{streamName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/streamfiles": {
@@ -6545,7 +7630,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getStreamFilesConfig",
-        "summary": "Retrieves the list of Stream Files for the specified VHost"
+        "summary": "Retrieves the list of Stream Files for the specified VHost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "streamfiles"
+        ]
       },
       "post": {
         "parameters": [
@@ -6614,7 +7707,15 @@
           },
           "required": true
         },
-        "summary": "Adds a Stream File to the list of Stream Files for the specified VHost"
+        "summary": "Adds a Stream File to the list of Stream Files for the specified VHost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "streamfiles"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/streamfiles/{streamfileName}": {
@@ -6672,7 +7773,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteStreamFileConfig",
-        "summary": "Deletes the specified Stream File configuration"
+        "summary": "Deletes the specified Stream File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "streamfiles",
+          "{streamfileName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -6740,7 +7850,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getStreamFileConfig",
-        "summary": "Retrieves the specified Stream File configuration"
+        "summary": "Retrieves the specified Stream File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "streamfiles",
+          "{streamfileName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -6819,7 +7938,16 @@
           },
           "required": true
         },
-        "summary": "Adds the specified Stream File configuration"
+        "summary": "Adds the specified Stream File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "streamfiles",
+          "{streamfileName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -6892,7 +8020,16 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Stream File configuration"
+        "summary": "Updates the specified Stream File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "streamfiles",
+          "{streamfileName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/streamfiles/{streamfileName}/actions/{action}": {
@@ -7012,7 +8149,18 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putStreamFileAction"
+        "operationId": "putStreamFileAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "streamfiles",
+          "{streamfileName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/streamfiles/{streamfileName}/adv": {
@@ -7082,7 +8230,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getStreamFileConfigAdv",
-        "summary": "Retrieves the Advanced Stream File configuration"
+        "summary": "Retrieves the Advanced Stream File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "streamfiles",
+          "{streamfileName}",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -7155,7 +8313,17 @@
           },
           "required": true
         },
-        "summary": "Updates the Advanced Stream File configuration"
+        "summary": "Updates the Advanced Stream File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "streamfiles",
+          "{streamfileName}",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/testPlaybackInfo": {
@@ -7216,7 +8384,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTestPlaybackInfoConfig",
-        "summary": "Retrieves the Playback Info for the specifed vhost"
+        "summary": "Retrieves the Playback Info for the specifed vhost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "testPlaybackInfo"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/transcoder": {
@@ -7276,7 +8452,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderConfig1",
-        "summary": "Retrieves the Transcoder configuration for the specified VHost"
+        "summary": "Retrieves the Transcoder configuration for the specified VHost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder"
+        ]
       },
       "put": {
         "parameters": [
@@ -7339,7 +8523,15 @@
           },
           "required": true
         },
-        "summary": "Updates the Transcoder configuration for the specified VHost"
+        "summary": "Updates the Transcoder configuration for the specified VHost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/transcoder/templates": {
@@ -7400,7 +8592,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderTemplatesConfig",
-        "summary": "Retrieves the list of Transcoder Template Configurations for the specified VHost"
+        "summary": "Retrieves the list of Transcoder Template Configurations for the specified VHost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates"
+        ]
       },
       "post": {
         "parameters": [
@@ -7470,7 +8671,16 @@
           },
           "required": true
         },
-        "summary": "Adds a Transcoder Templates Configuration to the specified VHost"
+        "summary": "Adds a Transcoder Templates Configuration to the specified VHost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/transcoder/templates/{templateName}": {
@@ -7527,7 +8737,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteTranscoderTemplateConfig",
-        "summary": "Deletes the specified Trancoder Template configuration"
+        "summary": "Deletes the specified Trancoder Template configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -7594,7 +8814,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderTemplateConfig",
-        "summary": "Retrieves the specified Trancoder Template configuration"
+        "summary": "Retrieves the specified Trancoder Template configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -7672,7 +8902,17 @@
           },
           "required": true
         },
-        "summary": "Adds the specified Trancoder Template configuration"
+        "summary": "Adds the specified Trancoder Template configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -7744,7 +8984,17 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Trancoder Template configuration"
+        "summary": "Updates the specified Trancoder Template configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/transcoder/templates/{templateName}/actions/{action}": {
@@ -7825,7 +9075,19 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putTranscoderTemplateAction"
+        "operationId": "putTranscoderTemplateAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/transcoder/templates/{templateName}/adv": {
@@ -7894,7 +9156,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderTemplateConfigAdv",
-        "summary": "Retrieves the Advanced Transcoder Template configuration"
+        "summary": "Retrieves the Advanced Transcoder Template configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -7966,7 +9239,18 @@
           },
           "required": true
         },
-        "summary": "Updates the Advanced Transcoder Template configuration"
+        "summary": "Updates the Advanced Transcoder Template configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/transcoder/templates/{templateName}/decode/overlays/{overlayName}": {
@@ -8032,7 +9316,20 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteTranscoderOverlayDecodeConfig",
-        "summary": "Deletes the specified Trancoder Overlay Decode configuration"
+        "summary": "Deletes the specified Trancoder Overlay Decode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "decode",
+          "overlays",
+          "{overlayName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -8108,7 +9405,20 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderOverlayDecodeConfig",
-        "summary": "Retrieves the specified Trancoder Overlay Decode configuration"
+        "summary": "Retrieves the specified Trancoder Overlay Decode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "decode",
+          "overlays",
+          "{overlayName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -8189,7 +9499,20 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Trancoder Overlay Decode configuration"
+        "summary": "Updates the specified Trancoder Overlay Decode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "decode",
+          "overlays",
+          "{overlayName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/transcoder/templates/{templateName}/encodes": {
@@ -8258,7 +9581,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderEncodesConfig",
-        "summary": "Retrieves the list of Transcoder Encode Configurations for the specified VHost"
+        "summary": "Retrieves the list of Transcoder Encode Configurations for the specified VHost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes"
+        ]
       },
       "post": {
         "parameters": [
@@ -8336,7 +9670,18 @@
           },
           "required": true
         },
-        "summary": "Adds a Transcoder Encode Configuration to the specified VHost"
+        "summary": "Adds a Transcoder Encode Configuration to the specified VHost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/transcoder/templates/{templateName}/encodes/{encodeName}": {
@@ -8402,7 +9747,19 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteTranscoderEncodeConfig",
-        "summary": "Deletes the specified Trancoder Encode configuration"
+        "summary": "Deletes the specified Trancoder Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -8478,7 +9835,19 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderEncodeConfig",
-        "summary": "Retrieves the specified Trancoder Encode configuration"
+        "summary": "Retrieves the specified Trancoder Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -8565,7 +9934,19 @@
           },
           "required": true
         },
-        "summary": "Adds the specified Trancoder Encode configuration"
+        "summary": "Adds the specified Trancoder Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -8646,7 +10027,19 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Trancoder Encode configuration"
+        "summary": "Updates the specified Trancoder Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/transcoder/templates/{templateName}/encodes/{encodeName}/adv": {
@@ -8724,7 +10117,20 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderEncodeConfigAdv",
-        "summary": "Retrieves the Advanced Transcoder Encode configuration"
+        "summary": "Retrieves the Advanced Transcoder Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -8805,7 +10211,20 @@
           },
           "required": true
         },
-        "summary": "Updates the Advanced Transcoder Encode configuration"
+        "summary": "Updates the Advanced Transcoder Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/transcoder/templates/{templateName}/encodes/{encodeName}/overlays/{overlayName}": {
@@ -8880,7 +10299,21 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteTranscoderOverlayEncodeConfig",
-        "summary": "Deletes the specified Trancoder Overlay Encode configuration"
+        "summary": "Deletes the specified Trancoder Overlay Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}",
+          "overlays",
+          "{overlayName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -8965,7 +10398,21 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderOverlayEncodeConfig",
-        "summary": "Retrieves the specified Trancoder Overlay Encode configuration"
+        "summary": "Retrieves the specified Trancoder Overlay Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}",
+          "overlays",
+          "{overlayName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -9055,7 +10502,21 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Trancoder Overlay Encode configuration"
+        "summary": "Updates the specified Trancoder Overlay Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}",
+          "overlays",
+          "{overlayName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/transcoder/templates/{templateName}/streamnamegroups": {
@@ -9124,7 +10585,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderStreamNameGroupsConfig",
-        "summary": "Retrieves the list of Transcoder Stream Name Groups for the specified Template"
+        "summary": "Retrieves the list of Transcoder Stream Name Groups for the specified Template",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "streamnamegroups"
+        ]
       },
       "post": {
         "parameters": [
@@ -9202,7 +10674,18 @@
           },
           "required": true
         },
-        "summary": "Adds a Transcoder Stream Name Groups Configuration to the specified Template"
+        "summary": "Adds a Transcoder Stream Name Groups Configuration to the specified Template",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "streamnamegroups"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/transcoder/templates/{templateName}/streamnamegroups/{groupName}": {
@@ -9268,7 +10751,19 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteTranscoderStreamNameGroupConfig",
-        "summary": "Deletes the specified Trancoder StreamNameGroup configuration"
+        "summary": "Deletes the specified Trancoder StreamNameGroup configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "streamnamegroups",
+          "{groupName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -9344,7 +10839,19 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderStreamNameGroupConfig",
-        "summary": "Retrieves the specified Trancoder StreamNameGroup configuration"
+        "summary": "Retrieves the specified Trancoder StreamNameGroup configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "streamnamegroups",
+          "{groupName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -9431,7 +10938,19 @@
           },
           "required": true
         },
-        "summary": "Adds the specified Trancoder StreamNameGroup configuration"
+        "summary": "Adds the specified Trancoder StreamNameGroup configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "streamnamegroups",
+          "{groupName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -9512,7 +11031,19 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Trancoder StreamNameGroup configuration"
+        "summary": "Updates the specified Trancoder StreamNameGroup configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "streamnamegroups",
+          "{groupName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/tune": {
@@ -9573,7 +11104,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getVHostTuneConfig",
-        "summary": "Retrieves the Tuning configuration for the specifed vhost"
+        "summary": "Retrieves the Tuning configuration for the specifed vhost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "tune"
+        ]
       },
       "put": {
         "parameters": [
@@ -9637,7 +11176,15 @@
           },
           "required": true
         },
-        "summary": "Updates the Tuning configuration for the specifed vhost"
+        "summary": "Updates the Tuning configuration for the specifed vhost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "tune"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/tunehostports": {
@@ -9698,7 +11245,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getHostportsTuneConfig",
-        "summary": "Retrieves the host port configuration used for server tuning for the specified vhost"
+        "summary": "Retrieves the host port configuration used for server tuning for the specified vhost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "tunehostports"
+        ]
       },
       "put": {
         "parameters": [
@@ -9762,7 +11317,15 @@
           },
           "required": true
         },
-        "summary": "Updates the host port configuration used for server tuning for the specified vhost"
+        "summary": "Updates the host port configuration used for server tuning for the specified vhost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "tunehostports"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications": {
@@ -9822,7 +11385,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getApplicationsConfig",
-        "summary": "Retrieves the list of Applications for the specifed vhost"
+        "summary": "Retrieves the list of Applications for the specifed vhost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications"
+        ]
       },
       "post": {
         "parameters": [
@@ -9891,7 +11462,15 @@
           },
           "required": true
         },
-        "summary": "Adds an Application to the list of Applications  for the specifed vhost"
+        "summary": "Adds an Application to the list of Applications  for the specifed vhost",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}": {
@@ -9948,7 +11527,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteApplicationConfig",
-        "summary": "Deletes the specified Application configuration"
+        "summary": "Deletes the specified Application configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -10015,7 +11603,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getApplicationConfig",
-        "summary": "Retrieves the specified Application configuration"
+        "summary": "Retrieves the specified Application configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -10093,7 +11690,16 @@
           },
           "required": true
         },
-        "summary": "Adds the specified Application configuration"
+        "summary": "Adds the specified Application configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -10165,7 +11771,16 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Application configuration"
+        "summary": "Updates the specified Application configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/actions/{action}": {
@@ -10249,7 +11864,18 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putApplicationAction"
+        "operationId": "putApplicationAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/adv": {
@@ -10318,7 +11944,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getApplicationConfigAdv",
-        "summary": "Retrieves the specified advanced Application configuration"
+        "summary": "Retrieves the specified advanced Application configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "adv"
+        ]
       },
       "post": {
         "parameters": [
@@ -10396,7 +12032,17 @@
           },
           "required": true
         },
-        "summary": "Adds the specified advanced Application configuration"
+        "summary": "Adds the specified advanced Application configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -10468,7 +12114,17 @@
           },
           "required": true
         },
-        "summary": "Updates the specified advanced Application configuration"
+        "summary": "Updates the specified advanced Application configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/drm": {
@@ -10537,7 +12193,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getDRMConfig",
-        "summary": "Retrieves the DRM configuration for the specified Application"
+        "summary": "Retrieves the DRM configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "drm"
+        ]
       },
       "put": {
         "parameters": [
@@ -10609,7 +12275,17 @@
           },
           "required": true
         },
-        "summary": "Updates the DRM configuration for the specified Application"
+        "summary": "Updates the DRM configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "drm"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/drm/adv": {
@@ -10678,7 +12354,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getDRMConfigAdv",
-        "summary": "Retrieves the advanced DRM configuration for the specified Application"
+        "summary": "Retrieves the advanced DRM configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "drm",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -10750,7 +12437,18 @@
           },
           "required": true
         },
-        "summary": "Updates the advanced DRM configuration for the specified Application"
+        "summary": "Updates the advanced DRM configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "drm",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/drm/buydrmmapfile": {
@@ -10819,7 +12517,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getBuyDRMStreamMapsConfig",
-        "summary": "Retrieves the BuyDRM stream mapfile for the specified Application"
+        "summary": "Retrieves the BuyDRM stream mapfile for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "drm",
+          "buydrmmapfile"
+        ]
       },
       "put": {
         "parameters": [
@@ -10891,7 +12600,18 @@
           },
           "required": true
         },
-        "summary": "Updates the BuyDRM stream mapfile for the specified Application"
+        "summary": "Updates the BuyDRM stream mapfile for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "drm",
+          "buydrmmapfile"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/drm/verimatrixmapfile": {
@@ -10960,7 +12680,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getVerimatrixStreamMapsConfig",
-        "summary": "Retrieves the Verimatrix stream mapfile for the specified Application"
+        "summary": "Retrieves the Verimatrix stream mapfile for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "drm",
+          "verimatrixmapfile"
+        ]
       },
       "put": {
         "parameters": [
@@ -11032,7 +12763,18 @@
           },
           "required": true
         },
-        "summary": "Updates the Verimatrix stream mapfile for the specified Application"
+        "summary": "Updates the Verimatrix stream mapfile for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "drm",
+          "verimatrixmapfile"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/dvr": {
@@ -11101,7 +12843,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getDVRConfig",
-        "summary": "Retrieves the DVR configuration for the specified Application"
+        "summary": "Retrieves the DVR configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "dvr"
+        ]
       },
       "put": {
         "parameters": [
@@ -11173,7 +12925,17 @@
           },
           "required": true
         },
-        "summary": "Updates the DVR configuration for the specified Application"
+        "summary": "Updates the DVR configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "dvr"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/dvr/adv": {
@@ -11242,7 +13004,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getDVRConfigAdv",
-        "summary": "Retrieves the advanced DVR configuration for the specified Application"
+        "summary": "Retrieves the advanced DVR configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "dvr",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -11314,7 +13087,18 @@
           },
           "required": true
         },
-        "summary": "Updates the advanced DVR configuration for the specified Application"
+        "summary": "Updates the advanced DVR configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "dvr",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances": {
@@ -11383,7 +13167,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getInstancesConfig",
-        "summary": "Retrieves the list of Instances for the specified Application"
+        "summary": "Retrieves the list of Instances for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}": {
@@ -11462,7 +13256,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getInstanceConfig",
-        "summary": "Retrieves the specified Application Instance information"
+        "summary": "Retrieves the specified Application Instance information",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/actions/{action}": {
@@ -11544,7 +13349,20 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putInstanceAction"
+        "operationId": "putInstanceAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/dvrstores": {
@@ -11623,7 +13441,19 @@
         "deprecated": false,
         "description": "This API is available in builds 15942 or later.",
         "operationId": "getDvrRESTConverterStores",
-        "summary": "Retrieves the list of DVR stores associated with this application instance"
+        "summary": "Retrieves the list of DVR stores associated with this application instance",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "dvrstores"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/dvrstores/actions/{action}": {
@@ -11814,7 +13644,21 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15942 or later.",
-        "operationId": "putDvrRESTConverterStoresAction"
+        "operationId": "putDvrRESTConverterStoresAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "dvrstores",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/dvrstores/{dvrStoreName}": {
@@ -11902,7 +13746,20 @@
         "deprecated": false,
         "description": "This API is available in builds 15942 or later.",
         "operationId": "getDvrRESTConverterStore",
-        "summary": "Retrieves the information about a store/converter associated with the application instance"
+        "summary": "Retrieves the information about a store/converter associated with the application instance",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "dvrstores",
+          "{dvrStoreName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/dvrstores/{dvrStoreName}/actions/{action}": {
@@ -11991,7 +13848,22 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15942 or later.",
-        "operationId": "putDvrRESTConverterStoreAction"
+        "operationId": "putDvrRESTConverterStoreAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "dvrstores",
+          "{dvrStoreName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/incomingstreams/{streamName}": {
@@ -12079,7 +13951,20 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getIncomingStreamConfig",
-        "summary": "Retrieves the Incoming Stream information for the specifed Incoming Stream"
+        "summary": "Retrieves the Incoming Stream information for the specifed Incoming Stream",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "incomingstreams",
+          "{streamName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/incomingstreams/{streamName}/actions/{action}": {
@@ -12172,7 +14057,22 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putIncomingStreamAction"
+        "operationId": "putIncomingStreamAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "incomingstreams",
+          "{streamName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/incomingstreams/{streamName}/encoder/live": {
@@ -12290,7 +14190,22 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getLiveEncoderConfig",
-        "summary": "Retrieves the LiveEncoder configuration for the specified IncomingStream"
+        "summary": "Retrieves the LiveEncoder configuration for the specified IncomingStream",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "incomingstreams",
+          "{streamName}",
+          "encoder",
+          "live"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/incomingstreams/{streamName}/encoder/shorturl": {
@@ -12378,7 +14293,22 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getShortUrlEncoderConfig",
-        "summary": "Retrieves the Short URL for the LiveEncoder configuration for the specified IncomingStream"
+        "summary": "Retrieves the Short URL for the LiveEncoder configuration for the specified IncomingStream",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "incomingstreams",
+          "{streamName}",
+          "encoder",
+          "shorturl"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/incomingstreams/{streamName}/monitoring/current": {
@@ -12466,7 +14396,22 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getCurrentIncomingStreamStatistics",
-        "summary": "Retrieves the Current Incoming Stream statistics for the specifed Incoming Stream"
+        "summary": "Retrieves the Current Incoming Stream statistics for the specifed Incoming Stream",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "incomingstreams",
+          "{streamName}",
+          "monitoring",
+          "current"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/incomingstreams/{streamName}/sourcecontrol": {
@@ -12554,7 +14499,21 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getSourceControlConfig",
-        "summary": "Gets information about the Source Control and it's supported features"
+        "summary": "Gets information about the Source Control and it's supported features",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "incomingstreams",
+          "{streamName}",
+          "sourcecontrol"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/incomingstreams/{streamName}/sourcecontrol/actions/{action}": {
@@ -12658,7 +14617,23 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putSourceControlAction"
+        "operationId": "putSourceControlAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "incomingstreams",
+          "{streamName}",
+          "sourcecontrol",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/mediacache/stores/actions/{action}": {
@@ -12747,7 +14722,22 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15942 or later.",
-        "operationId": "putMediaCacheApplicationStoreAction"
+        "operationId": "putMediaCacheApplicationStoreAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "mediacache",
+          "stores",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/streamgroups": {
@@ -12826,7 +14816,19 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getStreamGroupsConfig",
-        "summary": "Retrieves the list of Stream Groups for the specified Application Instance"
+        "summary": "Retrieves the list of Stream Groups for the specified Application Instance",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "streamgroups"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/streamgroups/{groupName}": {
@@ -12914,7 +14916,20 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getStreamGroupConfig",
-        "summary": "Retrieves the specified StreamGroup configuration"
+        "summary": "Retrieves the specified StreamGroup configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "streamgroups",
+          "{groupName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/streamgroups/{groupName}/actions/{action}": {
@@ -13008,7 +15023,22 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putStreamGroupAction"
+        "operationId": "putStreamGroupAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "streamgroups",
+          "{groupName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/streamrecorders": {
@@ -13087,7 +15117,19 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getStreamRecordersConfig",
-        "summary": "Retrieves the list of Stream Recorders for the specified Application Instance"
+        "summary": "Retrieves the list of Stream Recorders for the specified Application Instance",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "streamrecorders"
+        ]
       },
       "post": {
         "parameters": [
@@ -13175,7 +15217,19 @@
           },
           "required": true
         },
-        "summary": "Creates a new Stream Recorder in the specified Application Instance and starts recording"
+        "summary": "Creates a new Stream Recorder in the specified Application Instance and starts recording",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "streamrecorders"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/streamrecorders/{recorderName}": {
@@ -13263,7 +15317,20 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getStreamRecorderConfig",
-        "summary": "Retrieves the specifed Stream Recorder"
+        "summary": "Retrieves the specifed Stream Recorder",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "streamrecorders",
+          "{recorderName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -13360,7 +15427,20 @@
           },
           "required": true
         },
-        "summary": "Creates a new Stream Recorder and starts recording"
+        "summary": "Creates a new Stream Recorder and starts recording",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "streamrecorders",
+          "{recorderName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/streamrecorders/{recorderName}/actions/{action}": {
@@ -13453,7 +15533,22 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putStreamRecorderAction"
+        "operationId": "putStreamRecorderAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "streamrecorders",
+          "{recorderName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/instances/{instanceName}/streamrecorders/{recorderName}/default": {
@@ -13541,7 +15636,21 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getDefaultStreamRecorderConfig",
-        "summary": "Retrieves a Stream Recorder of the requested name, popluated with the default values"
+        "summary": "Retrieves a Stream Recorder of the requested name, popluated with the default values",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "instances",
+          "{instanceName}",
+          "streamrecorders",
+          "{recorderName}",
+          "default"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/modules": {
@@ -13610,7 +15719,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getModulesConfig",
-        "summary": "Retrieves the list of Modules for the specified Application"
+        "summary": "Retrieves the list of Modules for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "modules"
+        ]
       },
       "put": {
         "parameters": [
@@ -13682,7 +15801,17 @@
           },
           "required": true
         },
-        "summary": "Updates the list of Modules for the specified Application"
+        "summary": "Updates the list of Modules for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "modules"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/monitoring/current": {
@@ -13751,7 +15880,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getCurrentApplicationStatistics",
-        "summary": "Retrieves the current Application statistics"
+        "summary": "Retrieves the current Application statistics",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "monitoring",
+          "current"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/monitoring/historic": {
@@ -13820,7 +15960,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getHistoricApplicationStatistics",
-        "summary": "Retrieves the historic Application statistics"
+        "summary": "Retrieves the historic Application statistics",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "monitoring",
+          "historic"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/publishers": {
@@ -13890,7 +16041,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getPublishersAppConfig",
-        "summary": "Retrieves the list of Publishers for the specified Application"
+        "summary": "Retrieves the list of Publishers for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "publishers"
+        ]
       },
       "post": {
         "parameters": [
@@ -13969,7 +16130,17 @@
           },
           "required": true
         },
-        "summary": "Add a Publisher to list of Publishers for the specified Application"
+        "summary": "Add a Publisher to list of Publishers for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "publishers"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/publishers/{publisherName}": {
@@ -14037,7 +16208,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deletePublisherAppConfig",
-        "summary": "Deletes the specified Publisher configuration"
+        "summary": "Deletes the specified Publisher configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "publishers",
+          "{publisherName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -14115,7 +16297,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getPublisherAppConfig",
-        "summary": "Retrieves the specified Publisher configuration"
+        "summary": "Retrieves the specified Publisher configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "publishers",
+          "{publisherName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -14204,7 +16397,18 @@
           },
           "required": true
         },
-        "summary": "Adds the specified Publisher configuration"
+        "summary": "Adds the specified Publisher configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "publishers",
+          "{publisherName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -14287,7 +16491,18 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Publisher configuration"
+        "summary": "Updates the specified Publisher configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "publishers",
+          "{publisherName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/pushpublish/mapentries": {
@@ -14356,7 +16571,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getPushPublishStreamsAppConfig",
-        "summary": "Retrieves the list of PushPublish map entries for the specified Application"
+        "summary": "Retrieves the list of PushPublish map entries for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "pushpublish",
+          "mapentries"
+        ]
       },
       "post": {
         "parameters": [
@@ -14434,7 +16660,18 @@
           },
           "required": true
         },
-        "summary": "Adds a PushPublish map entry to list of PushPublish map entries for the specified Application"
+        "summary": "Adds a PushPublish map entry to list of PushPublish map entries for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "pushpublish",
+          "mapentries"
+        ]
       },
       "put": {
         "parameters": [
@@ -14505,7 +16742,18 @@
             }
           },
           "required": true
-        }
+        },
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "pushpublish",
+          "mapentries"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/pushpublish/mapentries/{entryName}": {
@@ -14572,7 +16820,19 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deletePushPublishStreamAppConfig",
-        "summary": "Deletes the specified PushPublish map entry for the specified Application"
+        "summary": "Deletes the specified PushPublish map entry for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "pushpublish",
+          "mapentries",
+          "{entryName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -14649,7 +16909,19 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getPushPublishStreamAppConfig",
-        "summary": "Retrieves the specified PushPublish map entry's configuration for the specified Application"
+        "summary": "Retrieves the specified PushPublish map entry's configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "pushpublish",
+          "mapentries",
+          "{entryName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -14737,7 +17009,19 @@
           },
           "required": true
         },
-        "summary": "Adds the specified PushPublish map entry for the specified Application"
+        "summary": "Adds the specified PushPublish map entry for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "pushpublish",
+          "mapentries",
+          "{entryName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -14819,7 +17103,19 @@
           },
           "required": true
         },
-        "summary": "Updates the specified PushPublish map entry's configuration for the specified Application"
+        "summary": "Updates the specified PushPublish map entry's configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "pushpublish",
+          "mapentries",
+          "{entryName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/pushpublish/mapentries/{entryName}/actions/{action}": {
@@ -14913,7 +17209,21 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putPushPublishStreamAppAction"
+        "operationId": "putPushPublishStreamAppAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "pushpublish",
+          "mapentries",
+          "{entryName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/sdpfiles": {
@@ -14982,7 +17292,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getSDPFilesAppConfig",
-        "summary": "Retrieves the list of SDP Files for the specified Application"
+        "summary": "Retrieves the list of SDP Files for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "sdpfiles"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/sdpfiles/{sdpfileName}": {
@@ -15049,7 +17369,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteSDPFileAppConfig",
-        "summary": "Deletes the specified SDP file"
+        "summary": "Deletes the specified SDP file",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "sdpfiles",
+          "{sdpfileName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/sdpfiles/{sdpfileName}/actions/{action}": {
@@ -15168,7 +17499,20 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putSDPFileAppAction"
+        "operationId": "putSDPFileAppAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "sdpfiles",
+          "{sdpfileName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/security": {
@@ -15237,7 +17581,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getSecurityConfig",
-        "summary": "Retrieves the Security configuration for the specified Application"
+        "summary": "Retrieves the Security configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "security"
+        ]
       },
       "put": {
         "parameters": [
@@ -15309,7 +17663,17 @@
           },
           "required": true
         },
-        "summary": "Updates the Security configuration for the specified Application"
+        "summary": "Updates the Security configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "security"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/smilfiles": {
@@ -15380,7 +17744,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getSMILFilesAppConfig",
-        "summary": "Retrieves the list of SMIL Files for the specified Application"
+        "summary": "Retrieves the list of SMIL Files for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "smilfiles"
+        ]
       },
       "post": {
         "parameters": [
@@ -15460,7 +17834,17 @@
           },
           "required": true
         },
-        "summary": "Adds a SMIL File to the list of SMIL Files for the specified Application"
+        "summary": "Adds a SMIL File to the list of SMIL Files for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "smilfiles"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/smilfiles/{smilfileName}": {
@@ -15527,7 +17911,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteSMILFileAppConfig",
-        "summary": "Deletes the specified SMIL File configuration"
+        "summary": "Deletes the specified SMIL File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "smilfiles",
+          "{smilfileName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -15604,7 +17999,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getSMILFileAppConfig",
-        "summary": "Retrieves the specified SMIL File configuration"
+        "summary": "Retrieves the specified SMIL File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "smilfiles",
+          "{smilfileName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -15692,7 +18098,18 @@
           },
           "required": true
         },
-        "summary": "Adds the specified SMIL File configuration"
+        "summary": "Adds the specified SMIL File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "smilfiles",
+          "{smilfileName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -15774,7 +18191,18 @@
           },
           "required": true
         },
-        "summary": "Updates the specified SMIL File configuration"
+        "summary": "Updates the specified SMIL File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "smilfiles",
+          "{smilfileName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/smilfiles/{smilfileName}/actions/{action}": {
@@ -15904,7 +18332,20 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putSMILFileAppAction"
+        "operationId": "putSMILFileAppAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "smilfiles",
+          "{smilfileName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/streamconfiguration": {
@@ -15973,7 +18414,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getStreamConfigurationConfig",
-        "summary": "Retrieves the Stream configuration for the specified Application"
+        "summary": "Retrieves the Stream configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "streamconfiguration"
+        ]
       },
       "put": {
         "parameters": [
@@ -16045,7 +18496,17 @@
           },
           "required": true
         },
-        "summary": "Updates the Stream configuration for the specified Application"
+        "summary": "Updates the Stream configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "streamconfiguration"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/streamfiles": {
@@ -16114,7 +18575,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getStreamFilesAppConfig",
-        "summary": "Retrieves the list of Stream Files for the specified Application"
+        "summary": "Retrieves the list of Stream Files for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "streamfiles"
+        ]
       },
       "post": {
         "parameters": [
@@ -16192,7 +18663,17 @@
           },
           "required": true
         },
-        "summary": "Adds a Stream File to the list of Stream Files for the specified Application"
+        "summary": "Adds a Stream File to the list of Stream Files for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "streamfiles"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/streamfiles/{streamfileName}": {
@@ -16259,7 +18740,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteStreamFileAppConfig",
-        "summary": "Deletes the specified Stream File configuration"
+        "summary": "Deletes the specified Stream File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "streamfiles",
+          "{streamfileName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -16336,7 +18828,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getStreamFileAppConfig",
-        "summary": "Retrieves the specified Stream File configuration"
+        "summary": "Retrieves the specified Stream File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "streamfiles",
+          "{streamfileName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -16424,7 +18927,18 @@
           },
           "required": true
         },
-        "summary": "Adds the specified Stream File configuration"
+        "summary": "Adds the specified Stream File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "streamfiles",
+          "{streamfileName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -16506,7 +19020,18 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Stream File configuration"
+        "summary": "Updates the specified Stream File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "streamfiles",
+          "{streamfileName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/streamfiles/{streamfileName}/actions/{action}": {
@@ -16636,7 +19161,20 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putStreamFileAppAction"
+        "operationId": "putStreamFileAppAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "streamfiles",
+          "{streamfileName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/streamfiles/{streamfileName}/adv": {
@@ -16715,7 +19253,19 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getStreamFileAppConfigAdv",
-        "summary": "Retrieves the Advanced Stream File configuration"
+        "summary": "Retrieves the Advanced Stream File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "streamfiles",
+          "{streamfileName}",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -16797,7 +19347,19 @@
           },
           "required": true
         },
-        "summary": "Updates the Advanced Stream File configuration"
+        "summary": "Updates the Advanced Stream File configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "streamfiles",
+          "{streamfileName}",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/transcoder": {
@@ -16866,7 +19428,17 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderAppConfig",
-        "summary": "Retrieves the Transcoder configuration for the specified Application"
+        "summary": "Retrieves the Transcoder configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder"
+        ]
       },
       "put": {
         "parameters": [
@@ -16938,7 +19510,17 @@
           },
           "required": true
         },
-        "summary": "Updates the Transcoder configuration for the specified Application"
+        "summary": "Updates the Transcoder configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/transcoder/adv": {
@@ -17007,7 +19589,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderAppConfigAdv",
-        "summary": "Retrieves the Advanced Transcoder configuration for the specified Application"
+        "summary": "Retrieves the Advanced Transcoder configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -17079,7 +19672,18 @@
           },
           "required": true
         },
-        "summary": "Updates the Advanced Transcoder configuration for the specified Application"
+        "summary": "Updates the Advanced Transcoder configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/transcoder/templates": {
@@ -17149,7 +19753,18 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderTemplatesAppConfig",
-        "summary": "Retrieves the list of Transcoder Template Configurations for the specified Application"
+        "summary": "Retrieves the list of Transcoder Template Configurations for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates"
+        ]
       },
       "post": {
         "parameters": [
@@ -17228,7 +19843,18 @@
           },
           "required": true
         },
-        "summary": "Adds a Transcoder Templates Configuration to the specified Application"
+        "summary": "Adds a Transcoder Templates Configuration to the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/transcoder/templates/{templateName}": {
@@ -17294,7 +19920,19 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteTranscoderTemplateAppConfig",
-        "summary": "Deletes the specified Trancoder Template configuration"
+        "summary": "Deletes the specified Trancoder Template configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -17370,7 +20008,19 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderTemplateAppConfig",
-        "summary": "Retrieves the specified Trancoder Template configuration"
+        "summary": "Retrieves the specified Trancoder Template configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -17457,7 +20107,19 @@
           },
           "required": true
         },
-        "summary": "Adds the specified Trancoder Template configuration"
+        "summary": "Adds the specified Trancoder Template configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -17538,7 +20200,19 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Trancoder Template configuration"
+        "summary": "Updates the specified Trancoder Template configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/transcoder/templates/{templateName}/actions/{action}": {
@@ -17629,7 +20303,21 @@
         },
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
-        "operationId": "putTranscoderTemplateAppAction"
+        "operationId": "putTranscoderTemplateAppAction",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/transcoder/templates/{templateName}/adv": {
@@ -17707,7 +20395,20 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderTemplateAppConfigAdv",
-        "summary": "Retrieves the Advanced Transcoder Template configuration"
+        "summary": "Retrieves the Advanced Transcoder Template configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -17788,7 +20489,20 @@
           },
           "required": true
         },
-        "summary": "Updates the Advanced Transcoder Template configuration"
+        "summary": "Updates the Advanced Transcoder Template configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/transcoder/templates/{templateName}/decode/overlays/{overlayName}": {
@@ -17863,7 +20577,22 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteTranscoderOverlayDecodeAppConfig",
-        "summary": "Deletes the specified Trancoder Overlay Decode configuration"
+        "summary": "Deletes the specified Trancoder Overlay Decode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "decode",
+          "overlays",
+          "{overlayName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -17948,7 +20677,22 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderOverlayDecodeAppConfig",
-        "summary": "Retrieves the specified Trancoder Overlay Decode configuration"
+        "summary": "Retrieves the specified Trancoder Overlay Decode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "decode",
+          "overlays",
+          "{overlayName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -18038,7 +20782,22 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Trancoder Overlay Decode configuration"
+        "summary": "Updates the specified Trancoder Overlay Decode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "decode",
+          "overlays",
+          "{overlayName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/transcoder/templates/{templateName}/encodes": {
@@ -18116,7 +20875,20 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderEncodesAppConfig",
-        "summary": "Retrieves the list of Transcoder Encode Configurations for the specified Application"
+        "summary": "Retrieves the list of Transcoder Encode Configurations for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes"
+        ]
       },
       "post": {
         "parameters": [
@@ -18203,7 +20975,20 @@
           },
           "required": true
         },
-        "summary": "Adds a Transcoder Encode Configuration to the specified Application"
+        "summary": "Adds a Transcoder Encode Configuration to the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/transcoder/templates/{templateName}/encodes/{encodeName}": {
@@ -18278,7 +21063,21 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteTranscoderEncodeAppConfig",
-        "summary": "Deletes the specified Trancoder Encode configuration"
+        "summary": "Deletes the specified Trancoder Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -18363,7 +21162,21 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderEncodeAppConfig",
-        "summary": "Retrieves the specified Trancoder Encode configuration"
+        "summary": "Retrieves the specified Trancoder Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -18459,7 +21272,21 @@
           },
           "required": true
         },
-        "summary": "Adds the specified Trancoder Encode configuration"
+        "summary": "Adds the specified Trancoder Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -18549,7 +21376,21 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Trancoder Encode configuration"
+        "summary": "Updates the specified Trancoder Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/transcoder/templates/{templateName}/encodes/{encodeName}/adv": {
@@ -18636,7 +21477,22 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderEncodeAppConfigAdv",
-        "summary": "Retrieves the Advanced Transcoder Encode configuration"
+        "summary": "Retrieves the Advanced Transcoder Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -18726,7 +21582,22 @@
           },
           "required": true
         },
-        "summary": "Updates the Advanced Transcoder Encode configuration"
+        "summary": "Updates the Advanced Transcoder Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/transcoder/templates/{templateName}/encodes/{encodeName}/overlays/{overlayName}": {
@@ -18810,7 +21681,23 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteTranscoderOverlayEncodeAppConfig",
-        "summary": "Deletes the specified Trancoder Overlay Encode configuration"
+        "summary": "Deletes the specified Trancoder Overlay Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}",
+          "overlays",
+          "{overlayName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -18904,7 +21791,23 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderOverlayEncodeAppConfig",
-        "summary": "Retrieves the specified Trancoder Overlay Encode configuration"
+        "summary": "Retrieves the specified Trancoder Overlay Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}",
+          "overlays",
+          "{overlayName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -19003,7 +21906,23 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Trancoder Overlay Encode configuration"
+        "summary": "Updates the specified Trancoder Overlay Encode configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "encodes",
+          "{encodeName}",
+          "overlays",
+          "{overlayName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/transcoder/templates/{templateName}/streamnamegroups": {
@@ -19081,7 +22000,20 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderStreamNameGroupsAppConfig",
-        "summary": "Retrieves the list of Transcoder Stream Name Groups for the specified Template"
+        "summary": "Retrieves the list of Transcoder Stream Name Groups for the specified Template",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "streamnamegroups"
+        ]
       },
       "post": {
         "parameters": [
@@ -19168,7 +22100,20 @@
           },
           "required": true
         },
-        "summary": "Adds a Transcoder Stream Name Groups Configuration to the specified Template"
+        "summary": "Adds a Transcoder Stream Name Groups Configuration to the specified Template",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "streamnamegroups"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/transcoder/templates/{templateName}/streamnamegroups/{groupName}": {
@@ -19243,7 +22188,21 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteTranscoderStreamNameGroupAppConfig",
-        "summary": "Deletes the specified Trancoder StreamNameGroup configuration"
+        "summary": "Deletes the specified Trancoder StreamNameGroup configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "streamnamegroups",
+          "{groupName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -19328,7 +22287,21 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getTranscoderStreamNameGroupAppConfig",
-        "summary": "Retrieves the specified Trancoder StreamNameGroup configuration"
+        "summary": "Retrieves the specified Trancoder StreamNameGroup configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "streamnamegroups",
+          "{groupName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -19424,7 +22397,21 @@
           },
           "required": true
         },
-        "summary": "Adds the specified Trancoder StreamNameGroup configuration"
+        "summary": "Adds the specified Trancoder StreamNameGroup configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "streamnamegroups",
+          "{groupName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -19514,7 +22501,21 @@
           },
           "required": true
         },
-        "summary": "Updates the specified Trancoder StreamNameGroup configuration"
+        "summary": "Updates the specified Trancoder StreamNameGroup configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "transcoder",
+          "templates",
+          "{templateName}",
+          "streamnamegroups",
+          "{groupName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/webrtc": {
@@ -19583,7 +22584,17 @@
         "deprecated": false,
         "description": "This API is available in builds 20180816154459 or later.",
         "operationId": "getWebRTCConfig",
-        "summary": "Retrieves the WebRTC configuration for the specified Application"
+        "summary": "Retrieves the WebRTC configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "webrtc"
+        ]
       },
       "put": {
         "parameters": [
@@ -19655,7 +22666,17 @@
           },
           "required": true
         },
-        "summary": "Updates the WebRTC configuration for the specified Application"
+        "summary": "Updates the WebRTC configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "webrtc"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/webrtc/adv": {
@@ -19724,7 +22745,18 @@
         "deprecated": false,
         "description": "This API is available in builds 20180816154459 or later.",
         "operationId": "getWebRTCConfigAdv",
-        "summary": "Retrieves the advanced WebRTC configuration for the specified Application"
+        "summary": "Retrieves the advanced WebRTC configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "webrtc",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -19796,7 +22828,18 @@
           },
           "required": true
         },
-        "summary": "Updates the advanced WebRTC configuration for the specified Application"
+        "summary": "Updates the advanced WebRTC configuration for the specified Application",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "webrtc",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/vhosts/{vhostName}/applications/{appName}/wscrestproxy": {
@@ -19876,7 +22919,17 @@
           },
           "required": true
         },
-        "summary": "Proxies a WSC REST API request"
+        "summary": "Proxies a WSC REST API request",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "vhosts",
+          "{vhostName}",
+          "applications",
+          "{appName}",
+          "wscrestproxy"
+        ]
       }
     },
     "/v3/servers/{serverName}/mediacache": {
@@ -19926,7 +22979,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheConfig3",
-        "summary": "Retrieves the server MediaCache configuration"
+        "summary": "Retrieves the server MediaCache configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache"
+        ]
       },
       "put": {
         "parameters": [
@@ -19979,7 +23038,13 @@
           },
           "required": true
         },
-        "summary": "Updates the server MediaCache configuration"
+        "summary": "Updates the server MediaCache configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache"
+        ]
       }
     },
     "/v3/servers/{serverName}/mediacache/sources": {
@@ -20029,7 +23094,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheSourcesConfig3",
-        "summary": "Retrieves the list of MediaCache Sources"
+        "summary": "Retrieves the list of MediaCache Sources",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources"
+        ]
       },
       "post": {
         "parameters": [
@@ -20088,7 +23160,14 @@
           },
           "required": true
         },
-        "summary": "Adds the specified MediaCache Source to the list"
+        "summary": "Adds the specified MediaCache Source to the list",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources"
+        ]
       }
     },
     "/v3/servers/{serverName}/mediacache/sources/{sourceName}": {
@@ -20135,7 +23214,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteMediaCacheSourceConfig3",
-        "summary": "Deletes the specified MediaCache Source configuration"
+        "summary": "Deletes the specified MediaCache Source configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -20192,7 +23279,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheSourceConfig3",
-        "summary": "Retrieves the specified MediaCache Source configuration"
+        "summary": "Retrieves the specified MediaCache Source configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -20260,7 +23355,15 @@
           },
           "required": true
         },
-        "summary": "Adds the specified MediaCache Source configuration"
+        "summary": "Adds the specified MediaCache Source configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -20322,7 +23425,15 @@
           },
           "required": true
         },
-        "summary": "Updates the specified MediaCache Source configuration"
+        "summary": "Updates the specified MediaCache Source configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}"
+        ]
       }
     },
     "/v3/servers/{serverName}/mediacache/sources/{sourceName}/adv": {
@@ -20381,7 +23492,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheSourceConfigAdv3",
-        "summary": "Retrieves the specified advanced MediaCache Source configuration"
+        "summary": "Retrieves the specified advanced MediaCache Source configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}",
+          "adv"
+        ]
       },
       "post": {
         "parameters": [
@@ -20449,7 +23569,16 @@
           },
           "required": true
         },
-        "summary": "Adds the specified advanced MediaCache Source configuration"
+        "summary": "Adds the specified advanced MediaCache Source configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -20511,7 +23640,16 @@
           },
           "required": true
         },
-        "summary": "Updates the specified advanced MediaCache Source configuration"
+        "summary": "Updates the specified advanced MediaCache Source configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}",
+          "adv"
+        ]
       }
     },
     "/v3/servers/{serverName}/mediacache/stores": {
@@ -20561,7 +23699,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheStoresConfig3",
-        "summary": "Retrieves the list of MediaCache Stores"
+        "summary": "Retrieves the list of MediaCache Stores",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores"
+        ]
       },
       "post": {
         "parameters": [
@@ -20620,7 +23765,14 @@
           },
           "required": true
         },
-        "summary": "Adds the specified MediaCache Store to the list"
+        "summary": "Adds the specified MediaCache Store to the list",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores"
+        ]
       }
     },
     "/v3/servers/{serverName}/mediacache/stores/{storeName}": {
@@ -20667,7 +23819,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteMediaCacheStoreConfig3",
-        "summary": "Deletes the specified MediaCache Store configuration"
+        "summary": "Deletes the specified MediaCache Store configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores",
+          "{storeName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -20724,7 +23884,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheStoreConfig3",
-        "summary": "Retrieves the specified MediaCache Store configuration"
+        "summary": "Retrieves the specified MediaCache Store configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores",
+          "{storeName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -20792,7 +23960,15 @@
           },
           "required": true
         },
-        "summary": "Adds the specified MediaCache Store configuration"
+        "summary": "Adds the specified MediaCache Store configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores",
+          "{storeName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -20854,7 +24030,15 @@
           },
           "required": true
         },
-        "summary": "Updates the specified MediaCache Store configuration"
+        "summary": "Updates the specified MediaCache Store configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores",
+          "{storeName}"
+        ]
       }
     },
     "/v3/servers/{serverName}/publishers": {
@@ -20904,7 +24088,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getPublishersConfig3",
-        "summary": "Retrieves the list of server Publishers"
+        "summary": "Retrieves the list of server Publishers",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "publishers"
+        ]
       },
       "post": {
         "parameters": [
@@ -20963,7 +24153,13 @@
           },
           "required": true
         },
-        "summary": "Adds a new Publisher to the list"
+        "summary": "Adds a new Publisher to the list",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "publishers"
+        ]
       }
     },
     "/v3/servers/{serverName}/publishers/{publisher}": {
@@ -21010,7 +24206,14 @@
         "deprecated": false,
         "description": "This API is available in builds 20064 or later.",
         "operationId": "deletePublisherConfig3",
-        "summary": "Deletes the specified Publisher configuration"
+        "summary": "Deletes the specified Publisher configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "publishers",
+          "{publisher}"
+        ]
       },
       "get": {
         "parameters": [
@@ -21067,7 +24270,14 @@
         "deprecated": false,
         "description": "This API is available in builds 20064 or later.",
         "operationId": "getPublisherConfig3",
-        "summary": "Retrieves the specified Publisher configuration"
+        "summary": "Retrieves the specified Publisher configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "publishers",
+          "{publisher}"
+        ]
       },
       "post": {
         "parameters": [
@@ -21135,7 +24345,14 @@
           },
           "required": true
         },
-        "summary": "Adds the specified Publisher configuration"
+        "summary": "Adds the specified Publisher configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "publishers",
+          "{publisher}"
+        ]
       },
       "put": {
         "parameters": [
@@ -21196,7 +24413,14 @@
             }
           },
           "required": true
-        }
+        },
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "publishers",
+          "{publisher}"
+        ]
       }
     }
   },

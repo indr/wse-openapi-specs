@@ -53,7 +53,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheConfig3",
-        "summary": "Retrieves the server MediaCache configuration"
+        "summary": "Retrieves the server MediaCache configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache"
+        ]
       },
       "put": {
         "parameters": [
@@ -106,7 +112,13 @@
           },
           "required": true
         },
-        "summary": "Updates the server MediaCache configuration"
+        "summary": "Updates the server MediaCache configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache"
+        ]
       }
     },
     "/v3/servers/{serverName}/mediacache/sources": {
@@ -156,7 +168,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheSourcesConfig3",
-        "summary": "Retrieves the list of MediaCache Sources"
+        "summary": "Retrieves the list of MediaCache Sources",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources"
+        ]
       },
       "post": {
         "parameters": [
@@ -215,7 +234,14 @@
           },
           "required": true
         },
-        "summary": "Adds the specified MediaCache Source to the list"
+        "summary": "Adds the specified MediaCache Source to the list",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources"
+        ]
       }
     },
     "/v3/servers/{serverName}/mediacache/sources/{sourceName}": {
@@ -262,7 +288,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteMediaCacheSourceConfig3",
-        "summary": "Deletes the specified MediaCache Source configuration"
+        "summary": "Deletes the specified MediaCache Source configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -319,7 +353,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheSourceConfig3",
-        "summary": "Retrieves the specified MediaCache Source configuration"
+        "summary": "Retrieves the specified MediaCache Source configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -387,7 +429,15 @@
           },
           "required": true
         },
-        "summary": "Adds the specified MediaCache Source configuration"
+        "summary": "Adds the specified MediaCache Source configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -449,7 +499,15 @@
           },
           "required": true
         },
-        "summary": "Updates the specified MediaCache Source configuration"
+        "summary": "Updates the specified MediaCache Source configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}"
+        ]
       }
     },
     "/v3/servers/{serverName}/mediacache/sources/{sourceName}/adv": {
@@ -508,7 +566,16 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheSourceConfigAdv3",
-        "summary": "Retrieves the specified advanced MediaCache Source configuration"
+        "summary": "Retrieves the specified advanced MediaCache Source configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}",
+          "adv"
+        ]
       },
       "post": {
         "parameters": [
@@ -576,7 +643,16 @@
           },
           "required": true
         },
-        "summary": "Adds the specified advanced MediaCache Source configuration"
+        "summary": "Adds the specified advanced MediaCache Source configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -638,7 +714,16 @@
           },
           "required": true
         },
-        "summary": "Updates the specified advanced MediaCache Source configuration"
+        "summary": "Updates the specified advanced MediaCache Source configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "sources",
+          "{sourceName}",
+          "adv"
+        ]
       }
     },
     "/v3/servers/{serverName}/mediacache/stores": {
@@ -688,7 +773,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheStoresConfig3",
-        "summary": "Retrieves the list of MediaCache Stores"
+        "summary": "Retrieves the list of MediaCache Stores",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores"
+        ]
       },
       "post": {
         "parameters": [
@@ -747,7 +839,14 @@
           },
           "required": true
         },
-        "summary": "Adds the specified MediaCache Store to the list"
+        "summary": "Adds the specified MediaCache Store to the list",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores"
+        ]
       }
     },
     "/v3/servers/{serverName}/mediacache/stores/{storeName}": {
@@ -794,7 +893,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteMediaCacheStoreConfig3",
-        "summary": "Deletes the specified MediaCache Store configuration"
+        "summary": "Deletes the specified MediaCache Store configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores",
+          "{storeName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -851,7 +958,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCacheStoreConfig3",
-        "summary": "Retrieves the specified MediaCache Store configuration"
+        "summary": "Retrieves the specified MediaCache Store configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores",
+          "{storeName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -919,7 +1034,15 @@
           },
           "required": true
         },
-        "summary": "Adds the specified MediaCache Store configuration"
+        "summary": "Adds the specified MediaCache Store configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores",
+          "{storeName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -981,7 +1104,15 @@
           },
           "required": true
         },
-        "summary": "Updates the specified MediaCache Store configuration"
+        "summary": "Updates the specified MediaCache Store configuration",
+        "tags": [
+          "v3",
+          "servers",
+          "{serverName}",
+          "mediacache",
+          "stores",
+          "{storeName}"
+        ]
       }
     }
   },
@@ -1492,5 +1623,34 @@
         "type": "object"
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "v3"
+    },
+    {
+      "name": "servers"
+    },
+    {
+      "name": "{serverName}"
+    },
+    {
+      "name": "mediacache"
+    },
+    {
+      "name": "sources"
+    },
+    {
+      "name": "{sourceName}"
+    },
+    {
+      "name": "adv"
+    },
+    {
+      "name": "stores"
+    },
+    {
+      "name": "{storeName}"
+    }
+  ]
 }

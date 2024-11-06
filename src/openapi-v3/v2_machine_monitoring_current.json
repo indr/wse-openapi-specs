@@ -40,7 +40,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getCurrentMachineStatistics",
-        "summary": "Retrieves current statictics for the machine"
+        "summary": "Retrieves current statictics for the machine",
+        "tags": [
+          "v2",
+          "machine",
+          "monitoring",
+          "current"
+        ]
       }
     }
   },
@@ -130,5 +136,19 @@
       "Integer": {},
       "Long": {}
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "v2"
+    },
+    {
+      "name": "machine"
+    },
+    {
+      "name": "monitoring"
+    },
+    {
+      "name": "current"
+    }
+  ]
 }

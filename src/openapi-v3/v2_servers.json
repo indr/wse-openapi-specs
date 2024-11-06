@@ -40,7 +40,11 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServersConfig",
-        "summary": "Retrieves the list of Servers"
+        "summary": "Retrieves the list of Servers",
+        "tags": [
+          "v2",
+          "servers"
+        ]
       }
     },
     "/v2/servers/{serverName}": {
@@ -90,7 +94,12 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerConfig",
-        "summary": "Retrieves the Server configuration"
+        "summary": "Retrieves the Server configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -143,7 +152,12 @@
           },
           "required": true
         },
-        "summary": "Updates the Server configuration"
+        "summary": "Updates the Server configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/actions/{action}": {
@@ -208,7 +222,14 @@
         "deprecated": false,
         "description": "This API is available in builds 18647 or later.",
         "operationId": "putServerAction",
-        "summary": "Tells the Server to perform an action"
+        "summary": "Tells the Server to perform an action",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "actions",
+          "{action}"
+        ]
       }
     },
     "/v2/servers/{serverName}/adv": {
@@ -258,7 +279,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerConfigAdv",
-        "summary": "Retrieves the advanced Server configuration"
+        "summary": "Retrieves the advanced Server configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "adv"
+        ]
       },
       "put": {
         "parameters": [
@@ -311,7 +338,13 @@
           },
           "required": true
         },
-        "summary": "Updates the advanced Server configuration"
+        "summary": "Updates the advanced Server configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "adv"
+        ]
       }
     },
     "/v2/servers/{serverName}/logfiles": {
@@ -376,7 +409,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerLogFilesConfig",
-        "summary": "Retrieves the list of server log files"
+        "summary": "Retrieves the list of server log files",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "logfiles"
+        ]
       }
     },
     "/v2/servers/{serverName}/logfiles/{logName}": {
@@ -512,7 +551,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerLogFileConfig",
-        "summary": "Retrieves the contents of a Server Log with the specified log name"
+        "summary": "Retrieves the contents of a Server Log with the specified log name",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "logfiles",
+          "{logName}"
+        ]
       }
     },
     "/v2/servers/{serverName}/logfiles/{logName}/download": {
@@ -572,7 +618,15 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerLogFileDownloadConfig",
-        "summary": "Retrieves the Server Log file for the specified log name, zipped"
+        "summary": "Retrieves the Server Log file for the specified log name, zipped",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "logfiles",
+          "{logName}",
+          "download"
+        ]
       }
     },
     "/v2/servers/{serverName}/logs": {
@@ -622,7 +676,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerLogTypesConfig",
-        "summary": "Retrieves the list of available server Log Types"
+        "summary": "Retrieves the list of available server Log Types",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "logs"
+        ]
       }
     },
     "/v2/servers/{serverName}/logs/{logType}": {
@@ -778,7 +838,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerLogsConfig",
-        "summary": "Retrieves the contents of multiple Server Logs with the specified type in the log name"
+        "summary": "Retrieves the contents of multiple Server Logs with the specified type in the log name",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "logs",
+          "{logType}"
+        ]
       }
     },
     "/v2/servers/{serverName}/sourcecontrol/drivernames": {
@@ -828,7 +895,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getSourceDriverNamesList",
-        "summary": "Get the list of source control drivers"
+        "summary": "Get the list of source control drivers",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "sourcecontrol",
+          "drivernames"
+        ]
       }
     }
   },
@@ -1521,5 +1595,46 @@
         "type": "object"
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "v2"
+    },
+    {
+      "name": "servers"
+    },
+    {
+      "name": "{serverName}"
+    },
+    {
+      "name": "actions"
+    },
+    {
+      "name": "{action}"
+    },
+    {
+      "name": "adv"
+    },
+    {
+      "name": "logfiles"
+    },
+    {
+      "name": "{logName}"
+    },
+    {
+      "name": "download"
+    },
+    {
+      "name": "logs"
+    },
+    {
+      "name": "{logType}"
+    },
+    {
+      "name": "sourcecontrol"
+    },
+    {
+      "name": "drivernames"
+    }
+  ]
 }

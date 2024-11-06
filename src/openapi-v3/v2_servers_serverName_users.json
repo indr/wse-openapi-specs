@@ -53,7 +53,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getUsersConfig",
-        "summary": "Retrieves the list of server Users"
+        "summary": "Retrieves the list of server Users",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "users"
+        ]
       },
       "post": {
         "parameters": [
@@ -112,7 +118,13 @@
           },
           "required": true
         },
-        "summary": "Adds a new server User to the list"
+        "summary": "Adds a new server User to the list",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "users"
+        ]
       }
     },
     "/v2/servers/{serverName}/users/{userName}": {
@@ -160,7 +172,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deleteUserConfig",
-        "summary": "Deletes the specified User configuration"
+        "summary": "Deletes the specified User configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "users",
+          "{userName}"
+        ]
       },
       "get": {
         "parameters": [
@@ -218,7 +237,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getUserConfig",
-        "summary": "Retrieves the specified User configuration"
+        "summary": "Retrieves the specified User configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "users",
+          "{userName}"
+        ]
       },
       "post": {
         "parameters": [
@@ -287,7 +313,14 @@
           },
           "required": true
         },
-        "summary": "Adds the specified User configuration"
+        "summary": "Adds the specified User configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "users",
+          "{userName}"
+        ]
       },
       "put": {
         "parameters": [
@@ -350,7 +383,14 @@
           },
           "required": true
         },
-        "summary": "Updates the specified User configuration"
+        "summary": "Updates the specified User configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "users",
+          "{userName}"
+        ]
       }
     }
   },
@@ -469,5 +509,22 @@
         "type": "object"
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "v2"
+    },
+    {
+      "name": "servers"
+    },
+    {
+      "name": "{serverName}"
+    },
+    {
+      "name": "users"
+    },
+    {
+      "name": "{userName}"
+    }
+  ]
 }

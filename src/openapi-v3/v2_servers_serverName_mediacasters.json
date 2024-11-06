@@ -53,7 +53,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCastersConfig",
-        "summary": "Retrieves the list of MediaCasters"
+        "summary": "Retrieves the list of MediaCasters",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacasters"
+        ]
       }
     },
     "/v2/servers/{serverName}/mediacasters/{mediacastername}": {
@@ -112,7 +118,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getMediaCasterConfig",
-        "summary": "Retrieves the specified MediaCaster configuration"
+        "summary": "Retrieves the specified MediaCaster configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "mediacasters",
+          "{mediacastername}"
+        ]
       }
     }
   },
@@ -208,5 +221,22 @@
         "type": "object"
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "v2"
+    },
+    {
+      "name": "servers"
+    },
+    {
+      "name": "{serverName}"
+    },
+    {
+      "name": "mediacasters"
+    },
+    {
+      "name": "{mediacastername}"
+    }
+  ]
 }

@@ -53,7 +53,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getServerStatusConfig",
-        "summary": "Retrieves the server Status"
+        "summary": "Retrieves the server Status",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "status"
+        ]
       }
     }
   },
@@ -306,5 +312,19 @@
         "type": "object"
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "v2"
+    },
+    {
+      "name": "servers"
+    },
+    {
+      "name": "{serverName}"
+    },
+    {
+      "name": "status"
+    }
+  ]
 }

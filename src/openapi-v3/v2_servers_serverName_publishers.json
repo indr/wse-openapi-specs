@@ -53,7 +53,13 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getPublishersConfig",
-        "summary": "Retrieves the list of server Publishers"
+        "summary": "Retrieves the list of server Publishers",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "publishers"
+        ]
       },
       "post": {
         "parameters": [
@@ -112,7 +118,13 @@
           },
           "required": true
         },
-        "summary": "Adds a new Publisher to the list"
+        "summary": "Adds a new Publisher to the list",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "publishers"
+        ]
       }
     },
     "/v2/servers/{serverName}/publishers/{publisher}": {
@@ -159,7 +171,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "deletePublisherConfig",
-        "summary": "Deletes the specified Publisher configuration"
+        "summary": "Deletes the specified Publisher configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "publishers",
+          "{publisher}"
+        ]
       },
       "get": {
         "parameters": [
@@ -216,7 +235,14 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getPublisherConfig",
-        "summary": "Retrieves the specified Publisher configuration"
+        "summary": "Retrieves the specified Publisher configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "publishers",
+          "{publisher}"
+        ]
       },
       "post": {
         "parameters": [
@@ -284,7 +310,14 @@
           },
           "required": true
         },
-        "summary": "Adds the specified Publisher configuration"
+        "summary": "Adds the specified Publisher configuration",
+        "tags": [
+          "v2",
+          "servers",
+          "{serverName}",
+          "publishers",
+          "{publisher}"
+        ]
       }
     }
   },
@@ -384,5 +417,22 @@
         "type": "object"
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "v2"
+    },
+    {
+      "name": "servers"
+    },
+    {
+      "name": "{serverName}"
+    },
+    {
+      "name": "publishers"
+    },
+    {
+      "name": "{publisher}"
+    }
+  ]
 }

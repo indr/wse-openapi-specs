@@ -40,7 +40,10 @@
         "deprecated": false,
         "description": "This API is available in builds 15089 or later.",
         "operationId": "getRESTInfoConfig",
-        "summary": "Retrieves the REST configuration information"
+        "summary": "Retrieves the REST configuration information",
+        "tags": [
+          "restinfo"
+        ]
       }
     }
   },
@@ -94,5 +97,10 @@
         "type": "object"
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "restinfo"
+    }
+  ]
 }
