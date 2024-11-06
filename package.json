@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Wowza Streaming Engine OpenAPI 3 specifications",
   "scripts": {
+    "convert": "./scripts/convert.sh ./src/swagger-v1.2 ./src/openapi-v3",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
