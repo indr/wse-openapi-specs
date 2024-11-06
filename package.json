@@ -17,5 +17,8 @@
     "OpenAPI"
   ],
   "author": "Reto Inderbitzin <mail@indr.ch>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "api-spec-converter": "^2.12.0"
+  }
 }
