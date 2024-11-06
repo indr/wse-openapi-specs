@@ -1,0 +1,21 @@
+{
+  "name": "wse-openapi-specs",
+  "version": "1.0.0",
+  "description": "Wowza Streaming Engine OpenAPI 3 specifications",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/indr/wse-openapi-specs"
+  },
+  "keywords": [
+    "Wowza",
+    "Wowza Streaming Engine",
+    "WSE",
+    "Swagger",
+    "OpenAPI"
+  ],
+  "author": "Reto Inderbitzin <mail@indr.ch>",
+  "license": "MIT"
+}
