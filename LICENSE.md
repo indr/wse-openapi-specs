@@ -1,6 +1,6 @@
 This repository is licensed under the MIT License for all modified and
 newly created files. The original, unmodified Wowza specification
-files in the `swagger-v1.2` directory do not have a known license.
+files in the `specs/swagger-v1.2` directory do not have a known license.
 
 ---
 
