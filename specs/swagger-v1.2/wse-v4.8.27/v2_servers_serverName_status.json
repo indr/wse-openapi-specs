@@ -1,0 +1,309 @@
+{
+  "swaggerVersion": "1.2",
+  "apis": [
+    {
+      "path": "/v2/servers/{serverName}/status",
+      "operations": [
+        {
+          "type": "ServerStatusConfig",
+          "method": "GET",
+          "nickname": "getServerStatusConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the server Status",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    }
+  ],
+  "apiVersion": "1.0.0",
+  "resourcePath": "/v2/servers/{serverName}/status",
+  "models": {
+    "ServerStatusConfig": {
+      "id": "ServerStatusConfig",
+      "properties": {
+        "transcoderWatermark": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "serverVersion": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "gpuAcceleration": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "wseName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "transcoderLicensed": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "javaMaxHeapSize": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "transcoderLicensesInUse": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        },
+        "javaVersion": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "httpOriginAvailable": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "osArchitecture": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "drmApplications": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "javaVMVersion": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "transcoderLicenses": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        },
+        "timeRunning": {
+          "type": "number",
+          "format": "double",
+          "uniqueItems": false
+        },
+        "licenseType": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "osBitness": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "dvrApplications": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "osVersion": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "serverBuild": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "javaName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "maxConnections": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "dvrLicensed": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "serverMode": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "javaBitness": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "currentConnections": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "drmLicensed": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "javaVendor": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "osName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "transcoderApplications": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "transcoderAvailable": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "javaHome": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "maxIncommingStreams": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "totalMemory": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "availableMemory": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "nativeBase": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "dvrInUse": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "drmInUse": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "licenseExpireDate": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "processorCores": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        },
+        "restAPIAvailable": {
+          "type": "boolean",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "wseName",
+        "serverVersion",
+        "serverBuild",
+        "licenseType",
+        "licenseExpireDate",
+        "serverMode",
+        "osName",
+        "osVersion",
+        "osArchitecture",
+        "osBitness",
+        "totalMemory",
+        "availableMemory",
+        "processorCores",
+        "gpuAcceleration",
+        "javaVersion",
+        "javaVMVersion",
+        "javaBitness",
+        "javaName",
+        "javaVendor",
+        "javaHome",
+        "javaMaxHeapSize",
+        "timeRunning",
+        "currentConnections",
+        "maxConnections",
+        "maxIncommingStreams",
+        "restAPIAvailable",
+        "httpOriginAvailable",
+        "transcoderLicensed",
+        "transcoderAvailable",
+        "transcoderWatermark",
+        "transcoderLicenses",
+        "transcoderLicensesInUse",
+        "transcoderApplications",
+        "dvrLicensed",
+        "dvrInUse",
+        "dvrApplications",
+        "drmLicensed",
+        "drmInUse",
+        "drmApplications",
+        "nativeBase"
+      ],
+      "className": "com.wowza.wms.rest.server.ServerStatusConfig"
+    }
+  },
+  "produces": [
+    "application/xml",
+    "text/xml",
+    "application/json"
+  ],
+  "authorizations": {}
+}

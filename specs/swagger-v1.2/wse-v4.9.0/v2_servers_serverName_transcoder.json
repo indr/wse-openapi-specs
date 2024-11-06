@@ -1,0 +1,110 @@
+{
+  "swaggerVersion": "1.2",
+  "apis": [
+    {
+      "path": "/v2/servers/{serverName}/transcoder",
+      "operations": [
+        {
+          "type": "TranscoderConfig",
+          "method": "GET",
+          "nickname": "getTranscoderConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the Transcoder information",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    }
+  ],
+  "apiVersion": "1.0.0",
+  "resourcePath": "/v2/servers/{serverName}/transcoder",
+  "models": {
+    "TranscoderConfig": {
+      "id": "TranscoderConfig",
+      "properties": {
+        "licenses": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        },
+        "licensed": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "licensesInUse": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        },
+        "available": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "available",
+        "licensed",
+        "licenses",
+        "licensesInUse"
+      ],
+      "className": "com.wowza.wms.rest.transcoder.TranscoderConfig"
+    }
+  },
+  "produces": [
+    "application/xml",
+    "text/xml",
+    "application/json"
+  ],
+  "authorizations": {}
+}

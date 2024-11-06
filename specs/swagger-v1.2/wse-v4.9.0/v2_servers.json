@@ -1,0 +1,1501 @@
+{
+  "swaggerVersion": "1.2",
+  "apis": [
+    {
+      "path": "/v2/servers",
+      "operations": [
+        {
+          "type": "ServersConfig",
+          "method": "GET",
+          "nickname": "getServersConfig",
+          "parameters": [],
+          "summary": "Retrieves the list of Servers",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v2/servers/{serverName}",
+      "operations": [
+        {
+          "type": "ServerConfig",
+          "method": "GET",
+          "nickname": "getServerConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the Server configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "PUT",
+          "nickname": "putServerConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "ServerConfig",
+              "uniqueItems": false,
+              "name": "body",
+              "paramType": "body",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Updates the Server configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v2/servers/{serverName}/actions/{action}",
+      "operations": [
+        {
+          "type": "void",
+          "method": "PUT",
+          "nickname": "putServerAction",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "action",
+              "paramType": "path",
+              "description": "The action which should be performed by the server",
+              "required": true,
+              "allowMultiple": false,
+              "enum": [
+                "heapDump",
+                "restart",
+                "stackTrace",
+                "start",
+                "stop"
+              ]
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "filename",
+              "paramType": "query",
+              "description": "The file location to use when creating a heap dump or stack trace. By default the installation location and file are named appropriately for a heap dump or stack trace",
+              "required": false,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Tells the Server to perform an action",
+          "notes": "This API is available in builds 18647 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v2/servers/{serverName}/adv",
+      "operations": [
+        {
+          "type": "ServerConfigAdv",
+          "method": "GET",
+          "nickname": "getServerConfigAdv",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the advanced Server configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "PUT",
+          "nickname": "putServerConfigAdv",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "ServerConfigAdv",
+              "uniqueItems": false,
+              "name": "body",
+              "paramType": "body",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Updates the advanced Server configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v2/servers/{serverName}/logfiles",
+      "operations": [
+        {
+          "type": "ServerLogFilesConfig",
+          "method": "GET",
+          "nickname": "getServerLogFilesConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "defaultValue": "newestFirst",
+              "uniqueItems": false,
+              "name": "order",
+              "paramType": "query",
+              "description": "The order of files in serverLogs list",
+              "required": false,
+              "allowMultiple": false,
+              "enum": [
+                "newestFirst",
+                "oldestFirst"
+              ]
+            }
+          ],
+          "summary": "Retrieves the list of server log files",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v2/servers/{serverName}/logfiles/{logName}",
+      "operations": [
+        {
+          "type": "ServerLogFileConfig",
+          "method": "GET",
+          "nickname": "getServerLogFileConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "defaultValue": "100",
+              "uniqueItems": false,
+              "name": "lineCount",
+              "paramType": "query",
+              "description": "The number of log lines requested, where a postive number indicates log lines after startOffset and a negative number indicate log lines before startOffset",
+              "required": false,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "startOffset",
+              "paramType": "query",
+              "description": "The byte offset in the file at which to begin getting log lines",
+              "required": false,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "filter",
+              "paramType": "query",
+              "description": "A string containing a list of predefined search filters separated by | where valid strings are noDebug,noInfo,noWarn,noError,noHeader,noColumnHeadings",
+              "required": false,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "search",
+              "paramType": "query",
+              "description": "A string containing a literal string on which to filter or a regex",
+              "required": false,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "defaultValue": "false",
+              "uniqueItems": false,
+              "name": "regexSearch",
+              "paramType": "query",
+              "description": "Indicates if the 'search' parameter is a regex or a literal string ",
+              "required": false,
+              "allowMultiple": false,
+              "enum": [
+                "false",
+                "true"
+              ]
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "head",
+              "paramType": "query",
+              "description": "Returns the first x lines from the requested log file, the overrides the startoffset and linecount values",
+              "required": false,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "tail",
+              "paramType": "query",
+              "description": "Returns the last x lines from the requested log file, the overrides the startoffset and linecount values",
+              "required": false,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "logName",
+              "paramType": "path",
+              "description": "The name of the log",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the contents of a Server Log with the specified log name",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v2/servers/{serverName}/logfiles/{logName}/download",
+      "operations": [
+        {
+          "type": "ServerLogFileDownloadConfig",
+          "method": "GET",
+          "nickname": "getServerLogFileDownloadConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "logName",
+              "paramType": "path",
+              "description": "The name of the log",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the Server Log file for the specified log name, zipped",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v2/servers/{serverName}/logs",
+      "operations": [
+        {
+          "type": "ServerLogTypesConfig",
+          "method": "GET",
+          "nickname": "getServerLogTypesConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the list of available server Log Types",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v2/servers/{serverName}/logs/{logType}",
+      "operations": [
+        {
+          "type": "ServerLogsConfig",
+          "method": "GET",
+          "nickname": "getServerLogsConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "defaultValue": "100",
+              "uniqueItems": false,
+              "name": "lineCount",
+              "paramType": "query",
+              "description": "The number of log lines requested, where a postive number indicates log lines after startOffset and a negative number indicate log lines before startOffset",
+              "required": false,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "startOffset",
+              "paramType": "query",
+              "description": "The byte offset in the file at which to begin getting log lines",
+              "required": false,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "filter",
+              "paramType": "query",
+              "description": "A string containing a list of predefined search filters separated by | where valid strings are noDebug,noInfo,noWarn,noError,noHeader,noColumnHeadings",
+              "required": false,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "search",
+              "paramType": "query",
+              "description": "A string containing a literal string on which to filter or a regex",
+              "required": false,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "defaultValue": "false",
+              "uniqueItems": false,
+              "name": "regexSearch",
+              "paramType": "query",
+              "description": "Indicates if the 'search' parameter is a regex or a literal string ",
+              "required": false,
+              "allowMultiple": false,
+              "enum": [
+                "false",
+                "true"
+              ]
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "head",
+              "paramType": "query",
+              "description": "Returns the first x lines from the requested log file, the overrides the startoffset and linecount values",
+              "required": false,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "tail",
+              "paramType": "query",
+              "description": "Returns the last x lines from the requested log file, the overrides the startoffset and linecount values",
+              "required": false,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "startDate",
+              "paramType": "query",
+              "description": "The start date to filter on (UTC milliseconds)",
+              "required": false,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "endDate",
+              "paramType": "query",
+              "description": "The end date to filter on (UTC milliseconds)",
+              "required": false,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "logType",
+              "paramType": "path",
+              "description": "The type of the log",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the contents of multiple Server Logs with the specified type in the log name",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v2/servers/{serverName}/sourcecontrol/drivernames",
+      "operations": [
+        {
+          "type": "SourceDriverNamesList",
+          "method": "GET",
+          "nickname": "getSourceDriverNamesList",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Get the list of source control drivers",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    }
+  ],
+  "apiVersion": "1.0.0",
+  "resourcePath": "/v2/servers",
+  "models": {
+    "ServerListenersConfig": {
+      "id": "ServerListenersConfig",
+      "properties": {
+        "serverListeners": {
+          "type": "array",
+          "items": {
+            "uniqueItems": false,
+            "$ref": "ServerListenerConfig"
+          },
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "serverListeners"
+      ],
+      "className": "com.wowza.wms.rest.server.listeners.ServerListenersConfig"
+    },
+    "ServerConfigAdv": {
+      "id": "ServerConfigAdv",
+      "properties": {
+        "serverListeners": {
+          "type": "array",
+          "items": {
+            "uniqueItems": false,
+            "$ref": "ServerListenerConfig"
+          },
+          "uniqueItems": false
+        },
+        "advancedSettings": {
+          "type": "array",
+          "items": {
+            "uniqueItems": false,
+            "$ref": "AdvancedSetting"
+          },
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "advancedSettings",
+        "serverListeners"
+      ],
+      "className": "com.wowza.wms.rest.server.ServerConfigAdv"
+    },
+    "ServerLogsConfig": {
+      "id": "ServerLogsConfig",
+      "properties": {
+        "endOffset": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "logStartDate": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "logDate": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "endDate": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "logLines": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "filterStr": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "retLineCount": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "logFields": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "logSoftware": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "startOffset": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "searchStr": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "regexSearch": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "logVersion": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "fileLength": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "startDate": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "retLineCount",
+        "startOffset",
+        "endOffset",
+        "fileLength",
+        "filterStr",
+        "logFields",
+        "logVersion",
+        "logStartDate",
+        "logSoftware",
+        "logDate",
+        "logLines",
+        "searchStr",
+        "regexSearch",
+        "startDate",
+        "endDate"
+      ],
+      "className": "com.wowza.wms.rest.server.logs.ServerLogsConfig"
+    },
+    "ServerListenerConfig": {
+      "id": "ServerListenerConfig",
+      "properties": {
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "baseClass": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "order": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "order",
+        "baseClass"
+      ],
+      "className": "com.wowza.wms.rest.server.listeners.ServerListenerConfig"
+    },
+    "ServerLogShortObject": {
+      "id": "ServerLogShortObject",
+      "properties": {
+        "fileSize": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "startDateMS": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "id": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "href": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "id",
+        "href",
+        "fileSize",
+        "startDateMS"
+      ],
+      "className": "com.wowza.wms.rest.server.logs.ServerLogShortObject"
+    },
+    "ServerLogTypesConfig": {
+      "id": "ServerLogTypesConfig",
+      "properties": {
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "serverLogType": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "serverLogType"
+      ],
+      "className": "com.wowza.wms.rest.server.logs.ServerLogTypesConfig"
+    },
+    "ServersConfig": {
+      "id": "ServersConfig",
+      "properties": {
+        "servers": {
+          "type": "array",
+          "items": {
+            "uniqueItems": false,
+            "$ref": "ServerConfig"
+          },
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "servers"
+      ],
+      "className": "com.wowza.wms.rest.server.ServersConfig"
+    },
+    "AdvancedSetting": {
+      "id": "AdvancedSetting",
+      "properties": {
+        "sectionName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "canRemove": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "defaultValue": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "documented": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "name": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "section": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "type": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "value": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "enabled": {
+          "type": "boolean",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "enabled",
+        "canRemove",
+        "name",
+        "value",
+        "defaultValue",
+        "type",
+        "sectionName",
+        "section",
+        "documented"
+      ],
+      "className": "com.wowza.wms.rest.AdvancedSetting"
+    },
+    "ServerLogFileDownloadConfig": {
+      "id": "ServerLogFileDownloadConfig",
+      "properties": {
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName"
+      ],
+      "className": "com.wowza.wms.rest.server.logs.ServerLogFileDownloadConfig"
+    },
+    "ServerLogFileConfig": {
+      "id": "ServerLogFileConfig",
+      "properties": {
+        "endOffset": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "logStartDate": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "logDate": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "endDate": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "logLines": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "filterStr": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "retLineCount": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "logFields": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "logSoftware": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "startOffset": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "searchStr": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "regexSearch": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "logVersion": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "fileLength": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "startDate": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "retLineCount",
+        "startOffset",
+        "endOffset",
+        "fileLength",
+        "filterStr",
+        "logFields",
+        "logVersion",
+        "logStartDate",
+        "logSoftware",
+        "logDate",
+        "logLines",
+        "searchStr",
+        "regexSearch",
+        "startDate",
+        "endDate"
+      ],
+      "className": "com.wowza.wms.rest.server.logs.ServerLogFileConfig"
+    },
+    "ServerConfig": {
+      "id": "ServerConfig",
+      "properties": {
+        "transportThreadPoolAutoValue": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "handlerThreadPool": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "transportThreadPool": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "ipAddress": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "serverId1": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "description": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "rtpDataPortSharingPort": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "serverId2": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "serverTS": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "port": {
+          "type": "integer",
+          "format": "int32",
+          "uniqueItems": false
+        },
+        "serverListeners": {
+          "uniqueItems": false,
+          "$ref": "ServerListenersConfig"
+        },
+        "name": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "rtpDataPortSharing": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "handlerThreadPoolAutoValue": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "defaultStreamPrefix": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "name",
+        "description",
+        "defaultStreamPrefix",
+        "ipAddress",
+        "port",
+        "handlerThreadPool",
+        "handlerThreadPoolAutoValue",
+        "transportThreadPool",
+        "transportThreadPoolAutoValue",
+        "rtpDataPortSharing",
+        "rtpDataPortSharingPort",
+        "serverListeners",
+        "serverId1",
+        "serverId2",
+        "serverTS"
+      ],
+      "className": "com.wowza.wms.rest.server.ServerConfig"
+    },
+    "SourceDriverNamesList": {
+      "id": "SourceDriverNamesList",
+      "properties": {
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "list"
+      ],
+      "className": "com.wowza.wms.rest.sourcecontrol.SourceDriverNamesList"
+    },
+    "ServerAction": {
+      "id": "ServerAction",
+      "properties": {
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "serverName"
+      ],
+      "className": "com.wowza.wms.rest.server.ServerAction"
+    },
+    "ServerLogFilesConfig": {
+      "id": "ServerLogFilesConfig",
+      "properties": {
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "serverLogFiles": {
+          "type": "array",
+          "items": {
+            "uniqueItems": false,
+            "$ref": "ServerLogShortObject"
+          },
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "serverLogFiles"
+      ],
+      "className": "com.wowza.wms.rest.server.logs.ServerLogFilesConfig"
+    }
+  },
+  "produces": [
+    "application/xml",
+    "text/xml",
+    "application/json"
+  ],
+  "consumes": [
+    "application/xml",
+    "text/xml",
+    "application/json"
+  ],
+  "authorizations": {}
+}

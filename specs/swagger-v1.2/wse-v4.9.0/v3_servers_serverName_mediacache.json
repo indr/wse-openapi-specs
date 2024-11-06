@@ -1,0 +1,1423 @@
+{
+  "swaggerVersion": "1.2",
+  "apis": [
+    {
+      "path": "/v3/servers/{serverName}/mediacache",
+      "operations": [
+        {
+          "type": "MediaCacheConfig3",
+          "method": "GET",
+          "nickname": "getMediaCacheConfig3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the server MediaCache configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "PUT",
+          "nickname": "putMediaCacheConfig3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "MediaCacheConfig3",
+              "uniqueItems": false,
+              "name": "body",
+              "paramType": "body",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Updates the server MediaCache configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v3/servers/{serverName}/mediacache/sources",
+      "operations": [
+        {
+          "type": "MediaCacheSourcesConfig3",
+          "method": "GET",
+          "nickname": "getMediaCacheSourcesConfig3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the list of MediaCache Sources",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "POST",
+          "nickname": "postMediaCacheSourcesConfig3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "MediaCacheSourceConfig",
+              "uniqueItems": false,
+              "name": "body",
+              "paramType": "body",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Adds the specified MediaCache Source to the list",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            },
+            {
+              "code": 201,
+              "message": "Created"
+            },
+            {
+              "code": 409,
+              "message": "Conflict"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v3/servers/{serverName}/mediacache/sources/{sourceName}",
+      "operations": [
+        {
+          "type": "MediaCacheSourceConfig3",
+          "method": "GET",
+          "nickname": "getMediaCacheSourceConfig3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "sourceName",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the specified MediaCache Source configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "POST",
+          "nickname": "postMediaCacheSourceConfig3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "sourceName",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "MediaCacheSourceConfig3",
+              "uniqueItems": false,
+              "name": "body",
+              "paramType": "body",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Adds the specified MediaCache Source configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            },
+            {
+              "code": 201,
+              "message": "Created"
+            },
+            {
+              "code": 409,
+              "message": "Conflict"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "PUT",
+          "nickname": "putMediaCacheSourceConfig3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "sourceName",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "MediaCacheSourceConfig3",
+              "uniqueItems": false,
+              "name": "body",
+              "paramType": "body",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Updates the specified MediaCache Source configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "DELETE",
+          "nickname": "deleteMediaCacheSourceConfig3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "sourceName",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Deletes the specified MediaCache Source configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v3/servers/{serverName}/mediacache/sources/{sourceName}/adv",
+      "operations": [
+        {
+          "type": "MediaCacheSourceConfigAdv3",
+          "method": "GET",
+          "nickname": "getMediaCacheSourceConfigAdv3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "sourceName",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the specified advanced MediaCache Source configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "PUT",
+          "nickname": "putMediaCacheSourceConfigAdv3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "sourceName",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "MediaCacheSourceConfigAdv3",
+              "uniqueItems": false,
+              "name": "body",
+              "paramType": "body",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Updates the specified advanced MediaCache Source configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "POST",
+          "nickname": "postMediaCacheSourceConfigAdv3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "sourceName",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "MediaCacheSourceConfigAdv3",
+              "uniqueItems": false,
+              "name": "body",
+              "paramType": "body",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Adds the specified advanced MediaCache Source configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            },
+            {
+              "code": 201,
+              "message": "Created"
+            },
+            {
+              "code": 409,
+              "message": "Conflict"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v3/servers/{serverName}/mediacache/stores",
+      "operations": [
+        {
+          "type": "MediaCacheStoresConfig3",
+          "method": "GET",
+          "nickname": "getMediaCacheStoresConfig3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the list of MediaCache Stores",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "POST",
+          "nickname": "postMediaCacheStoresConfig3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "MediaCacheStoreConfig",
+              "uniqueItems": false,
+              "name": "body",
+              "paramType": "body",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Adds the specified MediaCache Store to the list",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            },
+            {
+              "code": 201,
+              "message": "Created"
+            },
+            {
+              "code": 409,
+              "message": "Conflict"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v3/servers/{serverName}/mediacache/stores/{storeName}",
+      "operations": [
+        {
+          "type": "MediaCacheStoreConfig3",
+          "method": "GET",
+          "nickname": "getMediaCacheStoreConfig3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "storeName",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the specified MediaCache Store configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "POST",
+          "nickname": "postMediaCacheStoreConfig3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "storeName",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "MediaCacheStoreConfig3",
+              "uniqueItems": false,
+              "name": "body",
+              "paramType": "body",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Adds the specified MediaCache Store configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            },
+            {
+              "code": 201,
+              "message": "Created"
+            },
+            {
+              "code": 409,
+              "message": "Conflict"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "PUT",
+          "nickname": "putMediaCacheStoreConfig3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "storeName",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "MediaCacheStoreConfig3",
+              "uniqueItems": false,
+              "name": "body",
+              "paramType": "body",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Updates the specified MediaCache Store configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "DELETE",
+          "nickname": "deleteMediaCacheStoreConfig3",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "storeName",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Deletes the specified MediaCache Store configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    }
+  ],
+  "apiVersion": "1.0.0",
+  "resourcePath": "/v3/servers/{serverName}/mediacache",
+  "models": {
+    "MediaCacheSourceConfig3": {
+      "id": "MediaCacheSourceConfig3",
+      "properties": {
+        "readerClass": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "isPassThru": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "minTimeToLive": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "prefix": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "description": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "baseClass": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "type": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "isAmazonS3": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "s3BucketNameInDomain": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "googleServicePrivateKeyFile": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "googleServiceID": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "googleServicePrivateKeyPassword": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "azureAccountKey": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "awsSecretAccessKey": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "azureAccountName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "awsAccessKeyId": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "httpReaderFactoryClass": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "googleServiceKey": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "azureContainerName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "basePath": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "googleEncMethod": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "sourceName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "maxTimeToLive": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "sourceName",
+        "type",
+        "description",
+        "basePath",
+        "prefix",
+        "minTimeToLive",
+        "maxTimeToLive",
+        "isAmazonS3",
+        "s3BucketNameInDomain",
+        "awsAccessKeyId",
+        "awsSecretAccessKey",
+        "isPassThru",
+        "baseClass",
+        "readerClass",
+        "httpReaderFactoryClass",
+        "azureAccountName",
+        "azureContainerName",
+        "azureAccountKey",
+        "googleServiceID",
+        "googleServiceKey",
+        "googleServicePrivateKeyFile",
+        "googleServicePrivateKeyPassword",
+        "googleEncMethod"
+      ],
+      "className": "com.wowza.wms.rest.server.mediacache.MediaCacheSourceConfig3"
+    },
+    "MediaCacheConfig3": {
+      "id": "MediaCacheConfig3",
+      "properties": {
+        "maxPendingWriteRequestSizeAutoValue": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "uniqueItems": false,
+            "$ref": "MediaCacheSourceConfig3"
+          },
+          "uniqueItems": false
+        },
+        "stores": {
+          "type": "array",
+          "items": {
+            "uniqueItems": false,
+            "$ref": "MediaCacheStoreConfig3"
+          },
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "maxPendingReadAheadRequestSizeAutoValue": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "readAheadThreadPoolSizeAutoValue": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "readAheadThreadPoolSize": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "maxPendingReadAheadRequestSize": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "maxPendingWriteRequestSize": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "writerThreadPoolSizeAutoValue": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "writerThreadPoolSize": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "writerThreadPoolSize",
+        "writerThreadPoolSizeAutoValue",
+        "readAheadThreadPoolSize",
+        "readAheadThreadPoolSizeAutoValue",
+        "maxPendingWriteRequestSize",
+        "maxPendingWriteRequestSizeAutoValue",
+        "maxPendingReadAheadRequestSize",
+        "maxPendingReadAheadRequestSizeAutoValue",
+        "stores",
+        "sources"
+      ],
+      "className": "com.wowza.wms.rest.server.mediacache.MediaCacheConfig3"
+    },
+    "MediaCacheStoreConfig3": {
+      "id": "MediaCacheStoreConfig3",
+      "properties": {
+        "path": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "writeRate": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "description": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "storeName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "maxSize": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "writeRateMaxBucketSize": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "storeName",
+        "description",
+        "path",
+        "maxSize",
+        "writeRate",
+        "writeRateMaxBucketSize"
+      ],
+      "className": "com.wowza.wms.rest.server.mediacache.MediaCacheStoreConfig3"
+    },
+    "MediaCacheSourceConfigAdv3": {
+      "id": "MediaCacheSourceConfigAdv3",
+      "properties": {
+        "advancedSettings": {
+          "type": "array",
+          "items": {
+            "uniqueItems": false,
+            "$ref": "AdvancedSetting"
+          },
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "advancedSettings"
+      ],
+      "className": "com.wowza.wms.rest.server.mediacache.MediaCacheSourceConfigAdv3"
+    },
+    "MediaCacheSourcesConfig3": {
+      "id": "MediaCacheSourcesConfig3",
+      "properties": {
+        "sources": {
+          "type": "array",
+          "items": {
+            "uniqueItems": false,
+            "$ref": "ShortObject"
+          },
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "sources"
+      ],
+      "className": "com.wowza.wms.rest.server.mediacache.MediaCacheSourcesConfig3"
+    },
+    "AdvancedSetting": {
+      "id": "AdvancedSetting",
+      "properties": {
+        "sectionName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "canRemove": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "defaultValue": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "documented": {
+          "type": "boolean",
+          "uniqueItems": false
+        },
+        "name": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "section": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "type": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "value": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "enabled": {
+          "type": "boolean",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "enabled",
+        "canRemove",
+        "name",
+        "value",
+        "defaultValue",
+        "type",
+        "sectionName",
+        "section",
+        "documented"
+      ],
+      "className": "com.wowza.wms.rest.AdvancedSetting"
+    },
+    "MediaCacheStoresConfig3": {
+      "id": "MediaCacheStoresConfig3",
+      "properties": {
+        "stores": {
+          "type": "array",
+          "items": {
+            "uniqueItems": false,
+            "$ref": "ShortObject"
+          },
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "stores"
+      ],
+      "className": "com.wowza.wms.rest.server.mediacache.MediaCacheStoresConfig3"
+    },
+    "ShortObject": {
+      "id": "ShortObject",
+      "properties": {
+        "id": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "href": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "id",
+        "href"
+      ],
+      "className": "com.wowza.wms.rest.ShortObject"
+    }
+  },
+  "produces": [
+    "application/xml",
+    "text/xml",
+    "application/json"
+  ],
+  "consumes": [
+    "application/xml",
+    "text/xml",
+    "application/json"
+  ],
+  "authorizations": {}
+}

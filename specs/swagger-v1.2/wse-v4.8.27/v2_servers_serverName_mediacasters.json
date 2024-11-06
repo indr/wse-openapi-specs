@@ -1,0 +1,208 @@
+{
+  "swaggerVersion": "1.2",
+  "apis": [
+    {
+      "path": "/v2/servers/{serverName}/mediacasters",
+      "operations": [
+        {
+          "type": "MediaCastersConfig",
+          "method": "GET",
+          "nickname": "getMediaCastersConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the list of MediaCasters",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v2/servers/{serverName}/mediacasters/{mediacastername}",
+      "operations": [
+        {
+          "type": "MediaCasterConfig",
+          "method": "GET",
+          "nickname": "getMediaCasterConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "mediacastername",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the specified MediaCaster configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    }
+  ],
+  "apiVersion": "1.0.0",
+  "resourcePath": "/v2/servers/{serverName}/mediacasters",
+  "models": {
+    "MediaCastersConfig": {
+      "id": "MediaCastersConfig",
+      "properties": {
+        "mediaCasters": {
+          "type": "array",
+          "items": {
+            "uniqueItems": false,
+            "$ref": "MediaCasterConfig"
+          },
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "mediaCasters"
+      ],
+      "className": "com.wowza.wms.rest.server.mediacasters.MediaCastersConfig"
+    },
+    "MediaCasterConfig": {
+      "id": "MediaCasterConfig",
+      "properties": {
+        "streamType": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "keepAliveTime": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "name": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "description": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "baseClass": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "connectionTimeout": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "name",
+        "description",
+        "streamType",
+        "baseClass",
+        "connectionTimeout",
+        "keepAliveTime"
+      ],
+      "className": "com.wowza.wms.rest.server.mediacasters.MediaCasterConfig"
+    }
+  },
+  "produces": [
+    "application/xml",
+    "text/xml",
+    "application/json"
+  ],
+  "authorizations": {}
+}

@@ -1,0 +1,145 @@
+{
+  "swaggerVersion": "1.2",
+  "apis": [
+    {
+      "path": "/v2/machine/monitoring/current",
+      "operations": [
+        {
+          "type": "CurrentMachineStatistics",
+          "method": "GET",
+          "nickname": "getCurrentMachineStatistics",
+          "parameters": [],
+          "summary": "Retrieves current statictics for the machine",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    }
+  ],
+  "apiVersion": "1.0.0",
+  "resourcePath": "/v2/machine/monitoring/current",
+  "models": {
+    "Integer": {
+      "id": "Integer",
+      "properties": {},
+      "required": [],
+      "className": "java.lang.Integer"
+    },
+    "CurrentMachineStatistics": {
+      "id": "CurrentMachineStatistics",
+      "properties": {
+        "heapUsed": {
+          "uniqueItems": false,
+          "$ref": "Long"
+        },
+        "cpuSystem": {
+          "uniqueItems": false,
+          "$ref": "Integer"
+        },
+        "connectionCount": {
+          "uniqueItems": false,
+          "$ref": "Long"
+        },
+        "memoryFree": {
+          "uniqueItems": false,
+          "$ref": "Long"
+        },
+        "cpuIdle": {
+          "uniqueItems": false,
+          "$ref": "Integer"
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "memoryUsed": {
+          "uniqueItems": false,
+          "$ref": "Long"
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "diskFree": {
+          "uniqueItems": false,
+          "$ref": "Long"
+        },
+        "cpuUser": {
+          "uniqueItems": false,
+          "$ref": "Integer"
+        },
+        "diskUsed": {
+          "uniqueItems": false,
+          "$ref": "Long"
+        },
+        "heapFree": {
+          "uniqueItems": false,
+          "$ref": "Long"
+        },
+        "serverUptime": {
+          "type": "integer",
+          "format": "int64",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "serverUptime",
+        "cpuIdle",
+        "cpuUser",
+        "cpuSystem",
+        "memoryFree",
+        "memoryUsed",
+        "heapFree",
+        "heapUsed",
+        "diskFree",
+        "diskUsed",
+        "connectionCount"
+      ],
+      "className": "com.wowza.wms.rest.machine.monitoring.CurrentMachineStatistics"
+    },
+    "Long": {
+      "id": "Long",
+      "properties": {},
+      "required": [],
+      "className": "java.lang.Long"
+    }
+  },
+  "produces": [
+    "application/xml",
+    "text/xml",
+    "application/json"
+  ],
+  "authorizations": {}
+}

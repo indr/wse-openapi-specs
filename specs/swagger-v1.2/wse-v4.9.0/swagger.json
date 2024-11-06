@@ -1,0 +1,82 @@
+{
+  "swaggerVersion": "1.2",
+  "apis": [
+    {
+      "path": "/v2/servers/{serverName}/vhosts/{vhostName}/applications",
+      "description": "Application Operations"
+    },
+    {
+      "path": "/v2/machine/monitoring/current",
+      "description": "Machine Level Current Statistics"
+    },
+    {
+      "path": "/v2/machine/monitoring/historic",
+      "description": "Machine Level Historic Statistics"
+    },
+    {
+      "path": "/v2/servers/{serverName}/licenses",
+      "description": "Server Licenses"
+    },
+    {
+      "path": "/v2/servers/{serverName}/listeners",
+      "description": "Server Listeners"
+    },
+    {
+      "path": "/v2/servers/{serverName}/log4j",
+      "description": "Server log4j system"
+    },
+    {
+      "path": "/v2/servers/{serverName}/mediacache",
+      "description": "Server MediaCache"
+    },
+    {
+      "path": "/v3/servers/{serverName}/mediacache",
+      "description": "Server MediaCache Version 3"
+    },
+    {
+      "path": "/v2/servers/{serverName}/mediacasters",
+      "description": "Server MediaCasters"
+    },
+    {
+      "path": "/v2/servers/{serverName}/monitoring",
+      "description": "Server Monitoring"
+    },
+    {
+      "path": "/v2/servers/{serverName}/publishers",
+      "description": "Server Publishers"
+    },
+    {
+      "path": "/v3/servers/{serverName}/publishers",
+      "description": "Server Publishers Version 3"
+    },
+    {
+      "path": "/restinfo",
+      "description": "REST information"
+    },
+    {
+      "path": "/v2/servers",
+      "description": "Servers Configuration"
+    },
+    {
+      "path": "/v2/servers/{serverName}/status",
+      "description": "Server Status"
+    },
+    {
+      "path": "/v2/servers/{serverName}/transcoder",
+      "description": "Server Transcoder"
+    },
+    {
+      "path": "/v2/servers/{serverName}/tune",
+      "description": "Server Tuning"
+    },
+    {
+      "path": "/v2/servers/{serverName}/users",
+      "description": "Server Users"
+    },
+    {
+      "path": "/v2/servers/{serverName}/vhosts",
+      "description": "VHost Operations"
+    }
+  ],
+  "apiVersion": "1.0.0"
+}
