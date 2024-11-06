@@ -1,0 +1,483 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "",
+    "version": "1.0.0"
+  },
+  "servers": [],
+  "paths": {
+    "/v3/servers/{serverName}/publishers": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishersConfig3"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishersConfig3"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishersConfig3"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getPublishersConfig3",
+        "summary": "Retrieves the list of server Publishers"
+      },
+      "post": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "postPublishersConfig3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PublisherConfig3",
+                "uniqueItems": false
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/PublisherConfig3",
+                "uniqueItems": false
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/PublisherConfig3",
+                "uniqueItems": false
+              }
+            }
+          },
+          "required": true
+        },
+        "summary": "Adds a new Publisher to the list"
+      }
+    },
+    "/v3/servers/{serverName}/publishers/{publisher}": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "in": "path",
+            "name": "publisher",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 20064 or later.",
+        "operationId": "deletePublisherConfig3",
+        "summary": "Deletes the specified Publisher configuration"
+      },
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "in": "path",
+            "name": "publisher",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublisherConfig3"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublisherConfig3"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublisherConfig3"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 20064 or later.",
+        "operationId": "getPublisherConfig3",
+        "summary": "Retrieves the specified Publisher configuration"
+      },
+      "post": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "in": "path",
+            "name": "publisher",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 20064 or later.",
+        "operationId": "postPublisherConfig3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PublisherConfig3",
+                "uniqueItems": false
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/PublisherConfig3",
+                "uniqueItems": false
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/PublisherConfig3",
+                "uniqueItems": false
+              }
+            }
+          },
+          "required": true
+        },
+        "summary": "Adds the specified Publisher configuration"
+      },
+      "put": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "in": "path",
+            "name": "publisher",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 20064 or later.",
+        "operationId": "putPublisherConfig3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PublisherConfig3",
+                "uniqueItems": false
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/PublisherConfig3",
+                "uniqueItems": false
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/PublisherConfig3",
+                "uniqueItems": false
+              }
+            }
+          },
+          "required": true
+        }
+      }
+    }
+  },
+  "components": {
+    "requestBodies": {
+      "PublisherConfig3": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PublisherConfig3",
+              "uniqueItems": false
+            }
+          },
+          "application/xml": {
+            "schema": {
+              "$ref": "#/components/schemas/PublisherConfig3",
+              "uniqueItems": false
+            }
+          },
+          "text/xml": {
+            "schema": {
+              "$ref": "#/components/schemas/PublisherConfig3",
+              "uniqueItems": false
+            }
+          }
+        },
+        "required": true
+      }
+    },
+    "schemas": {
+      "PublisherConfig3": {
+        "properties": {
+          "description": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "password": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "publisher": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "publisher",
+          "description",
+          "password"
+        ],
+        "type": "object"
+      },
+      "PublishersConfig3": {
+        "properties": {
+          "publishers": {
+            "items": {
+              "$ref": "#/components/schemas/PublisherConfig3",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "publishers"
+        ],
+        "type": "object"
+      }
+    }
+  }
+}

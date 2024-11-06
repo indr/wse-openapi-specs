@@ -1,0 +1,507 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "",
+    "version": "1.0.0"
+  },
+  "servers": [],
+  "paths": {
+    "/v2/servers/{serverName}/users": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsersConfig"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsersConfig"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsersConfig"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getUsersConfig",
+        "summary": "Retrieves the list of server Users"
+      },
+      "post": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "postUsersConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserConfig",
+                "uniqueItems": false
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/UserConfig",
+                "uniqueItems": false
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/UserConfig",
+                "uniqueItems": false
+              }
+            }
+          },
+          "required": true
+        },
+        "summary": "Adds a new server User to the list"
+      }
+    },
+    "/v2/servers/{serverName}/users/{userName}": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The user name",
+            "in": "path",
+            "name": "userName",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "deleteUserConfig",
+        "summary": "Deletes the specified User configuration"
+      },
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The user name",
+            "in": "path",
+            "name": "userName",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserConfig"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserConfig"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserConfig"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getUserConfig",
+        "summary": "Retrieves the specified User configuration"
+      },
+      "post": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The user name",
+            "in": "path",
+            "name": "userName",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "postUserConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserConfig",
+                "uniqueItems": false
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/UserConfig",
+                "uniqueItems": false
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/UserConfig",
+                "uniqueItems": false
+              }
+            }
+          },
+          "required": true
+        },
+        "summary": "Adds the specified User configuration"
+      },
+      "put": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The user name",
+            "in": "path",
+            "name": "userName",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "putUserConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserConfig",
+                "uniqueItems": false
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/UserConfig",
+                "uniqueItems": false
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/UserConfig",
+                "uniqueItems": false
+              }
+            }
+          },
+          "required": true
+        },
+        "summary": "Updates the specified User configuration"
+      }
+    }
+  },
+  "components": {
+    "requestBodies": {
+      "UserConfig": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UserConfig",
+              "uniqueItems": false
+            }
+          },
+          "application/xml": {
+            "schema": {
+              "$ref": "#/components/schemas/UserConfig",
+              "uniqueItems": false
+            }
+          },
+          "text/xml": {
+            "schema": {
+              "$ref": "#/components/schemas/UserConfig",
+              "uniqueItems": false
+            }
+          }
+        },
+        "required": true
+      }
+    },
+    "schemas": {
+      "UserConfig": {
+        "properties": {
+          "description": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "groups": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "password": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "passwordEncoding": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "realm": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "userName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "userName",
+          "description",
+          "groups",
+          "password",
+          "passwordEncoding",
+          "realm"
+        ],
+        "type": "object"
+      },
+      "UsersConfig": {
+        "properties": {
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "users": {
+            "items": {
+              "$ref": "#/components/schemas/UserConfig",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "users"
+        ],
+        "type": "object"
+      }
+    }
+  }
+}

@@ -1,0 +1,1582 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "",
+    "version": "1.0.0"
+  },
+  "servers": [],
+  "paths": {
+    "/v2/servers": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServersConfig"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServersConfig"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServersConfig"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getServersConfig",
+        "summary": "Retrieves the list of Servers"
+      }
+    },
+    "/v2/servers/{serverName}": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerConfig"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerConfig"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerConfig"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getServerConfig",
+        "summary": "Retrieves the Server configuration"
+      },
+      "put": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "putServerConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServerConfig",
+                "uniqueItems": false
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/ServerConfig",
+                "uniqueItems": false
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/ServerConfig",
+                "uniqueItems": false
+              }
+            }
+          },
+          "required": true
+        },
+        "summary": "Updates the Server configuration"
+      }
+    },
+    "/v2/servers/{serverName}/actions/{action}": {
+      "put": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The action which should be performed by the server",
+            "in": "path",
+            "name": "action",
+            "required": true,
+            "schema": {
+              "enum": [
+                "heapDump",
+                "restart",
+                "stackTrace",
+                "start",
+                "stop"
+              ],
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The file location to use when creating a heap dump or stack trace. By default the installation location and file are named appropriately for a heap dump or stack trace",
+            "in": "query",
+            "name": "filename",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 18647 or later.",
+        "operationId": "putServerAction",
+        "summary": "Tells the Server to perform an action"
+      }
+    },
+    "/v2/servers/{serverName}/adv": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerConfigAdv"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerConfigAdv"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerConfigAdv"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getServerConfigAdv",
+        "summary": "Retrieves the advanced Server configuration"
+      },
+      "put": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "putServerConfigAdv",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServerConfigAdv",
+                "uniqueItems": false
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/ServerConfigAdv",
+                "uniqueItems": false
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/ServerConfigAdv",
+                "uniqueItems": false
+              }
+            }
+          },
+          "required": true
+        },
+        "summary": "Updates the advanced Server configuration"
+      }
+    },
+    "/v2/servers/{serverName}/logfiles": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The order of files in serverLogs list",
+            "in": "query",
+            "name": "order",
+            "required": false,
+            "schema": {
+              "default": "newestFirst",
+              "enum": [
+                "newestFirst",
+                "oldestFirst"
+              ],
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerLogFilesConfig"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerLogFilesConfig"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerLogFilesConfig"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getServerLogFilesConfig",
+        "summary": "Retrieves the list of server log files"
+      }
+    },
+    "/v2/servers/{serverName}/logfiles/{logName}": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The number of log lines requested, where a postive number indicates log lines after startOffset and a negative number indicate log lines before startOffset",
+            "in": "query",
+            "name": "lineCount",
+            "required": false,
+            "schema": {
+              "default": "100",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The byte offset in the file at which to begin getting log lines",
+            "in": "query",
+            "name": "startOffset",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "A string containing a list of predefined search filters separated by | where valid strings are noDebug,noInfo,noWarn,noError,noHeader,noColumnHeadings",
+            "in": "query",
+            "name": "filter",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "A string containing a literal string on which to filter or a regex",
+            "in": "query",
+            "name": "search",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "Indicates if the 'search' parameter is a regex or a literal string ",
+            "in": "query",
+            "name": "regexSearch",
+            "required": false,
+            "schema": {
+              "default": "false",
+              "enum": [
+                "false",
+                "true"
+              ],
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "Returns the first x lines from the requested log file, the overrides the startoffset and linecount values",
+            "in": "query",
+            "name": "head",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "Returns the last x lines from the requested log file, the overrides the startoffset and linecount values",
+            "in": "query",
+            "name": "tail",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The name of the log",
+            "in": "path",
+            "name": "logName",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerLogFileConfig"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerLogFileConfig"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerLogFileConfig"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getServerLogFileConfig",
+        "summary": "Retrieves the contents of a Server Log with the specified log name"
+      }
+    },
+    "/v2/servers/{serverName}/logfiles/{logName}/download": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The name of the log",
+            "in": "path",
+            "name": "logName",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerLogFileDownloadConfig"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerLogFileDownloadConfig"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerLogFileDownloadConfig"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getServerLogFileDownloadConfig",
+        "summary": "Retrieves the Server Log file for the specified log name, zipped"
+      }
+    },
+    "/v2/servers/{serverName}/logs": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerLogTypesConfig"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerLogTypesConfig"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerLogTypesConfig"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getServerLogTypesConfig",
+        "summary": "Retrieves the list of available server Log Types"
+      }
+    },
+    "/v2/servers/{serverName}/logs/{logType}": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The number of log lines requested, where a postive number indicates log lines after startOffset and a negative number indicate log lines before startOffset",
+            "in": "query",
+            "name": "lineCount",
+            "required": false,
+            "schema": {
+              "default": "100",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The byte offset in the file at which to begin getting log lines",
+            "in": "query",
+            "name": "startOffset",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "A string containing a list of predefined search filters separated by | where valid strings are noDebug,noInfo,noWarn,noError,noHeader,noColumnHeadings",
+            "in": "query",
+            "name": "filter",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "A string containing a literal string on which to filter or a regex",
+            "in": "query",
+            "name": "search",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "Indicates if the 'search' parameter is a regex or a literal string ",
+            "in": "query",
+            "name": "regexSearch",
+            "required": false,
+            "schema": {
+              "default": "false",
+              "enum": [
+                "false",
+                "true"
+              ],
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "Returns the first x lines from the requested log file, the overrides the startoffset and linecount values",
+            "in": "query",
+            "name": "head",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "Returns the last x lines from the requested log file, the overrides the startoffset and linecount values",
+            "in": "query",
+            "name": "tail",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The start date to filter on (UTC milliseconds)",
+            "in": "query",
+            "name": "startDate",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The end date to filter on (UTC milliseconds)",
+            "in": "query",
+            "name": "endDate",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "description": "The type of the log",
+            "in": "path",
+            "name": "logType",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerLogsConfig"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerLogsConfig"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerLogsConfig"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getServerLogsConfig",
+        "summary": "Retrieves the contents of multiple Server Logs with the specified type in the log name"
+      }
+    },
+    "/v2/servers/{serverName}/sourcecontrol/drivernames": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SourceDriverNamesList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SourceDriverNamesList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SourceDriverNamesList"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getSourceDriverNamesList",
+        "summary": "Get the list of source control drivers"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AdvancedSetting": {
+        "properties": {
+          "canRemove": {
+            "type": "boolean",
+            "uniqueItems": false
+          },
+          "defaultValue": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "documented": {
+            "type": "boolean",
+            "uniqueItems": false
+          },
+          "enabled": {
+            "type": "boolean",
+            "uniqueItems": false
+          },
+          "name": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "section": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "sectionName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "type": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "value": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "enabled",
+          "canRemove",
+          "name",
+          "value",
+          "defaultValue",
+          "type",
+          "sectionName",
+          "section",
+          "documented"
+        ],
+        "type": "object"
+      },
+      "ServerAction": {
+        "properties": {
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "serverName"
+        ],
+        "type": "object"
+      },
+      "ServerConfig": {
+        "properties": {
+          "defaultStreamPrefix": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "description": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "handlerThreadPool": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "handlerThreadPoolAutoValue": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "ipAddress": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "name": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "port": {
+            "format": "int32",
+            "type": "integer",
+            "uniqueItems": false
+          },
+          "rtpDataPortSharing": {
+            "type": "boolean",
+            "uniqueItems": false
+          },
+          "rtpDataPortSharingPort": {
+            "format": "int32",
+            "type": "integer",
+            "uniqueItems": false
+          },
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverId1": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "serverId2": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "serverListeners": {
+            "$ref": "#/components/schemas/ServerListenersConfig",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "serverTS": {
+            "format": "int64",
+            "type": "integer",
+            "uniqueItems": false
+          },
+          "transportThreadPool": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "transportThreadPoolAutoValue": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "name",
+          "description",
+          "defaultStreamPrefix",
+          "ipAddress",
+          "port",
+          "handlerThreadPool",
+          "handlerThreadPoolAutoValue",
+          "transportThreadPool",
+          "transportThreadPoolAutoValue",
+          "rtpDataPortSharing",
+          "rtpDataPortSharingPort",
+          "serverListeners",
+          "serverId1",
+          "serverId2",
+          "serverTS"
+        ],
+        "type": "object"
+      },
+      "ServerConfigAdv": {
+        "properties": {
+          "advancedSettings": {
+            "items": {
+              "$ref": "#/components/schemas/AdvancedSetting",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverListeners": {
+            "items": {
+              "$ref": "#/components/schemas/ServerListenerConfig",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "advancedSettings",
+          "serverListeners"
+        ],
+        "type": "object"
+      },
+      "ServerListenerConfig": {
+        "properties": {
+          "baseClass": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "order": {
+            "format": "int32",
+            "type": "integer",
+            "uniqueItems": false
+          },
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "order",
+          "baseClass"
+        ],
+        "type": "object"
+      },
+      "ServerListenersConfig": {
+        "properties": {
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverListeners": {
+            "items": {
+              "$ref": "#/components/schemas/ServerListenerConfig",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "serverListeners"
+        ],
+        "type": "object"
+      },
+      "ServerLogFileConfig": {
+        "properties": {
+          "endDate": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "endOffset": {
+            "format": "int64",
+            "type": "integer",
+            "uniqueItems": false
+          },
+          "fileLength": {
+            "format": "int64",
+            "type": "integer",
+            "uniqueItems": false
+          },
+          "filterStr": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "logDate": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "logFields": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "logLines": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "logSoftware": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "logStartDate": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "logVersion": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "regexSearch": {
+            "type": "boolean",
+            "uniqueItems": false
+          },
+          "retLineCount": {
+            "format": "int64",
+            "type": "integer",
+            "uniqueItems": false
+          },
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "searchStr": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "startDate": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "startOffset": {
+            "format": "int64",
+            "type": "integer",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "retLineCount",
+          "startOffset",
+          "endOffset",
+          "fileLength",
+          "filterStr",
+          "logFields",
+          "logVersion",
+          "logStartDate",
+          "logSoftware",
+          "logDate",
+          "logLines",
+          "searchStr",
+          "regexSearch",
+          "startDate",
+          "endDate"
+        ],
+        "type": "object"
+      },
+      "ServerLogFileDownloadConfig": {
+        "properties": {
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName"
+        ],
+        "type": "object"
+      },
+      "ServerLogFilesConfig": {
+        "properties": {
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverLogFiles": {
+            "items": {
+              "$ref": "#/components/schemas/ServerLogShortObject",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "serverLogFiles"
+        ],
+        "type": "object"
+      },
+      "ServerLogShortObject": {
+        "properties": {
+          "fileSize": {
+            "format": "int64",
+            "type": "integer",
+            "uniqueItems": false
+          },
+          "href": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "id": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "startDateMS": {
+            "format": "int64",
+            "type": "integer",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "id",
+          "href",
+          "fileSize",
+          "startDateMS"
+        ],
+        "type": "object"
+      },
+      "ServerLogTypesConfig": {
+        "properties": {
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverLogType": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "serverLogType"
+        ],
+        "type": "object"
+      },
+      "ServerLogsConfig": {
+        "properties": {
+          "endDate": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "endOffset": {
+            "format": "int64",
+            "type": "integer",
+            "uniqueItems": false
+          },
+          "fileLength": {
+            "format": "int64",
+            "type": "integer",
+            "uniqueItems": false
+          },
+          "filterStr": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "logDate": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "logFields": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "logLines": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "logSoftware": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "logStartDate": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "logVersion": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "regexSearch": {
+            "type": "boolean",
+            "uniqueItems": false
+          },
+          "retLineCount": {
+            "format": "int64",
+            "type": "integer",
+            "uniqueItems": false
+          },
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "searchStr": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "startDate": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "startOffset": {
+            "format": "int64",
+            "type": "integer",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "retLineCount",
+          "startOffset",
+          "endOffset",
+          "fileLength",
+          "filterStr",
+          "logFields",
+          "logVersion",
+          "logStartDate",
+          "logSoftware",
+          "logDate",
+          "logLines",
+          "searchStr",
+          "regexSearch",
+          "startDate",
+          "endDate"
+        ],
+        "type": "object"
+      },
+      "ServersConfig": {
+        "properties": {
+          "servers": {
+            "items": {
+              "$ref": "#/components/schemas/ServerConfig",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "servers"
+        ],
+        "type": "object"
+      },
+      "SourceDriverNamesList": {
+        "properties": {
+          "list": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "list"
+        ],
+        "type": "object"
+      }
+    }
+  }
+}

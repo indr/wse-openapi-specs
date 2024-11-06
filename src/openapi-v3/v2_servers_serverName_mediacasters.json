@@ -1,0 +1,222 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "",
+    "version": "1.0.0"
+  },
+  "servers": [],
+  "paths": {
+    "/v2/servers/{serverName}/mediacasters": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MediaCastersConfig"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/MediaCastersConfig"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/MediaCastersConfig"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getMediaCastersConfig",
+        "summary": "Retrieves the list of MediaCasters"
+      }
+    },
+    "/v2/servers/{serverName}/mediacasters/{mediacastername}": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "in": "path",
+            "name": "mediacastername",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MediaCasterConfig"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/MediaCasterConfig"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/MediaCasterConfig"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getMediaCasterConfig",
+        "summary": "Retrieves the specified MediaCaster configuration"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "MediaCasterConfig": {
+        "properties": {
+          "baseClass": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "connectionTimeout": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "description": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "keepAliveTime": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "name": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "streamType": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "name",
+          "description",
+          "streamType",
+          "baseClass",
+          "connectionTimeout",
+          "keepAliveTime"
+        ],
+        "type": "object"
+      },
+      "MediaCastersConfig": {
+        "properties": {
+          "mediaCasters": {
+            "items": {
+              "$ref": "#/components/schemas/MediaCasterConfig",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "mediaCasters"
+        ],
+        "type": "object"
+      }
+    }
+  }
+}

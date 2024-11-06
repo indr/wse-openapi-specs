@@ -1,0 +1,249 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "",
+    "version": "1.0.0"
+  },
+  "servers": [],
+  "paths": {
+    "/v2/servers/{serverName}/monitoring": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MonitoringConfig"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/MonitoringConfig"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/MonitoringConfig"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getMonitoringConfig",
+        "summary": "Retrieves the server monitoring configuration"
+      },
+      "put": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "putMonitoringConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MonitoringConfig",
+                "uniqueItems": false
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/MonitoringConfig",
+                "uniqueItems": false
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/MonitoringConfig",
+                "uniqueItems": false
+              }
+            }
+          },
+          "required": true
+        },
+        "summary": "Updates the server monitoring configuration"
+      }
+    },
+    "/v2/servers/{serverName}/monitoring/historic": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Reserved for future use",
+            "in": "path",
+            "name": "serverName",
+            "required": true,
+            "schema": {
+              "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricServerStatistics"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricServerStatistics"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricServerStatistics"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "402": {
+            "description": "Payment Required"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "415": {
+            "description": "Unsupported Media Type"
+          }
+        },
+        "deprecated": false,
+        "description": "This API is available in builds 15089 or later.",
+        "operationId": "getHistoricServerStatistics",
+        "summary": "Retrieves the server historical statictics"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HistoricServerStatistics": {
+        "properties": {
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "entries"
+        ],
+        "type": "object"
+      },
+      "MonitoringConfig": {
+        "properties": {
+          "databaseDebugEnable": {
+            "type": "boolean",
+            "uniqueItems": false
+          },
+          "debugEnable": {
+            "type": "boolean",
+            "uniqueItems": false
+          },
+          "enable": {
+            "type": "boolean",
+            "uniqueItems": false
+          },
+          "saveFieldList": {
+            "items": {
+              "type": "string",
+              "uniqueItems": false
+            },
+            "type": "array",
+            "uniqueItems": false
+          },
+          "serverName": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "version": {
+            "type": "string",
+            "uniqueItems": false
+          }
+        },
+        "required": [
+          "version",
+          "serverName",
+          "enable",
+          "debugEnable",
+          "databaseDebugEnable"
+        ],
+        "type": "object"
+      }
+    }
+  }
+}
