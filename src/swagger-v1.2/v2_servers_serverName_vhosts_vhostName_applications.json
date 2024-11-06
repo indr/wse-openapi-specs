@@ -11228,7 +11228,7 @@
           "type": "array",
           "items": {
             "uniqueItems": false,
-            "$ref": "VerimatrixStreamMapsConfig$VerimatrixStreamMapConfig"
+            "$ref": "VerimatrixStreamMapConfig"
           },
           "uniqueItems": false
         }
@@ -12016,7 +12016,7 @@
           "type": "array",
           "items": {
             "uniqueItems": false,
-            "$ref": "BuyDRMStreamMapsConfig$BuyDRMStreamMapConfig"
+            "$ref": "BuyDRMStreamMapConfig"
           },
           "uniqueItems": false
         },
@@ -12257,7 +12257,7 @@
       "properties": {
         "output": {
           "uniqueItems": false,
-          "$ref": "LiveEncoderConfig$Output"
+          "$ref": "Output"
         },
         "serverName": {
           "type": "string",
@@ -13068,11 +13068,11 @@
       "properties": {
         "rtmp": {
           "uniqueItems": false,
-          "$ref": "LiveEncoderConfig$RTMP"
+          "$ref": "RTMP"
         },
         "video": {
           "uniqueItems": false,
-          "$ref": "LiveEncoderConfig$VideoSettings"
+          "$ref": "VideoSettings"
         }
       },
       "required": [
@@ -14908,6 +14908,36 @@
         "someProp2"
       ],
       "className": "com.wowza.wms.rest.vhosts.applications.instances.outgoingstreams.OutgoingStreamConfig"
+    },
+    "IDvrConverterStore": {
+      "id": "IDvrConverterStore",
+      "properties": {
+        "placeholder": {
+          "type": "string",
+          "description": "This is a placeholder for the unknown IDvrConverterStore model"
+        }
+      },
+      "additionalProperties": true
+    },
+    "IDvrConverterStoreSummary": {
+      "id": "IDvrConverterStoreSummary",
+      "properties": {
+        "placeholder": {
+          "type": "string",
+          "description": "This is a placeholder for the unknown IDvrConverterStoreSummary model"
+        }
+      },
+      "additionalProperties": true
+    },
+    "IDvrConverterGroupStatus": {
+      "id": "IDvrConverterGroupStatus",
+      "properties": {
+        "placeholder": {
+          "type": "string",
+          "description": "This is a placeholder for the unknown IDvrConverterGroupStatus model"
+        }
+      },
+      "additionalProperties": true
     }
   },
   "produces": [

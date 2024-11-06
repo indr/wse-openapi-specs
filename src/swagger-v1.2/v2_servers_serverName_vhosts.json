@@ -8248,6 +8248,16 @@
         "streamfileName"
       ],
       "className": "com.wowza.wms.rest.vhosts.streamfiles.StreamFileAction"
+    },
+    "IMediaCacheItemSummary": {
+      "id": "IMediaCacheItemSummary",
+      "properties": {
+        "placeholder": {
+          "type": "string",
+          "description": "This is a placeholder for the unknown IMediaCacheItemSummary model"
+        }
+      },
+      "additionalProperties": true
     }
   },
   "produces": [

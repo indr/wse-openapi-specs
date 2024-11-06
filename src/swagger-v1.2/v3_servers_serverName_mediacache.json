@@ -159,7 +159,7 @@
               "allowMultiple": false
             },
             {
-              "type": "MediaCacheSourceConfig",
+              "type": "MediaCacheSourceConfig3",
               "uniqueItems": false,
               "name": "body",
               "paramType": "body",
@@ -672,7 +672,7 @@
               "allowMultiple": false
             },
             {
-              "type": "MediaCacheStoreConfig",
+              "type": "MediaCacheStoreConfig3",
               "uniqueItems": false,
               "name": "body",
               "paramType": "body",
