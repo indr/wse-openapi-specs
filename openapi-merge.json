@@ -1,0 +1,62 @@
+{
+  "inputs": [
+    {
+      "inputFile": "./src/openapi-v3/restinfo.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_machine_monitoring_current.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_machine_monitoring_historic.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_servers.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_servers_serverName_licenses.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_servers_serverName_listeners.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_servers_serverName_log4j.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_servers_serverName_mediacache.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_servers_serverName_mediacasters.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_servers_serverName_monitoring.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_servers_serverName_publishers.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_servers_serverName_status.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_servers_serverName_transcoder.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_servers_serverName_tune.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_servers_serverName_users.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_servers_serverName_vhosts.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v2_servers_serverName_vhosts_vhostName_applications.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v3_servers_serverName_mediacache.json"
+    },
+    {
+      "inputFile": "./src/openapi-v3/v3_servers_serverName_publishers.json"
+    }
+  ],
+  "output": "./dist/openapi.json"
+}
