@@ -1,0 +1,730 @@
+# This file instructs Redocly's linter to ignore the rules contained for specific parts of your API.
+# See https://redocly.com/docs/cli/ for more information.
+src/openapi-v3/restinfo.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  security-defined:
+    - '#/paths/~1restinfo/get'
+src/openapi-v3/v2_machine_monitoring_current.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  security-defined:
+    - '#/paths/~1v2~1machine~1monitoring~1current/get'
+src/openapi-v3/v2_machine_monitoring_historic.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  security-defined:
+    - '#/paths/~1v2~1machine~1monitoring~1historic/get'
+src/openapi-v3/v2_servers.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  no-unused-components:
+    - '#/components/schemas/ServerAction'
+  security-defined:
+    - '#/paths/~1v2~1servers/get'
+    - '#/paths/~1v2~1servers~1{serverName}/get'
+    - '#/paths/~1v2~1servers~1{serverName}/put'
+    - '#/paths/~1v2~1servers~1{serverName}~1actions~1{action}/put'
+    - '#/paths/~1v2~1servers~1{serverName}~1adv/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1adv/put'
+    - '#/paths/~1v2~1servers~1{serverName}~1logfiles/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1logfiles~1{logName}/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1logfiles~1{logName}~1download/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1logs/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1logs~1{logType}/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1sourcecontrol~1drivernames/get'
+src/openapi-v3/v2_servers_serverName_licenses.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  security-defined:
+    - '#/paths/~1v2~1servers~1{serverName}~1licenses/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1licenses/put'
+src/openapi-v3/v2_servers_serverName_listeners.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  security-defined:
+    - '#/paths/~1v2~1servers~1{serverName}~1listeners/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1listeners/put'
+src/openapi-v3/v2_servers_serverName_log4j.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  no-unused-components:
+    - '#/components/schemas/Log4jAction'
+    - '#/components/schemas/Log4jsAction'
+  security-defined:
+    - '#/paths/~1v2~1servers~1{serverName}~1log4j/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1log4j~1actions~1{action}/put'
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1log4j~1{loggerName}~1actions~1{action}/put
+src/openapi-v3/v2_servers_serverName_mediacache.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  no-unused-components:
+    - '#/components/requestBodies/MediaCacheConfigAdv'
+    - '#/components/requestBodies/MediaCacheSourceConfig'
+    - '#/components/requestBodies/MediaCacheSourceConfigAdv'
+    - '#/components/requestBodies/MediaCacheStoreConfig'
+    - '#/components/requestBodies/MediaCacheStoreConfigAdv'
+  security-defined:
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacache/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacache/put'
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacache~1adv/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacache~1adv/put'
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacache~1adv/post'
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacache~1sources/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacache~1sources/post'
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacache~1sources~1{sourceName}/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacache~1sources~1{sourceName}/put'
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1mediacache~1sources~1{sourceName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1mediacache~1sources~1{sourceName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1mediacache~1sources~1{sourceName}~1adv/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1mediacache~1sources~1{sourceName}~1adv/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1mediacache~1sources~1{sourceName}~1adv/post
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacache~1stores/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacache~1stores/post'
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacache~1stores~1{storeName}/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacache~1stores~1{storeName}/put'
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacache~1stores~1{storeName}/post'
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1mediacache~1stores~1{storeName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1mediacache~1stores~1{storeName}~1adv/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1mediacache~1stores~1{storeName}~1adv/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1mediacache~1stores~1{storeName}~1adv/post
+src/openapi-v3/v2_servers_serverName_mediacasters.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  security-defined:
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacasters/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1mediacasters~1{mediacastername}/get'
+src/openapi-v3/v2_servers_serverName_monitoring.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  security-defined:
+    - '#/paths/~1v2~1servers~1{serverName}~1monitoring/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1monitoring/put'
+    - '#/paths/~1v2~1servers~1{serverName}~1monitoring~1historic/get'
+src/openapi-v3/v2_servers_serverName_publishers.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  no-unused-components:
+    - '#/components/requestBodies/PublisherConfig'
+  security-defined:
+    - '#/paths/~1v2~1servers~1{serverName}~1publishers/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1publishers/post'
+    - '#/paths/~1v2~1servers~1{serverName}~1publishers~1{publisher}/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1publishers~1{publisher}/post'
+    - '#/paths/~1v2~1servers~1{serverName}~1publishers~1{publisher}/delete'
+src/openapi-v3/v2_servers_serverName_status.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  security-defined:
+    - '#/paths/~1v2~1servers~1{serverName}~1status/get'
+src/openapi-v3/v2_servers_serverName_transcoder.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  security-defined:
+    - '#/paths/~1v2~1servers~1{serverName}~1transcoder/get'
+src/openapi-v3/v2_servers_serverName_tune.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  security-defined:
+    - '#/paths/~1v2~1servers~1{serverName}~1tune/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1tune/put'
+src/openapi-v3/v2_servers_serverName_users.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  no-unused-components:
+    - '#/components/requestBodies/UserConfig'
+  security-defined:
+    - '#/paths/~1v2~1servers~1{serverName}~1users/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1users/post'
+    - '#/paths/~1v2~1servers~1{serverName}~1users~1{userName}/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1users~1{userName}/put'
+    - '#/paths/~1v2~1servers~1{serverName}~1users~1{userName}/post'
+    - '#/paths/~1v2~1servers~1{serverName}~1users~1{userName}/delete'
+src/openapi-v3/v2_servers_serverName_vhosts.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  operation-summary:
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1hostports~1{portname}~1adv/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1mediacache~1stores~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1sdpfiles~1{sdpfileName}~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1smilfiles~1{smilfileName}~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1streamfiles~1{streamfileName}~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1actions~1{action}/put/summary
+  no-unused-components:
+    - '#/components/schemas/MediaCacheStoreAction'
+    - '#/components/schemas/SDPFileAction'
+    - '#/components/schemas/SDPFileConfig'
+    - '#/components/schemas/SMILFileAction'
+    - '#/components/schemas/StreamFileAction'
+    - '#/components/schemas/TranscoderTemplateAction'
+    - '#/components/schemas/VHostAction'
+    - '#/components/requestBodies/PublisherVhostConfig'
+    - '#/components/requestBodies/SMILFileConfig'
+    - '#/components/requestBodies/StartupStreamConfig'
+    - '#/components/requestBodies/StreamFileConfig'
+    - '#/components/requestBodies/TranscoderEncodeConfig'
+    - '#/components/requestBodies/TranscoderStreamNameGroupConfig'
+    - '#/components/requestBodies/TranscoderTemplateConfig'
+  security-defined:
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}/put'
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1actions~1{action}/put
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1adv/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1adv/put'
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1hostports/get'
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1hostports~1{portname}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1hostports~1{portname}~1adv/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1hostports~1{portname}~1adv/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1hostports~1{portname}~1httpproviders~1{baseClass}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1hostports~1{portname}~1ssl/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1hostports~1{portname}~1ssl/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1mediacache~1stores/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1mediacache~1stores~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1monitoring~1current/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1monitoring~1historic/get
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1publishers/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1publishers/post'
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1publishers~1{publisherName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1publishers~1{publisherName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1publishers~1{publisherName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1publishers~1{publisherName}/delete
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1sdpfiles/get'
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1sdpfiles~1{sdpfileName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1sdpfiles~1{sdpfileName}~1actions~1{action}/put
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1smilfiles/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1smilfiles/post'
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1smilfiles~1{smilfileName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1smilfiles~1{smilfileName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1smilfiles~1{smilfileName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1smilfiles~1{smilfileName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1smilfiles~1{smilfileName}~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1startupstreams/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1startupstreams/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1startupstreams~1applications~1{appName}~1instances~1{instanceName}~1streams~1{streamName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1startupstreams~1applications~1{appName}~1instances~1{instanceName}~1streams~1{streamName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1startupstreams~1applications~1{appName}~1instances~1{instanceName}~1streams~1{streamName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1startupstreams~1applications~1{appName}~1instances~1{instanceName}~1streams~1{streamName}/delete
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1streamfiles/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1streamfiles/post'
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1streamfiles~1{streamfileName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1streamfiles~1{streamfileName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1streamfiles~1{streamfileName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1streamfiles~1{streamfileName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1streamfiles~1{streamfileName}~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1streamfiles~1{streamfileName}~1adv/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1streamfiles~1{streamfileName}~1adv/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1testPlaybackInfo/get
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder/put'
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1adv/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1adv/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1decode~1overlays~1{overlayName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1decode~1overlays~1{overlayName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1decode~1overlays~1{overlayName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1encodes/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1encodes/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}~1adv/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}~1adv/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}~1overlays~1{overlayName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}~1overlays~1{overlayName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}~1overlays~1{overlayName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1streamnamegroups/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1streamnamegroups/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1streamnamegroups~1{groupName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1streamnamegroups~1{groupName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1streamnamegroups~1{groupName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1transcoder~1templates~1{templateName}~1streamnamegroups~1{groupName}/delete
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1tune/get'
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1tune/put'
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1tunehostports/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1tunehostports/put
+src/openapi-v3/v2_servers_serverName_vhosts_vhostName_applications.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  operation-summary:
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1dvrstores~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1dvrstores~1{dvrStoreName}~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1incomingstreams~1{streamName}~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1incomingstreams~1{streamName}~1sourcecontrol~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1mediacache~1stores~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1streamgroups~1{groupName}~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1streamrecorders~1{recorderName}~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1pushpublish~1mapentries/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1pushpublish~1mapentries~1{entryName}~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1sdpfiles~1{sdpfileName}~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1smilfiles~1{smilfileName}~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1streamfiles~1{streamfileName}~1actions~1{action}/put/summary
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1actions~1{action}/put/summary
+  no-unused-components:
+    - '#/components/schemas/ApplicationAction'
+    - '#/components/schemas/DvrRESTConverterStoreAction'
+    - '#/components/schemas/DvrRESTConverterStoresAction'
+    - '#/components/schemas/IncomingStreamAction'
+    - '#/components/schemas/InstanceAction'
+    - '#/components/schemas/MediaCacheApplicationStoreAction'
+    - '#/components/schemas/PushPublishStreamAppAction'
+    - '#/components/schemas/SDPFileAppAction'
+    - '#/components/schemas/SDPFileAppConfig'
+    - '#/components/schemas/SMILFileAppAction'
+    - '#/components/schemas/SourceControlAction'
+    - '#/components/schemas/StreamFileAppAction'
+    - '#/components/schemas/StreamGroupAction'
+    - '#/components/schemas/StreamRecorderAction'
+    - '#/components/schemas/TranscoderTemplateAppAction'
+    - '#/components/requestBodies/ApplicationConfig'
+    - '#/components/requestBodies/ApplicationConfigAdv'
+    - '#/components/requestBodies/PublisherAppConfig'
+    - '#/components/requestBodies/PushPublishStreamAppConfig'
+    - '#/components/requestBodies/SMILFileAppConfig'
+    - '#/components/requestBodies/StreamFileAppConfig'
+    - '#/components/requestBodies/StreamRecorderConfig'
+    - '#/components/requestBodies/TranscoderEncodeAppConfig'
+    - '#/components/requestBodies/TranscoderStreamNameGroupAppConfig'
+    - '#/components/requestBodies/TranscoderTemplateAppConfig'
+  security-defined:
+    - '#/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications/get'
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1adv/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1adv/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1adv/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1drm/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1drm/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1drm~1adv/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1drm~1adv/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1drm~1buydrmmapfile/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1drm~1buydrmmapfile/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1drm~1verimatrixmapfile/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1drm~1verimatrixmapfile/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1dvr/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1dvr/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1dvr~1adv/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1dvr~1adv/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1dvrstores/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1dvrstores~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1dvrstores~1{dvrStoreName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1dvrstores~1{dvrStoreName}~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1incomingstreams~1{streamName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1incomingstreams~1{streamName}~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1incomingstreams~1{streamName}~1encoder~1live/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1incomingstreams~1{streamName}~1encoder~1shorturl/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1incomingstreams~1{streamName}~1monitoring~1current/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1incomingstreams~1{streamName}~1sourcecontrol/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1incomingstreams~1{streamName}~1sourcecontrol~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1mediacache~1stores~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1streamgroups/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1streamgroups~1{groupName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1streamgroups~1{groupName}~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1streamrecorders/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1streamrecorders/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1streamrecorders~1{recorderName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1streamrecorders~1{recorderName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1streamrecorders~1{recorderName}~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1instances~1{instanceName}~1streamrecorders~1{recorderName}~1default/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1modules/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1modules/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1monitoring~1current/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1monitoring~1historic/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1publishers/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1publishers/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1publishers~1{publisherName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1publishers~1{publisherName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1publishers~1{publisherName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1publishers~1{publisherName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1pushpublish~1mapentries/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1pushpublish~1mapentries/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1pushpublish~1mapentries/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1pushpublish~1mapentries~1{entryName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1pushpublish~1mapentries~1{entryName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1pushpublish~1mapentries~1{entryName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1pushpublish~1mapentries~1{entryName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1pushpublish~1mapentries~1{entryName}~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1sdpfiles/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1sdpfiles~1{sdpfileName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1sdpfiles~1{sdpfileName}~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1security/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1security/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1smilfiles/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1smilfiles/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1smilfiles~1{smilfileName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1smilfiles~1{smilfileName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1smilfiles~1{smilfileName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1smilfiles~1{smilfileName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1smilfiles~1{smilfileName}~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1streamconfiguration/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1streamconfiguration/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1streamfiles/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1streamfiles/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1streamfiles~1{streamfileName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1streamfiles~1{streamfileName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1streamfiles~1{streamfileName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1streamfiles~1{streamfileName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1streamfiles~1{streamfileName}~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1streamfiles~1{streamfileName}~1adv/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1streamfiles~1{streamfileName}~1adv/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1adv/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1adv/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1actions~1{action}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1adv/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1adv/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1decode~1overlays~1{overlayName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1decode~1overlays~1{overlayName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1decode~1overlays~1{overlayName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1encodes/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1encodes/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}~1adv/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}~1adv/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}~1overlays~1{overlayName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}~1overlays~1{overlayName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1encodes~1{encodeName}~1overlays~1{overlayName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1streamnamegroups/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1streamnamegroups/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1streamnamegroups~1{groupName}/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1streamnamegroups~1{groupName}/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1streamnamegroups~1{groupName}/post
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1transcoder~1templates~1{templateName}~1streamnamegroups~1{groupName}/delete
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1webrtc/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1webrtc/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1webrtc~1adv/get
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1webrtc~1adv/put
+    - >-
+      #/paths/~1v2~1servers~1{serverName}~1vhosts~1{vhostName}~1applications~1{appName}~1wscrestproxy/post
+src/openapi-v3/v3_servers_serverName_mediacache.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  no-unused-components:
+    - '#/components/requestBodies/MediaCacheSourceConfig3'
+    - '#/components/requestBodies/MediaCacheSourceConfigAdv3'
+    - '#/components/requestBodies/MediaCacheStoreConfig3'
+  security-defined:
+    - '#/paths/~1v3~1servers~1{serverName}~1mediacache/get'
+    - '#/paths/~1v3~1servers~1{serverName}~1mediacache/put'
+    - '#/paths/~1v3~1servers~1{serverName}~1mediacache~1sources/get'
+    - '#/paths/~1v3~1servers~1{serverName}~1mediacache~1sources/post'
+    - '#/paths/~1v3~1servers~1{serverName}~1mediacache~1sources~1{sourceName}/get'
+    - '#/paths/~1v3~1servers~1{serverName}~1mediacache~1sources~1{sourceName}/put'
+    - >-
+      #/paths/~1v3~1servers~1{serverName}~1mediacache~1sources~1{sourceName}/post
+    - >-
+      #/paths/~1v3~1servers~1{serverName}~1mediacache~1sources~1{sourceName}/delete
+    - >-
+      #/paths/~1v3~1servers~1{serverName}~1mediacache~1sources~1{sourceName}~1adv/get
+    - >-
+      #/paths/~1v3~1servers~1{serverName}~1mediacache~1sources~1{sourceName}~1adv/put
+    - >-
+      #/paths/~1v3~1servers~1{serverName}~1mediacache~1sources~1{sourceName}~1adv/post
+    - '#/paths/~1v3~1servers~1{serverName}~1mediacache~1stores/get'
+    - '#/paths/~1v3~1servers~1{serverName}~1mediacache~1stores/post'
+    - '#/paths/~1v3~1servers~1{serverName}~1mediacache~1stores~1{storeName}/get'
+    - '#/paths/~1v3~1servers~1{serverName}~1mediacache~1stores~1{storeName}/put'
+    - '#/paths/~1v3~1servers~1{serverName}~1mediacache~1stores~1{storeName}/post'
+    - >-
+      #/paths/~1v3~1servers~1{serverName}~1mediacache~1stores~1{storeName}/delete
+src/openapi-v3/v3_servers_serverName_publishers.json:
+  no-empty-servers:
+    - '#/servers'
+  info-license:
+    - '#/info'
+  operation-summary:
+    - '#/paths/~1v3~1servers~1{serverName}~1publishers~1{publisher}/put/summary'
+  no-unused-components:
+    - '#/components/requestBodies/PublisherConfig3'
+  security-defined:
+    - '#/paths/~1v3~1servers~1{serverName}~1publishers/get'
+    - '#/paths/~1v3~1servers~1{serverName}~1publishers/post'
+    - '#/paths/~1v3~1servers~1{serverName}~1publishers~1{publisher}/get'
+    - '#/paths/~1v3~1servers~1{serverName}~1publishers~1{publisher}/put'
+    - '#/paths/~1v3~1servers~1{serverName}~1publishers~1{publisher}/post'
+    - '#/paths/~1v3~1servers~1{serverName}~1publishers~1{publisher}/delete'

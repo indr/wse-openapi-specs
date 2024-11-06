@@ -123,6 +123,14 @@
               "description": "Reserved for future use",
               "required": true,
               "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "publisher",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
             }
           ],
           "summary": "Retrieves the specified Publisher configuration",
@@ -163,6 +171,14 @@
               "name": "serverName",
               "paramType": "path",
               "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "publisher",
+              "paramType": "path",
               "required": true,
               "allowMultiple": false
             },
@@ -221,6 +237,14 @@
               "name": "serverName",
               "paramType": "path",
               "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "publisher",
+              "paramType": "path",
               "required": true,
               "allowMultiple": false
             }

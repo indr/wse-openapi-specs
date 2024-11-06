@@ -5,7 +5,8 @@
   "scripts": {
     "build": "openapi-merge-cli --config openapi-merge.json",
     "convert": "./scripts/convert.sh ./src/swagger-v1.2 ./src/openapi-v3",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "redocly lint src/openapi-v3/*.json"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   "author": "Reto Inderbitzin <mail@indr.ch>",
   "license": "MIT",
   "devDependencies": {
+    "@redocly/cli": "^1.25.11",
     "api-spec-converter": "^2.12.0",
     "openapi-merge-cli": "^1.3.2"
   }
