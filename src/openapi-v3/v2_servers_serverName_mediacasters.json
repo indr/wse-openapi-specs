@@ -33,11 +33,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/MediaCastersConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/MediaCastersConfig"
-                }
               }
             },
             "description": "Ok"
@@ -94,11 +89,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/MediaCasterConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/MediaCasterConfig"
                 }

@@ -418,12 +418,10 @@
   },
   "produces": [
     "application/xml",
-    "text/xml",
     "application/json"
   ],
   "consumes": [
     "application/xml",
-    "text/xml",
     "application/json"
   ],
   "authorizations": {}

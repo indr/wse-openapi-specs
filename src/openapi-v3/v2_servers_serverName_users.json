@@ -33,11 +33,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/UsersConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/UsersConfig"
-                }
               }
             },
             "description": "Ok"
@@ -109,12 +104,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/UserConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/UserConfig",
                 "uniqueItems": false
@@ -209,11 +198,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/UserConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserConfig"
-                }
               }
             },
             "description": "Ok"
@@ -299,12 +283,6 @@
                 "$ref": "#/components/schemas/UserConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/UserConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -368,12 +346,6 @@
                 "$ref": "#/components/schemas/UserConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/UserConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -393,12 +365,6 @@
             }
           },
           "application/xml": {
-            "schema": {
-              "$ref": "#/components/schemas/UserConfig",
-              "uniqueItems": false
-            }
-          },
-          "text/xml": {
             "schema": {
               "$ref": "#/components/schemas/UserConfig",
               "uniqueItems": false

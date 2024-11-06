@@ -33,11 +33,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/ServerListenersConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServerListenersConfig"
-                }
               }
             },
             "description": "Ok"
@@ -103,12 +98,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/ServerListenersConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/ServerListenersConfig",
                 "uniqueItems": false

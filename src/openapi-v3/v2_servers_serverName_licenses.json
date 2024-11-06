@@ -33,11 +33,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/ServerLicensesConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServerLicensesConfig"
-                }
               }
             },
             "description": "Ok"
@@ -103,12 +98,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/ServerLicensesConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/ServerLicensesConfig",
                 "uniqueItems": false

@@ -20,11 +20,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/ServersConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServersConfig"
-                }
               }
             },
             "description": "Ok"
@@ -72,11 +67,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServerConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/ServerConfig"
                 }
@@ -145,12 +135,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/ServerConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/ServerConfig",
                 "uniqueItems": false
@@ -254,11 +238,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/ServerConfigAdv"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServerConfigAdv"
-                }
               }
             },
             "description": "Ok"
@@ -328,12 +307,6 @@
                 "$ref": "#/components/schemas/ServerConfigAdv",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/ServerConfigAdv",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -380,11 +353,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServerLogFilesConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/ServerLogFilesConfig"
                 }
@@ -524,11 +492,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/ServerLogFileConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServerLogFileConfig"
-                }
               }
             },
             "description": "Ok"
@@ -589,11 +552,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/ServerLogFileDownloadConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServerLogFileDownloadConfig"
-                }
               }
             },
             "description": "Ok"
@@ -641,11 +599,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServerLogTypesConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/ServerLogTypesConfig"
                 }
@@ -805,11 +758,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/ServerLogsConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServerLogsConfig"
-                }
               }
             },
             "description": "Ok"
@@ -857,11 +805,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/SourceDriverNamesList"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/SourceDriverNamesList"
                 }

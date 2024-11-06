@@ -33,11 +33,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/TranscoderConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/TranscoderConfig"
-                }
               }
             },
             "description": "Ok"

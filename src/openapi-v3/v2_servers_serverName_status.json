@@ -33,11 +33,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/ServerStatusConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServerStatusConfig"
-                }
               }
             },
             "description": "Ok"

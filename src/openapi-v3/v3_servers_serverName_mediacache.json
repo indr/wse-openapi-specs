@@ -33,11 +33,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/MediaCacheConfig3"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/MediaCacheConfig3"
-                }
               }
             },
             "description": "Ok"
@@ -107,12 +102,6 @@
                 "$ref": "#/components/schemas/MediaCacheConfig3",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/MediaCacheConfig3",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -144,11 +133,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/MediaCacheSourcesConfig3"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/MediaCacheSourcesConfig3"
                 }
@@ -223,12 +207,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/MediaCacheSourceConfig3",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/MediaCacheSourceConfig3",
                 "uniqueItems": false
@@ -321,11 +299,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/MediaCacheSourceConfig3"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/MediaCacheSourceConfig3"
-                }
               }
             },
             "description": "Ok"
@@ -410,12 +383,6 @@
                 "$ref": "#/components/schemas/MediaCacheSourceConfig3",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/MediaCacheSourceConfig3",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -478,12 +445,6 @@
                 "$ref": "#/components/schemas/MediaCacheSourceConfig3",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/MediaCacheSourceConfig3",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -524,11 +485,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/MediaCacheSourceConfigAdv3"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/MediaCacheSourceConfigAdv3"
                 }
@@ -616,12 +572,6 @@
                 "$ref": "#/components/schemas/MediaCacheSourceConfigAdv3",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/MediaCacheSourceConfigAdv3",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -684,12 +634,6 @@
                 "$ref": "#/components/schemas/MediaCacheSourceConfigAdv3",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/MediaCacheSourceConfigAdv3",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -721,11 +665,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/MediaCacheStoresConfig3"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/MediaCacheStoresConfig3"
                 }
@@ -800,12 +739,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/MediaCacheStoreConfig3",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/MediaCacheStoreConfig3",
                 "uniqueItems": false
@@ -898,11 +831,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/MediaCacheStoreConfig3"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/MediaCacheStoreConfig3"
-                }
               }
             },
             "description": "Ok"
@@ -987,12 +915,6 @@
                 "$ref": "#/components/schemas/MediaCacheStoreConfig3",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/MediaCacheStoreConfig3",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -1055,12 +977,6 @@
                 "$ref": "#/components/schemas/MediaCacheStoreConfig3",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/MediaCacheStoreConfig3",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -1084,12 +1000,6 @@
               "$ref": "#/components/schemas/MediaCacheSourceConfig3",
               "uniqueItems": false
             }
-          },
-          "text/xml": {
-            "schema": {
-              "$ref": "#/components/schemas/MediaCacheSourceConfig3",
-              "uniqueItems": false
-            }
           }
         },
         "required": true
@@ -1107,12 +1017,6 @@
               "$ref": "#/components/schemas/MediaCacheSourceConfigAdv3",
               "uniqueItems": false
             }
-          },
-          "text/xml": {
-            "schema": {
-              "$ref": "#/components/schemas/MediaCacheSourceConfigAdv3",
-              "uniqueItems": false
-            }
           }
         },
         "required": true
@@ -1126,12 +1030,6 @@
             }
           },
           "application/xml": {
-            "schema": {
-              "$ref": "#/components/schemas/MediaCacheStoreConfig3",
-              "uniqueItems": false
-            }
-          },
-          "text/xml": {
             "schema": {
               "$ref": "#/components/schemas/MediaCacheStoreConfig3",
               "uniqueItems": false

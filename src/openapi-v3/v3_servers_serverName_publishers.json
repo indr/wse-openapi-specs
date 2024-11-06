@@ -33,11 +33,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/PublishersConfig3"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/PublishersConfig3"
-                }
               }
             },
             "description": "Ok"
@@ -109,12 +104,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/PublisherConfig3",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/PublisherConfig3",
                 "uniqueItems": false
@@ -207,11 +196,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/PublisherConfig3"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/PublisherConfig3"
-                }
               }
             },
             "description": "Ok"
@@ -296,12 +280,6 @@
                 "$ref": "#/components/schemas/PublisherConfig3",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/PublisherConfig3",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -364,12 +342,6 @@
                 "$ref": "#/components/schemas/PublisherConfig3",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/PublisherConfig3",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -388,12 +360,6 @@
             }
           },
           "application/xml": {
-            "schema": {
-              "$ref": "#/components/schemas/PublisherConfig3",
-              "uniqueItems": false
-            }
-          },
-          "text/xml": {
             "schema": {
               "$ref": "#/components/schemas/PublisherConfig3",
               "uniqueItems": false

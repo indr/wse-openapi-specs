@@ -33,11 +33,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/PublishersConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/PublishersConfig"
-                }
               }
             },
             "description": "Ok"
@@ -109,12 +104,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/PublisherConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/PublisherConfig",
                 "uniqueItems": false
@@ -207,11 +196,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/PublisherConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/PublisherConfig"
-                }
               }
             },
             "description": "Ok"
@@ -296,12 +280,6 @@
                 "$ref": "#/components/schemas/PublisherConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/PublisherConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -321,12 +299,6 @@
             }
           },
           "application/xml": {
-            "schema": {
-              "$ref": "#/components/schemas/PublisherConfig",
-              "uniqueItems": false
-            }
-          },
-          "text/xml": {
             "schema": {
               "$ref": "#/components/schemas/PublisherConfig",
               "uniqueItems": false

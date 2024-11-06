@@ -20,11 +20,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/HistoricMachineStatistics"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/HistoricMachineStatistics"
-                }
               }
             },
             "description": "Ok"

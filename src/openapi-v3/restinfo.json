@@ -20,11 +20,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/RESTInfoConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/RESTInfoConfig"
-                }
               }
             },
             "description": "Ok"

@@ -33,11 +33,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/MonitoringConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/MonitoringConfig"
-                }
               }
             },
             "description": "Ok"
@@ -107,12 +102,6 @@
                 "$ref": "#/components/schemas/MonitoringConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/MonitoringConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -144,11 +133,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/HistoricServerStatistics"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/HistoricServerStatistics"
                 }

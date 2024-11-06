@@ -33,11 +33,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/VHostsConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VHostsConfig"
-                }
               }
             },
             "description": "Ok"
@@ -96,11 +91,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VHostConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/VHostConfig"
                 }
@@ -180,12 +170,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/VHostConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/VHostConfig",
                 "uniqueItems": false
@@ -297,11 +281,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/VHostConfigAdv"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VHostConfigAdv"
-                }
               }
             },
             "description": "Ok"
@@ -381,12 +360,6 @@
                 "$ref": "#/components/schemas/VHostConfigAdv",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/VHostConfigAdv",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -428,11 +401,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/HostPortsConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/HostPortsConfig"
                 }
@@ -506,11 +474,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/HostPortConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/HostPortConfig"
-                }
               }
             },
             "description": "Ok"
@@ -578,11 +541,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/HostPortConfigAdv"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/HostPortConfigAdv"
                 }
@@ -675,12 +633,6 @@
                 "$ref": "#/components/schemas/HostPortConfigAdv",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/HostPortConfigAdv",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -740,11 +692,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPProviderConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/HTTPProviderConfig"
                 }
@@ -815,11 +762,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/SSLConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/SSLConfig"
                 }
@@ -912,12 +854,6 @@
                 "$ref": "#/components/schemas/SSLConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/SSLConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -959,11 +895,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/MediaCacheStoreList"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/MediaCacheStoreList"
                 }
@@ -1095,11 +1026,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/CurrentVHostStatistics"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/CurrentVHostStatistics"
-                }
               }
             },
             "description": "Ok"
@@ -1157,11 +1083,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/HistoricVHostStatistics"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/HistoricVHostStatistics"
                 }
@@ -1223,11 +1144,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/PublishersVhostConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/PublishersVhostConfig"
                 }
@@ -1313,12 +1229,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/PublisherVhostConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/PublisherVhostConfig",
                 "uniqueItems": false
@@ -1435,11 +1345,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/PublisherVhostConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/PublisherVhostConfig"
-                }
               }
             },
             "description": "Ok"
@@ -1536,12 +1441,6 @@
                 "$ref": "#/components/schemas/PublisherVhostConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/PublisherVhostConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -1616,12 +1515,6 @@
                 "$ref": "#/components/schemas/PublisherVhostConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/PublisherVhostConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -1663,11 +1556,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/SDPFilesConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/SDPFilesConfig"
                 }
@@ -1899,11 +1787,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/SMILFilesConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/SMILFilesConfig"
-                }
               }
             },
             "description": "Ok"
@@ -1986,12 +1869,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/SMILFileConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/SMILFileConfig",
                 "uniqueItems": false
@@ -2106,11 +1983,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/SMILFileConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/SMILFileConfig"
-                }
               }
             },
             "description": "Ok"
@@ -2206,12 +2078,6 @@
                 "$ref": "#/components/schemas/SMILFileConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/SMILFileConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -2281,12 +2147,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/SMILFileConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/SMILFileConfig",
                 "uniqueItems": false
@@ -2455,11 +2315,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/StartupStreamsConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/StartupStreamsConfig"
-                }
               }
             },
             "description": "Ok"
@@ -2541,12 +2396,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/StartupStreamConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/StartupStreamConfig",
                 "uniqueItems": false
@@ -2697,11 +2546,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/StartupStreamConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/StartupStreamConfig"
-                }
               }
             },
             "description": "Ok"
@@ -2815,12 +2659,6 @@
                 "$ref": "#/components/schemas/StartupStreamConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/StartupStreamConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -2912,12 +2750,6 @@
                 "$ref": "#/components/schemas/StartupStreamConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/StartupStreamConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -2959,11 +2791,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/StreamFilesConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/StreamFilesConfig"
                 }
@@ -3048,12 +2875,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/StreamFileConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/StreamFileConfig",
                 "uniqueItems": false
@@ -3168,11 +2989,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/StreamFileConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/StreamFileConfig"
-                }
               }
             },
             "description": "Ok"
@@ -3268,12 +3084,6 @@
                 "$ref": "#/components/schemas/StreamFileConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/StreamFileConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -3343,12 +3153,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/StreamFileConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/StreamFileConfig",
                 "uniqueItems": false
@@ -3527,11 +3331,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/StreamFileConfigAdv"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/StreamFileConfigAdv"
-                }
               }
             },
             "description": "Ok"
@@ -3621,12 +3420,6 @@
                 "$ref": "#/components/schemas/StreamFileConfigAdv",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/StreamFileConfigAdv",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -3669,11 +3462,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/TestPlaybackInfoConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/TestPlaybackInfoConfig"
                 }
@@ -3734,11 +3522,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/TranscoderConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/TranscoderConfig"
                 }
@@ -3821,12 +3604,6 @@
                 "$ref": "#/components/schemas/TranscoderConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/TranscoderConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -3869,11 +3646,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/TranscoderTemplatesConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/TranscoderTemplatesConfig"
                 }
@@ -3959,12 +3731,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/TranscoderTemplateConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/TranscoderTemplateConfig",
                 "uniqueItems": false
@@ -4077,11 +3843,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/TranscoderTemplateConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/TranscoderTemplateConfig"
-                }
               }
             },
             "description": "Ok"
@@ -4176,12 +3937,6 @@
                 "$ref": "#/components/schemas/TranscoderTemplateConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/TranscoderTemplateConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -4250,12 +4005,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/TranscoderTemplateConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/TranscoderTemplateConfig",
                 "uniqueItems": false
@@ -4394,11 +4143,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/TranscoderTemplateConfigAdv"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/TranscoderTemplateConfigAdv"
-                }
               }
             },
             "description": "Ok"
@@ -4483,12 +4227,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/TranscoderTemplateConfigAdv",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/TranscoderTemplateConfigAdv",
                 "uniqueItems": false
@@ -4619,11 +4357,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/TranscoderOverlayDecodeConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/TranscoderOverlayDecodeConfig"
-                }
               }
             },
             "description": "Ok"
@@ -4721,12 +4454,6 @@
                 "$ref": "#/components/schemas/TranscoderOverlayDecodeConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/TranscoderOverlayDecodeConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -4777,11 +4504,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/TranscoderEncodesConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/TranscoderEncodesConfig"
                 }
@@ -4875,12 +4597,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/TranscoderEncodeConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/TranscoderEncodeConfig",
                 "uniqueItems": false
@@ -5011,11 +4727,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/TranscoderEncodeConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/TranscoderEncodeConfig"
-                }
               }
             },
             "description": "Ok"
@@ -5119,12 +4830,6 @@
                 "$ref": "#/components/schemas/TranscoderEncodeConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/TranscoderEncodeConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -5206,12 +4911,6 @@
                 "$ref": "#/components/schemas/TranscoderEncodeConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/TranscoderEncodeConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -5271,11 +4970,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/TranscoderEncodeConfigAdv"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/TranscoderEncodeConfigAdv"
                 }
@@ -5372,12 +5066,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/TranscoderEncodeConfigAdv",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/TranscoderEncodeConfigAdv",
                 "uniqueItems": false
@@ -5526,11 +5214,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/TranscoderOverlayEncodeConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/TranscoderOverlayEncodeConfig"
-                }
               }
             },
             "description": "Ok"
@@ -5637,12 +5320,6 @@
                 "$ref": "#/components/schemas/TranscoderOverlayEncodeConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/TranscoderOverlayEncodeConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -5693,11 +5370,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/TranscoderStreamNameGroupsConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/TranscoderStreamNameGroupsConfig"
                 }
@@ -5791,12 +5463,6 @@
               }
             },
             "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/TranscoderStreamNameGroupConfig",
-                "uniqueItems": false
-              }
-            },
-            "text/xml": {
               "schema": {
                 "$ref": "#/components/schemas/TranscoderStreamNameGroupConfig",
                 "uniqueItems": false
@@ -5927,11 +5593,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/TranscoderStreamNameGroupConfig"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/TranscoderStreamNameGroupConfig"
-                }
               }
             },
             "description": "Ok"
@@ -6035,12 +5696,6 @@
                 "$ref": "#/components/schemas/TranscoderStreamNameGroupConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/TranscoderStreamNameGroupConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -6122,12 +5777,6 @@
                 "$ref": "#/components/schemas/TranscoderStreamNameGroupConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/TranscoderStreamNameGroupConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -6170,11 +5819,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VHostTuneConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/VHostTuneConfig"
                 }
@@ -6258,12 +5902,6 @@
                 "$ref": "#/components/schemas/VHostTuneConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/VHostTuneConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -6306,11 +5944,6 @@
                 }
               },
               "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/HostportsTuneConfig"
-                }
-              },
-              "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/HostportsTuneConfig"
                 }
@@ -6394,12 +6027,6 @@
                 "$ref": "#/components/schemas/HostportsTuneConfig",
                 "uniqueItems": false
               }
-            },
-            "text/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/HostportsTuneConfig",
-                "uniqueItems": false
-              }
             }
           },
           "required": true
@@ -6423,12 +6050,6 @@
               "$ref": "#/components/schemas/PublisherVhostConfig",
               "uniqueItems": false
             }
-          },
-          "text/xml": {
-            "schema": {
-              "$ref": "#/components/schemas/PublisherVhostConfig",
-              "uniqueItems": false
-            }
           }
         },
         "required": true
@@ -6442,12 +6063,6 @@
             }
           },
           "application/xml": {
-            "schema": {
-              "$ref": "#/components/schemas/SMILFileConfig",
-              "uniqueItems": false
-            }
-          },
-          "text/xml": {
             "schema": {
               "$ref": "#/components/schemas/SMILFileConfig",
               "uniqueItems": false
@@ -6469,12 +6084,6 @@
               "$ref": "#/components/schemas/StartupStreamConfig",
               "uniqueItems": false
             }
-          },
-          "text/xml": {
-            "schema": {
-              "$ref": "#/components/schemas/StartupStreamConfig",
-              "uniqueItems": false
-            }
           }
         },
         "required": true
@@ -6488,12 +6097,6 @@
             }
           },
           "application/xml": {
-            "schema": {
-              "$ref": "#/components/schemas/StreamFileConfig",
-              "uniqueItems": false
-            }
-          },
-          "text/xml": {
             "schema": {
               "$ref": "#/components/schemas/StreamFileConfig",
               "uniqueItems": false
@@ -6515,12 +6118,6 @@
               "$ref": "#/components/schemas/TranscoderEncodeConfig",
               "uniqueItems": false
             }
-          },
-          "text/xml": {
-            "schema": {
-              "$ref": "#/components/schemas/TranscoderEncodeConfig",
-              "uniqueItems": false
-            }
           }
         },
         "required": true
@@ -6538,12 +6135,6 @@
               "$ref": "#/components/schemas/TranscoderStreamNameGroupConfig",
               "uniqueItems": false
             }
-          },
-          "text/xml": {
-            "schema": {
-              "$ref": "#/components/schemas/TranscoderStreamNameGroupConfig",
-              "uniqueItems": false
-            }
           }
         },
         "required": true
@@ -6557,12 +6148,6 @@
             }
           },
           "application/xml": {
-            "schema": {
-              "$ref": "#/components/schemas/TranscoderTemplateConfig",
-              "uniqueItems": false
-            }
-          },
-          "text/xml": {
             "schema": {
               "$ref": "#/components/schemas/TranscoderTemplateConfig",
               "uniqueItems": false

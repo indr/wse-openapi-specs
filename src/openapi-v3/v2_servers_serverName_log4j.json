@@ -33,11 +33,6 @@
                 "schema": {
                   "$ref": "#/components/schemas/Log4js"
                 }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/Log4js"
-                }
               }
             },
             "description": "Ok"

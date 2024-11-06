@@ -138,7 +138,6 @@
   },
   "produces": [
     "application/xml",
-    "text/xml",
     "application/json"
   ],
   "authorizations": {}
