@@ -1840,6 +1840,15 @@
               "type": "string",
               "uniqueItems": false
             }
+          },
+          {
+            "in": "path",
+            "name": "sourceName",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
           }
         ],
         "responses": {
@@ -1873,6 +1882,15 @@
             "required": true,
             "schema": {
               "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "in": "path",
+            "name": "sourceName",
+            "required": true,
+            "schema": {
               "type": "string",
               "uniqueItems": false
             }
@@ -1926,6 +1944,15 @@
             "required": true,
             "schema": {
               "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "in": "path",
+            "name": "sourceName",
+            "required": true,
+            "schema": {
               "type": "string",
               "uniqueItems": false
             }
@@ -1991,6 +2018,15 @@
             "required": true,
             "schema": {
               "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "in": "path",
+            "name": "sourceName",
+            "required": true,
+            "schema": {
               "type": "string",
               "uniqueItems": false
             }
@@ -2381,6 +2417,15 @@
               "type": "string",
               "uniqueItems": false
             }
+          },
+          {
+            "in": "path",
+            "name": "storeName",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
           }
         ],
         "responses": {
@@ -2414,6 +2459,15 @@
             "required": true,
             "schema": {
               "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "in": "path",
+            "name": "storeName",
+            "required": true,
+            "schema": {
               "type": "string",
               "uniqueItems": false
             }
@@ -2467,6 +2521,15 @@
             "required": true,
             "schema": {
               "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "in": "path",
+            "name": "storeName",
+            "required": true,
+            "schema": {
               "type": "string",
               "uniqueItems": false
             }
@@ -2532,6 +2595,15 @@
             "required": true,
             "schema": {
               "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "in": "path",
+            "name": "storeName",
+            "required": true,
+            "schema": {
               "type": "string",
               "uniqueItems": false
             }
@@ -3210,6 +3282,15 @@
               "type": "string",
               "uniqueItems": false
             }
+          },
+          {
+            "in": "path",
+            "name": "publisher",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
           }
         ],
         "responses": {
@@ -3243,6 +3324,15 @@
             "required": true,
             "schema": {
               "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "in": "path",
+            "name": "publisher",
+            "required": true,
+            "schema": {
               "type": "string",
               "uniqueItems": false
             }
@@ -3296,6 +3386,15 @@
             "required": true,
             "schema": {
               "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "in": "path",
+            "name": "publisher",
+            "required": true,
+            "schema": {
               "type": "string",
               "uniqueItems": false
             }

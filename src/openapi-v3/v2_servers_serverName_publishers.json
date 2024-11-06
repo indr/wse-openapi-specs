@@ -139,6 +139,15 @@
               "type": "string",
               "uniqueItems": false
             }
+          },
+          {
+            "in": "path",
+            "name": "publisher",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "uniqueItems": false
+            }
           }
         ],
         "responses": {
@@ -172,6 +181,15 @@
             "required": true,
             "schema": {
               "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "in": "path",
+            "name": "publisher",
+            "required": true,
+            "schema": {
               "type": "string",
               "uniqueItems": false
             }
@@ -225,6 +243,15 @@
             "required": true,
             "schema": {
               "default": "_defaultServer_",
+              "type": "string",
+              "uniqueItems": false
+            }
+          },
+          {
+            "in": "path",
+            "name": "publisher",
+            "required": true,
+            "schema": {
               "type": "string",
               "uniqueItems": false
             }

@@ -375,6 +375,14 @@
               "description": "Reserved for future use",
               "required": true,
               "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "sourceName",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
             }
           ],
           "summary": "Retrieves the specified MediaCache Source configuration",
@@ -415,6 +423,14 @@
               "name": "serverName",
               "paramType": "path",
               "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "sourceName",
+              "paramType": "path",
               "required": true,
               "allowMultiple": false
             },
@@ -477,6 +493,14 @@
               "allowMultiple": false
             },
             {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "sourceName",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
               "type": "MediaCacheSourceConfig",
               "uniqueItems": false,
               "name": "body",
@@ -523,6 +547,14 @@
               "name": "serverName",
               "paramType": "path",
               "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "sourceName",
+              "paramType": "path",
               "required": true,
               "allowMultiple": false
             }
@@ -856,6 +888,14 @@
               "description": "Reserved for future use",
               "required": true,
               "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "storeName",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
             }
           ],
           "summary": "Retrieves the specified MediaCache Store configuration",
@@ -896,6 +936,14 @@
               "name": "serverName",
               "paramType": "path",
               "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "storeName",
+              "paramType": "path",
               "required": true,
               "allowMultiple": false
             },
@@ -958,6 +1006,14 @@
               "allowMultiple": false
             },
             {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "storeName",
+              "paramType": "path",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
               "type": "MediaCacheStoreConfig",
               "uniqueItems": false,
               "name": "body",
@@ -1004,6 +1060,14 @@
               "name": "serverName",
               "paramType": "path",
               "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "storeName",
+              "paramType": "path",
               "required": true,
               "allowMultiple": false
             }
