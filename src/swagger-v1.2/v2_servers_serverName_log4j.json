@@ -1,0 +1,301 @@
+{
+  "swaggerVersion": "1.2",
+  "apis": [
+    {
+      "path": "/v2/servers/{serverName}/log4j",
+      "operations": [
+        {
+          "type": "Log4js",
+          "method": "GET",
+          "nickname": "getLog4js",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the Server log4j configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v2/servers/{serverName}/log4j/actions/{action}",
+      "operations": [
+        {
+          "type": "void",
+          "method": "PUT",
+          "nickname": "putLog4jsAction",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "action",
+              "paramType": "path",
+              "description": "The action which should be performed by the server",
+              "required": true,
+              "allowMultiple": false,
+              "enum": [
+                "reload"
+              ]
+            }
+          ],
+          "summary": "Tells the log4j system to perform an action",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v2/servers/{serverName}/log4j/{loggerName}/actions/{action}",
+      "operations": [
+        {
+          "type": "void",
+          "method": "PUT",
+          "nickname": "putLog4jAction",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "action",
+              "paramType": "path",
+              "description": "The action which should be performed by the server",
+              "required": true,
+              "allowMultiple": false,
+              "enum": [
+                "debug",
+                "error",
+                "fatal",
+                "info",
+                "reload",
+                "warn"
+              ]
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "loggerName",
+              "paramType": "path",
+              "description": "The logger name needed for this REST call",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Tells the specified log4j logger to perform an action",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    }
+  ],
+  "apiVersion": "1.0.0",
+  "resourcePath": "/v2/servers/{serverName}/log4j",
+  "models": {
+    "WMSLoggerConfig": {
+      "id": "WMSLoggerConfig",
+      "properties": {
+        "logLevel": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "name": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "name",
+        "logLevel"
+      ],
+      "className": "com.wowza.wms.rest.log4j.Log4js$WMSLoggerConfig"
+    },
+    "Log4js": {
+      "id": "Log4js",
+      "properties": {
+        "loggers": {
+          "type": "array",
+          "items": {
+            "uniqueItems": false,
+            "$ref": "Log4js$WMSLoggerConfig"
+          },
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "loggers"
+      ],
+      "className": "com.wowza.wms.rest.log4j.Log4js"
+    },
+    "Log4jsAction": {
+      "id": "Log4jsAction",
+      "properties": {
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "serverName"
+      ],
+      "className": "com.wowza.wms.rest.log4j.Log4jsAction"
+    },
+    "Log4jAction": {
+      "id": "Log4jAction",
+      "properties": {
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "loggerName": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "serverName",
+        "loggerName"
+      ],
+      "className": "com.wowza.wms.rest.log4j.Log4jAction"
+    }
+  },
+  "produces": [
+    "application/xml",
+    "text/xml",
+    "application/json"
+  ],
+  "consumes": [
+    "application/xml",
+    "text/xml",
+    "application/json"
+  ],
+  "authorizations": {}
+}

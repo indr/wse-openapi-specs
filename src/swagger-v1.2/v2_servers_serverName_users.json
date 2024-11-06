@@ -1,0 +1,453 @@
+{
+  "swaggerVersion": "1.2",
+  "apis": [
+    {
+      "path": "/v2/servers/{serverName}/users",
+      "operations": [
+        {
+          "type": "UsersConfig",
+          "method": "GET",
+          "nickname": "getUsersConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the list of server Users",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "POST",
+          "nickname": "postUsersConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "UserConfig",
+              "uniqueItems": false,
+              "name": "body",
+              "paramType": "body",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Adds a new server User to the list",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            },
+            {
+              "code": 201,
+              "message": "Created"
+            },
+            {
+              "code": 409,
+              "message": "Conflict"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "path": "/v2/servers/{serverName}/users/{userName}",
+      "operations": [
+        {
+          "type": "UserConfig",
+          "method": "GET",
+          "nickname": "getUserConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "userName",
+              "paramType": "path",
+              "description": "The user name",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Retrieves the specified User configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "PUT",
+          "nickname": "putUserConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "userName",
+              "paramType": "path",
+              "description": "The user name",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "UserConfig",
+              "uniqueItems": false,
+              "name": "body",
+              "paramType": "body",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Updates the specified User configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "POST",
+          "nickname": "postUserConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "userName",
+              "paramType": "path",
+              "description": "The user name",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "UserConfig",
+              "uniqueItems": false,
+              "name": "body",
+              "paramType": "body",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Adds the specified User configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            },
+            {
+              "code": 201,
+              "message": "Created"
+            },
+            {
+              "code": 409,
+              "message": "Conflict"
+            }
+          ],
+          "deprecated": false
+        },
+        {
+          "type": "void",
+          "method": "DELETE",
+          "nickname": "deleteUserConfig",
+          "parameters": [
+            {
+              "type": "string",
+              "defaultValue": "_defaultServer_",
+              "uniqueItems": false,
+              "name": "serverName",
+              "paramType": "path",
+              "description": "Reserved for future use",
+              "required": true,
+              "allowMultiple": false
+            },
+            {
+              "type": "string",
+              "uniqueItems": false,
+              "name": "userName",
+              "paramType": "path",
+              "description": "The user name",
+              "required": true,
+              "allowMultiple": false
+            }
+          ],
+          "summary": "Deletes the specified User configuration",
+          "notes": "This API is available in builds 15089 or later.",
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 402,
+              "message": "Payment Required"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 415,
+              "message": "Unsupported Media Type"
+            }
+          ],
+          "deprecated": false
+        }
+      ]
+    }
+  ],
+  "apiVersion": "1.0.0",
+  "resourcePath": "/v2/servers/{serverName}/users",
+  "models": {
+    "UsersConfig": {
+      "id": "UsersConfig",
+      "properties": {
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "users": {
+          "type": "array",
+          "items": {
+            "uniqueItems": false,
+            "$ref": "UserConfig"
+          },
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "users"
+      ],
+      "className": "com.wowza.wms.rest.user.UsersConfig"
+    },
+    "UserConfig": {
+      "id": "UserConfig",
+      "properties": {
+        "password": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "passwordEncoding": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "serverName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "description": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "realm": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "saveFieldList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": false
+          },
+          "uniqueItems": false
+        },
+        "userName": {
+          "type": "string",
+          "uniqueItems": false
+        },
+        "version": {
+          "type": "string",
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "version",
+        "serverName",
+        "userName",
+        "description",
+        "groups",
+        "password",
+        "passwordEncoding",
+        "realm"
+      ],
+      "className": "com.wowza.wms.rest.user.UserConfig"
+    }
+  },
+  "produces": [
+    "application/xml",
+    "text/xml",
+    "application/json"
+  ],
+  "consumes": [
+    "application/xml",
+    "text/xml",
+    "application/json"
+  ],
+  "authorizations": {}
+}
