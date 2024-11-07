@@ -1,4 +1,4 @@
-# Wowza Streaming Engine OpenAPI specifications
+# Wowza Streaming Engine OpenAPI 3 specifications
 
 This repository provides an updated OpenAPI 3 specification for the Wowza Streaming Engine (WSE) RESTful API. While
 Wowza Streaming Engine offers a Swagger specification, it’s based on Swagger version 1.2. Many modern code generators
