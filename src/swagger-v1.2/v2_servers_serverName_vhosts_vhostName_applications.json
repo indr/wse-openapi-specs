@@ -10554,8 +10554,6 @@
         }
       },
       "required": [
-        "version",
-        "serverName",
         "applications"
       ],
       "className": "com.wowza.wms.rest.vhosts.applications.ApplicationsConfig"
@@ -11934,34 +11932,9 @@
         }
       },
       "required": [
-        "version",
-        "serverName",
         "name",
         "appType",
-        "description",
-        "applicationTimeout",
-        "pingTimeout",
-        "repeaterOriginURL",
-        "repeaterQueryString",
-        "clientStreamReadAccess",
-        "clientStreamWriteAccess",
-        "avSyncMethod",
-        "maxRTCPWaitTime",
-        "httpCORSHeadersEnabled",
-        "httpStreamers",
-        "mediaCacheSourceList",
-        "mediaReaderRandomAccessReaderClass",
-        "httpOptimizeFileReads",
-        "mediaReaderBufferSeekIO",
-        "captionLiveIngestType",
-        "vodTimedTextProviders",
-        "securityConfig",
-        "streamConfig",
-        "dvrConfig",
-        "drmConfig",
-        "transcoderConfig",
-        "webRTCConfig",
-        "modules"
+        "streamConfig"
       ],
       "className": "com.wowza.wms.rest.vhosts.applications.ApplicationConfig"
     },
@@ -14544,15 +14517,7 @@
         }
       },
       "required": [
-        "version",
-        "serverName",
-        "streamType",
-        "storageDir",
-        "createStorageDir",
-        "storageDirExists",
-        "keyDir",
-        "liveStreamPacketizer",
-        "httpRandomizeMediaName"
+        "streamType"
       ],
       "className": "com.wowza.wms.rest.vhosts.applications.streamconfiguration.StreamConfigurationConfig"
     },

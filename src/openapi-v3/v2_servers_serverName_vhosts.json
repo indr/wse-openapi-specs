@@ -7124,8 +7124,6 @@
           }
         },
         "required": [
-          "version",
-          "serverName",
           "applications"
         ],
         "type": "object"

@@ -12040,34 +12040,9 @@
           }
         },
         "required": [
-          "version",
-          "serverName",
           "name",
           "appType",
-          "description",
-          "applicationTimeout",
-          "pingTimeout",
-          "repeaterOriginURL",
-          "repeaterQueryString",
-          "clientStreamReadAccess",
-          "clientStreamWriteAccess",
-          "avSyncMethod",
-          "maxRTCPWaitTime",
-          "httpCORSHeadersEnabled",
-          "httpStreamers",
-          "mediaCacheSourceList",
-          "mediaReaderRandomAccessReaderClass",
-          "httpOptimizeFileReads",
-          "mediaReaderBufferSeekIO",
-          "captionLiveIngestType",
-          "vodTimedTextProviders",
-          "securityConfig",
-          "streamConfig",
-          "dvrConfig",
-          "drmConfig",
-          "transcoderConfig",
-          "webRTCConfig",
-          "modules"
+          "streamConfig"
         ],
         "type": "object"
       },
@@ -12142,8 +12117,6 @@
           }
         },
         "required": [
-          "version",
-          "serverName",
           "applications"
         ],
         "type": "object"
@@ -14965,15 +14938,7 @@
           }
         },
         "required": [
-          "version",
-          "serverName",
-          "streamType",
-          "storageDir",
-          "createStorageDir",
-          "storageDirExists",
-          "keyDir",
-          "liveStreamPacketizer",
-          "httpRandomizeMediaName"
+          "streamType"
         ],
         "type": "object"
       },

@@ -6142,8 +6142,6 @@
         }
       },
       "required": [
-        "version",
-        "serverName",
         "applications"
       ],
       "className": "com.wowza.wms.rest.vhosts.applications.ApplicationsConfig"
